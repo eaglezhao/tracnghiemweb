@@ -185,7 +185,7 @@
 
     <owl:DatatypeProperty rdf:about="#hasFormula">
         <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
-        <rdfs:range rdf:resource="&rdf;XMLLiteral"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -1373,7 +1373,7 @@
     <FerrousChloride rdf:about="#FerrousChloride">
         <rdf:type rdf:resource="&owl;Class"/>
         <rdf:type rdf:resource="&owl;Thing"/>
-        <hasFormula>FeCl2</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">FeCl2</hasFormula>
     </FerrousChloride>
     
 
@@ -1383,7 +1383,7 @@
     <owl:Class rdf:about="#FerrousOxide">
         <rdf:type rdf:resource="#FerrousOxide"/>
         <rdf:type rdf:resource="&owl;Thing"/>
-        <hasFormula>FeO</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">FeO</hasFormula>
     </owl:Class>
     
 
@@ -1392,7 +1392,7 @@
 
     <owl:Thing rdf:about="#HydroChloride">
         <rdf:type rdf:resource="#HydrogenChloride"/>
-        <hasFormula>HCl</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">HCl</hasFormula>
     </owl:Thing>
     
 
@@ -1402,7 +1402,7 @@
     <Hydrogen rdf:about="#Hydrogen">
         <rdf:type rdf:resource="&owl;Class"/>
         <rdf:type rdf:resource="&owl;Thing"/>
-        <hasFormula>H2</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">H2</hasFormula>
     </Hydrogen>
     
 
@@ -1412,7 +1412,7 @@
     <Iron rdf:about="#Iron">
         <rdf:type rdf:resource="&owl;Class"/>
         <rdf:type rdf:resource="&owl;Thing"/>
-        <hasFormula>Fe</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">Fe</hasFormula>
     </Iron>
     
 
@@ -1422,7 +1422,7 @@
     <owl:Thing rdf:about="#Oxygen">
         <rdf:type rdf:resource="#Oxygen"/>
         <rdf:type rdf:resource="&owl;Class"/>
-        <hasFormula>O2</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">O2</hasFormula>
     </owl:Thing>
     
 
@@ -1489,7 +1489,7 @@
     <Rust rdf:about="#Rust">
         <rdf:type rdf:resource="&owl;Class"/>
         <rdf:type rdf:resource="&owl;Thing"/>
-        <hasFormula>Fe2O3</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">Fe2O3</hasFormula>
     </Rust>
     
 
@@ -1499,7 +1499,7 @@
     <owl:Thing rdf:about="#Water">
         <rdf:type rdf:resource="#Water"/>
         <rdf:type rdf:resource="&owl;Class"/>
-        <hasFormula>H2O</hasFormula>
+        <hasFormula rdf:datatype="&rdfs;Literal">H2O</hasFormula>
     </owl:Thing>
 </rdf:RDF>
 
