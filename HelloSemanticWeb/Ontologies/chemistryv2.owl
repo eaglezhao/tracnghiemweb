@@ -160,12 +160,6 @@
     
 
 
-    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#trongMoiTruong -->
-
-    <owl:ObjectProperty rdf:about="#trongMoiTruong"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1354,6 +1348,12 @@
         <rdfs:subClassOf rdf:resource="#NamedMolecule"/>
         <rdfs:comment rdf:datatype="&xsd;string">H2O</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
     
 
 
