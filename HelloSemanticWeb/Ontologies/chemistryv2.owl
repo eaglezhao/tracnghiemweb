@@ -105,6 +105,7 @@
     <owl:ObjectProperty rdf:about="#hasProduct">
         <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
         <rdfs:domain rdf:resource="#Reaction"/>
+        <owl:equivalentProperty rdf:resource="#produces"/>
     </owl:ObjectProperty>
     
 
@@ -156,6 +157,15 @@
     <owl:ObjectProperty rdf:about="#isPartOf">
         <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
         <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#produces -->
+
+    <owl:ObjectProperty rdf:about="#produces">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="#hasReactant"/>
     </owl:ObjectProperty>
     
 
