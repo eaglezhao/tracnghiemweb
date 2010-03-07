@@ -36,23 +36,27 @@ public class HelloSemanticWeb {
 	InfModel inferredFriends = null;
 
 	public static void main(String[] args) throws IOException {
-
-		OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_MEM, null );
-
+		
+		Reasoner reasoner =	PelletReasonerFactory.theInstance().create();
+		Model infModel = ModelFactory.createInfModel(reasoner, ModelFactory.createDefaultModel());
+				
+		OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_DL_MEM, infModel );
+		//OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_DL_MEM_RDFS_INF);
         // we have a local copy of the wine ontology
         
         m.getDocumentManager().addAltEntry( "file:Ontologies/chemistryv2.owl",
                                             "file:Ontologies/chemistryv2.owl" );
         
 
-        m.read( "file:Ontologies/chemistryv2.owl" );
+        m.read( "file:Ontologies/chemistryv2.owl",null, "RDF/XML" );
         
        
         
         HelloSemanticWeb hello = new HelloSemanticWeb();
         
         System.out.println("\nSay Hello to Myself");
-		hello.mySelf(m);
+		//hello.mySelf(m);
+        hello.produceElement(m);
         
 	}
 	
@@ -85,6 +89,20 @@ public class HelloSemanticWeb {
 //hopchat SubClassOf MoleculeContainingHydrogen 
 	}
 	
+	private void produceElement(Model model)
+	{
+		runQuery("PREFIX chemistry: <http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#> " +
+				"SELECT ?formulaReactant ?formulaProduct " +
+				"WHERE { " +
+				"?reactant chemistry:produces ?product." +
+				"?reactant rdf:type chemistry:Oxygen. " +
+				
+				"?reactant chemistry:hasFormula ?formulaReactant." +
+				"?product chemistry:hasFormula ?formulaProduct." +
+				
+				"}", model);  //add the query string" +
+	}
+	
 
 	private void runQuery(String queryRequest, Model model){
 		
@@ -115,7 +133,7 @@ public class HelloSemanticWeb {
 			System.out.println(soln.hashCode() + "\n");
 			RDFNode name = soln.get("?formulaProduct");
 			RDFNode name1 = soln.get("?formulaReactant");
-			RDFNode name2 = soln.get("?reaction");
+			//RDFNode name2 = soln.get("?reaction");
 
 			System.out.println("P: " + name.toString());
 			if(!product.contains(name))
@@ -127,16 +145,17 @@ public class HelloSemanticWeb {
 				reactant.add(name1);
 			}
 			
-			System.out.println("R: " + name2.toString());
+			/*System.out.println("R: " + name2.toString());
 			if(!reaction.contains(name2))
 			{
 				reaction.add(name2);
-			}
+			}*/
 		}
+		/*
 		System.out.print("Reaction : ");
 		for (RDFNode node : reaction) {
 			System.out.println(node.toString() + " ");
-		}
+		}*/
 		
 		System.out.print("Reactant : ");
 		for (RDFNode node : reactant) {
