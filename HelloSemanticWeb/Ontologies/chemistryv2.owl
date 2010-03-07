@@ -1080,7 +1080,7 @@
     <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#NamedMolecule -->
 
     <owl:Class rdf:about="#NamedMolecule">
-        <rdfs:subClassOf rdf:resource="#Glucose"/>
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
     </owl:Class>
     
 
