@@ -340,7 +340,7 @@
     <owl:Class rdf:about="#Anion">
         <rdfs:subClassOf rdf:resource="#Ion"/>
         <owl:disjointWith rdf:resource="#Cation"/>
-        <rdfs:comment xml:lang="wikipedia"
+        <rdfs:comment 
             >Anions are negatively charged ions, formed when an atom gains electrons in a reaction.</rdfs:comment>
     </owl:Class>
     
@@ -479,7 +479,7 @@
 
     <owl:Class rdf:about="#Cation">
         <rdfs:subClassOf rdf:resource="#Ion"/>
-        <rdfs:comment xml:lang="wikipedia"
+        <rdfs:comment 
             >Cations are positively charged ions, formed when an atom loses electrons in a reaction.</rdfs:comment>
     </owl:Class>
     
@@ -732,7 +732,7 @@
 
     <owl:Class rdf:about="#Ion">
         <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-        <rdfs:comment xml:lang="chebi"
+        <rdfs:comment
             >An ion is a molecular structure having a net electric charge</rdfs:comment>
         <rdfs:comment xml:lang="en"
             >An ion is an atom or molecule which has lost or gained one or more valence electrons, giving it a positive or negative electrical charge.</rdfs:comment>
@@ -883,9 +883,9 @@
 
     <owl:Class rdf:about="#Molecule">
         <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-        <rdfs:comment xml:lang="chebi"
+        <rdfs:comment
             >A molecule is an electrically neutral entity consisting of more than one atom.</rdfs:comment>
-        <rdfs:comment xml:lang="wikipedia"
+        <rdfs:comment 
             >A molecule is a sufficiently stable electrically neutral group of at least two atoms in a definite arrangement held together by very strong chemical bonds . It can also be defined as a unit of two or more atoms held together by covalent bonds.</rdfs:comment>
     </owl:Class>
     
