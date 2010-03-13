@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology_OU_Chemistry "http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:Ontology_OU_Chemistry="http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#AtomContrucstion -->
+
+    <owl:DatatypeProperty rdf:about="#AtomContrucstion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#AtomicNumber -->
+
+    <owl:DatatypeProperty rdf:about="#AtomicNumber">
+        <rdfs:comment
+            >L&#224; s&#7889; h&#7841;t proton trong nh&#226;n c&#7911;a Nguy&#234;n t&#7917;</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Gas -->
+
+    <owl:DatatypeProperty rdf:about="#Gas">
+        <rdfs:subPropertyOf rdf:resource="#Phase"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Liquid -->
+
+    <owl:DatatypeProperty rdf:about="#Liquid">
+        <rdfs:subPropertyOf rdf:resource="#Phase"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Phase -->
+
+    <owl:DatatypeProperty rdf:about="#Phase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Solid -->
+
+    <owl:DatatypeProperty rdf:about="#Solid">
+        <rdfs:subPropertyOf rdf:resource="#Phase"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Symbol -->
+
+    <owl:DatatypeProperty rdf:about="#Symbol">
+        <rdfs:comment
+            >L&#224; k&#253; t&#7921; vi&#7871;t t&#7855;t t&#234;n h&#243;a h&#7885;c c&#7911;a m&#7897;t nguy&#234;n t&#7889;. C&#243; t&#7889;i &#273;a 2 k&#253; t&#7921;. G&#7891;m m&#7897;t ch&#7919; in hoa (v&#7899;i m&#7897;t k&#253; t&#7921; in th&#432;&#7901;ng li&#234;n sau n&#243;).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#hasElectron -->
+
+    <owl:DatatypeProperty rdf:about="#hasElectron">
+        <rdfs:domain rdf:resource="#Atom"/>
+        <rdfs:subPropertyOf rdf:resource="#AtomContrucstion"/>
+        <rdfs:range rdf:resource="&xsd;unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#hasNotron -->
+
+    <owl:DatatypeProperty rdf:about="#hasNotron">
+        <rdfs:domain rdf:resource="#Atom"/>
+        <rdfs:subPropertyOf rdf:resource="#AtomContrucstion"/>
+        <rdfs:range rdf:resource="&xsd;unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#hasProton -->
+
+    <owl:DatatypeProperty rdf:about="#hasProton">
+        <rdfs:domain rdf:resource="#Atom"/>
+        <rdfs:subPropertyOf rdf:resource="#AtomContrucstion"/>
+        <rdfs:range rdf:resource="&xsd;unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#AlkaliMetal -->
+
+    <owl:Class rdf:about="#AlkaliMetal">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#AlkalineEarth -->
+
+    <owl:Class rdf:about="#AlkalineEarth">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Anion -->
+
+    <owl:Class rdf:about="#Anion">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <owl:disjointWith rdf:resource="#Cation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Atom -->
+
+    <owl:Class rdf:about="#Atom">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#BasicMetal -->
+
+    <owl:Class rdf:about="#BasicMetal">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Cation -->
+
+    <owl:Class rdf:about="#Cation">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Electron -->
+
+    <owl:Class rdf:about="#Electron">
+        <rdfs:subClassOf rdf:resource="#Subatomic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Element -->
+
+    <owl:Class rdf:about="#Element">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Ferric -->
+
+    <owl:Class rdf:about="#Ferric">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Iron"/>
+        <rdfs:subClassOf rdf:resource="#Monatomic"/>
+        <rdfs:comment>Fe 2+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Ferrous -->
+
+    <owl:Class rdf:about="#Ferrous">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Iron"/>
+        <rdfs:subClassOf rdf:resource="#Monatomic"/>
+        <rdfs:comment>Fe 3+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Halogen -->
+
+    <owl:Class rdf:about="#Halogen">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Hydrogen -->
+
+    <owl:Class rdf:about="#Hydrogen">
+        <rdfs:subClassOf rdf:resource="#Atom"/>
+        <rdfs:subClassOf rdf:resource="#NonMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Ion -->
+
+    <owl:Class rdf:about="#Ion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Iron -->
+
+    <owl:Class rdf:about="#Iron">
+        <rdfs:subClassOf rdf:resource="#Atom"/>
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Molecule -->
+
+    <owl:Class rdf:about="#Molecule"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Monatomic -->
+
+    <owl:Class rdf:about="#Monatomic">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <owl:disjointWith rdf:resource="#Polyatomic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#NobleGas -->
+
+    <owl:Class rdf:about="#NobleGas">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#NonMetal -->
+
+    <owl:Class rdf:about="#NonMetal">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Notron -->
+
+    <owl:Class rdf:about="#Notron">
+        <rdfs:subClassOf rdf:resource="#Subatomic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Polyatomic -->
+
+    <owl:Class rdf:about="#Polyatomic">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Proton -->
+
+    <owl:Class rdf:about="#Proton">
+        <rdfs:subClassOf rdf:resource="#Subatomic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#RareEarth -->
+
+    <owl:Class rdf:about="#RareEarth">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#SemiMetal -->
+
+    <owl:Class rdf:about="#SemiMetal">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Silver -->
+
+    <owl:Class rdf:about="#Silver">
+        <rdfs:subClassOf rdf:resource="#Atom"/>
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Sliver_1+ -->
+
+    <owl:Class rdf:about="#Sliver_1+">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Monatomic"/>
+        <rdfs:subClassOf rdf:resource="#Silver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Sodium -->
+
+    <owl:Class rdf:about="#Sodium">
+        <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
+        <rdfs:subClassOf rdf:resource="#Atom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Sodium_2+ -->
+
+    <owl:Class rdf:about="#Sodium_2+">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Monatomic"/>
+        <rdfs:subClassOf rdf:resource="#Sodium"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Subatomic -->
+
+    <owl:Class rdf:about="#Subatomic">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#TransitionMetal -->
+
+    <owl:Class rdf:about="#TransitionMetal">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Oxygen -->
+
+    <owl:Thing rdf:about="#Oxygen">
+        <rdf:type rdf:resource="#Atom"/>
+        <rdf:type rdf:resource="#NonMetal"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/2/Ontology_OU_Chemistry.owl#Oxygen_1- -->
+
+    <Monatomic rdf:about="#Oxygen_1-">
+        <rdf:type rdf:resource="#Anion"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Monatomic>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
