@@ -237,6 +237,15 @@
     
 
 
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ag -->
+
+    <owl:Class rdf:about="#Ag">
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Al -->
 
     <owl:Class rdf:about="#Al">
@@ -517,6 +526,14 @@
     
 
 
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Cu -->
+
+    <owl:Class rdf:about="#Cu">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#D-glucose -->
 
     <owl:Class rdf:about="#D-glucose">
@@ -552,6 +569,14 @@
         <rdfs:label xml:lang="en">Fluoride</rdfs:label>
         <rdfs:subClassOf rdf:resource="#Anion"/>
         <rdfs:subClassOf rdf:resource="#F"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Fe -->
+
+    <owl:Class rdf:about="#Fe">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
     </owl:Class>
     
 
@@ -1559,6 +1584,12 @@
         </swrl:head>
         <swrl:body>
             <swrl:AtomList>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/a"/>
+                        <swrl:classPredicate rdf:resource="#Molecule"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
                 <rdf:rest>
                     <swrl:AtomList>
                         <rdf:rest>
@@ -1571,6 +1602,13 @@
                                 </rdf:first>
                                 <rdf:rest>
                                     <swrl:AtomList>
+                                        <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                                <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/b"/>
+                                                <swrl:propertyPredicate rdf:resource="#hasProduct"/>
+                                                <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
+                                            </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
                                         <rdf:rest>
                                             <swrl:AtomList>
                                                 <rdf:rest rdf:resource="&rdf;nil"/>
@@ -1583,13 +1621,6 @@
                                                 </rdf:first>
                                             </swrl:AtomList>
                                         </rdf:rest>
-                                        <rdf:first>
-                                            <swrl:IndividualPropertyAtom>
-                                                <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/b"/>
-                                                <swrl:propertyPredicate rdf:resource="#hasProduct"/>
-                                                <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-                                            </swrl:IndividualPropertyAtom>
-                                        </rdf:first>
                                     </swrl:AtomList>
                                 </rdf:rest>
                             </swrl:AtomList>
@@ -1602,28 +1633,10 @@
                         </rdf:first>
                     </swrl:AtomList>
                 </rdf:rest>
-                <rdf:first>
-                    <swrl:ClassAtom>
-                        <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/a"/>
-                        <swrl:classPredicate rdf:resource="#Molecule"/>
-                    </swrl:ClassAtom>
-                </rdf:first>
             </swrl:AtomList>
         </swrl:body>
     </swrl:Imp>
     <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-2">
-        <swrl:head>
-            <swrl:AtomList>
-                <rdf:rest rdf:resource="&rdf;nil"/>
-                <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="#joinWith"/>
-                        <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-                        <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
-                    </swrl:IndividualPropertyAtom>
-                </rdf:first>
-            </swrl:AtomList>
-        </swrl:head>
         <swrl:body>
             <swrl:AtomList>
                 <rdf:rest rdf:resource="&rdf;nil"/>
@@ -1636,20 +1649,20 @@
                 </rdf:first>
             </swrl:AtomList>
         </swrl:body>
-    </swrl:Imp>
-    <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-1">
         <swrl:head>
             <swrl:AtomList>
                 <rdf:rest rdf:resource="&rdf;nil"/>
                 <rdf:first>
                     <swrl:IndividualPropertyAtom>
                         <swrl:propertyPredicate rdf:resource="#joinWith"/>
-                        <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction1"/>
+                        <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
                         <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
                     </swrl:IndividualPropertyAtom>
                 </rdf:first>
             </swrl:AtomList>
         </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-1">
         <swrl:body>
             <swrl:AtomList>
                 <rdf:rest>
@@ -1684,6 +1697,18 @@
                 </rdf:first>
             </swrl:AtomList>
         </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#joinWith"/>
+                        <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction1"/>
+                        <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
     </swrl:Imp>
     <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-4">
         <swrl:body>
