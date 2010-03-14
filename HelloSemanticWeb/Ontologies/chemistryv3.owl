@@ -1,1615 +1,1726 @@
 <?xml version="1.0"?>
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
-    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:chemistry="http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#"
-    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
-  xml:base="http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl">
-  <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
-    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >This ontology is intended as an incomplete representation of molecules. It is for tutoring purpose. It is heavily inspired from ChEBI (http://www.ebi.ac.uk/chebi/). As usual, the good stuff comes from them; the errors and over-simplifications are ours.</rdfs:comment>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >1.0</owl:versionInfo>
-  </owl:Ontology>
-  <owl:Class rdf:ID="He">
-    <owl:disjointWith>
-      <owl:Class rdf:ID="N"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="NobleGas"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Na"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Ne"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Li"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Mg"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="S"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Si"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:FunctionalProperty rdf:ID="hasNumberOfProtons"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >2</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="P"/>
-    </owl:disjointWith>
-    <rdfs:label xml:lang="en">Helium</rdfs:label>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="O"/>
-    </owl:disjointWith>
-  </owl:Class>
-  <owl:Class rdf:ID="HydrogenChloride">
-    <owl:disjointWith>
-      <chemistry:Water rdf:ID="Water">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >H2O</rdfs:comment>
-        <rdf:type>
-          <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
-        </rdf:type>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+    <!ENTITY swrla "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#" >
+    <!ENTITY sqwrl "http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#" >
+    <!ENTITY chemistry "http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#"
+     xml:base="http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemistry="http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">1.0</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This ontology is intended as an incomplete representation of molecules. It is for tutoring purpose. It is heavily inspired from ChEBI (http://www.ebi.ac.uk/chebi/). As usual, the good stuff comes from them; the errors and over-simplifications are ours.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#actsOn -->
+
+    <owl:ObjectProperty rdf:about="#actsOn">
+        <rdfs:domain rdf:resource="#BiologicalProcess"/>
+        <rdfs:range rdf:resource="#Molecule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#creationOf -->
+
+    <owl:ObjectProperty rdf:about="#creationOf">
+        <rdfs:domain rdf:resource="#BiologicalProcess"/>
+        <rdfs:range rdf:resource="#Molecule"/>
+        <rdfs:subPropertyOf rdf:resource="#actsOn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#destructionOf -->
+
+    <owl:ObjectProperty rdf:about="#destructionOf">
+        <rdfs:domain rdf:resource="#BiologicalProcess"/>
+        <rdfs:range rdf:resource="#Molecule"/>
+        <rdfs:subPropertyOf rdf:resource="#actsOn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="#hasComponent">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Th&#224;nh ph&#7847;n c&#7911;a m&#7897;t ch&#7845;t ho&#7863;c Ion</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Ion"/>
+                    <rdf:Description rdf:about="#Molecule"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasDirectPart -->
+
+    <owl:ObjectProperty rdf:about="#hasDirectPart">
+        <rdfs:subPropertyOf rdf:resource="#hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="#hasPart">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
+        <owl:inverseOf rdf:resource="#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasProduct -->
+
+    <owl:ObjectProperty rdf:about="#hasProduct">
+        <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:domain rdf:resource="#Reaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasReactant -->
+
+    <owl:ObjectProperty rdf:about="#hasReactant"/>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#isDirectPartOf -->
+
+    <owl:ObjectProperty rdf:about="#isDirectPartOf">
+        <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
+        <owl:inverseOf rdf:resource="#hasDirectPart"/>
+        <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="#isPartOf">
+        <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#joinWith -->
+
+    <owl:ObjectProperty rdf:about="#joinWith">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#produces -->
+
+    <owl:ObjectProperty rdf:about="#produces">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasFoation -->
+
+    <owl:DatatypeProperty rdf:about="#hasFoation"/>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasFormula -->
+
+    <owl:DatatypeProperty rdf:about="#hasFormula">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="#hasName">
+        <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasNumberAtomic -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumberAtomic">
+        <rdfs:comment rdf:datatype="&xsd;string">Nguy&#234;n t&#7917; kh&#7889;i</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasNumberElectrovalency -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency">
+        <rdfs:domain rdf:resource="#Ion"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasNumberOfAtomics -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumberOfAtomics">
+        <rdfs:domain rdf:resource="#Atom"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasNumberOfElectrons -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumberOfElectrons"/>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasNumberOfNeutrons -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumberOfNeutrons">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ChemicalElement"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasNumberOfProtons -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumberOfProtons">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="#ChemicalElement"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasOxidationStates -->
+
+    <owl:DatatypeProperty rdf:about="#hasOxidationStates">
+        <rdfs:comment rdf:datatype="&xsd;string">S&#7889; oxy h&#243;a.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Atom"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Acid -->
+
+    <owl:Class rdf:about="#Acid">
+        <rdfs:subClassOf rdf:resource="#Compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#AcidRadical -->
+
+    <owl:Class rdf:about="#AcidRadical">
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">G&#7889;c axit</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#AcidixOxide -->
+
+    <owl:Class rdf:about="#AcidixOxide">
+        <rdfs:subClassOf rdf:resource="#Oxide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Actinide -->
+
+    <owl:Class rdf:about="#Actinide">
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+        <owl:disjointWith rdf:resource="#AlkaliMetal"/>
+        <owl:disjointWith rdf:resource="#AlkalineEarthMetal"/>
+        <owl:disjointWith rdf:resource="#Halogen"/>
+        <owl:disjointWith rdf:resource="#Lanthanide"/>
+        <owl:disjointWith rdf:resource="#NobleGas"/>
+        <owl:disjointWith rdf:resource="#OtherNonMetal"/>
+        <owl:disjointWith rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ag -->
+
+    <owl:Class rdf:about="#Ag">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Al -->
+
+    <owl:Class rdf:about="#Al">
+        <rdfs:label xml:lang="en">Aluminium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SemiMetal"/>
+        <owl:disjointWith rdf:resource="#Ar"/>
+        <owl:disjointWith rdf:resource="#B"/>
+        <owl:disjointWith rdf:resource="#Be"/>
+        <owl:disjointWith rdf:resource="#C"/>
+        <owl:disjointWith rdf:resource="#Cl"/>
+        <owl:disjointWith rdf:resource="#F"/>
+        <owl:disjointWith rdf:resource="#H"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Al_3plus -->
+
+    <owl:Class rdf:about="#Al_3plus">
+        <rdfs:label>Al 3+</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Al"/>
+        <rdfs:subClassOf rdf:resource="#Cation"/>
         <rdfs:subClassOf>
-          <owl:Restriction>
-            <owl:onProperty>
-              <owl:ObjectProperty rdf:ID="hasComponent"/>
-            </owl:onProperty>
-            <owl:valuesFrom>
-              <owl:Class rdf:ID="OH_1minus"/>
-            </owl:valuesFrom>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-            >1</owl:cardinality>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Aldohexose -->
+
+    <owl:Class rdf:about="#Aldohexose">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Aldose"/>
+                    <rdf:Description rdf:about="#Hexose"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Aldose -->
+
+    <owl:Class rdf:about="#Aldose">
+        <rdfs:subClassOf rdf:resource="#Monosaccharide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#AlkaliMetal -->
+
+    <owl:Class rdf:about="#AlkaliMetal">
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+        <owl:disjointWith rdf:resource="#AlkalineEarthMetal"/>
+        <owl:disjointWith rdf:resource="#Halogen"/>
+        <owl:disjointWith rdf:resource="#Lanthanide"/>
+        <owl:disjointWith rdf:resource="#NobleGas"/>
+        <owl:disjointWith rdf:resource="#OtherNonMetal"/>
+        <owl:disjointWith rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#AlkalineEarthMetal -->
+
+    <owl:Class rdf:about="#AlkalineEarthMetal">
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+        <owl:disjointWith rdf:resource="#Halogen"/>
+        <owl:disjointWith rdf:resource="#Lanthanide"/>
+        <owl:disjointWith rdf:resource="#NobleGas"/>
+        <owl:disjointWith rdf:resource="#OtherNonMetal"/>
+        <owl:disjointWith rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Anion -->
+
+    <owl:Class rdf:about="#Anion">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <owl:disjointWith rdf:resource="#Cation"/>
+        <rdfs:comment xml:lang="wikipedia"
+            >Anions are negatively charged ions, formed when an atom gains electrons in a reaction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ar -->
+
+    <owl:Class rdf:about="#Ar">
+        <rdfs:label xml:lang="en">Argon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NobleGas"/>
+        <owl:disjointWith rdf:resource="#B"/>
+        <owl:disjointWith rdf:resource="#Be"/>
+        <owl:disjointWith rdf:resource="#C"/>
+        <owl:disjointWith rdf:resource="#Cl"/>
+        <owl:disjointWith rdf:resource="#F"/>
+        <owl:disjointWith rdf:resource="#H"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Atom -->
+
+    <owl:Class rdf:about="#Atom">
+        <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfProtons"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Au -->
+
+    <owl:Class rdf:about="#Au">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#B -->
+
+    <owl:Class rdf:about="#B">
+        <rdfs:label xml:lang="en">Boron</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SemiMetal"/>
+        <owl:disjointWith rdf:resource="#Be"/>
+        <owl:disjointWith rdf:resource="#C"/>
+        <owl:disjointWith rdf:resource="#Cl"/>
+        <owl:disjointWith rdf:resource="#F"/>
+        <owl:disjointWith rdf:resource="#H"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ba -->
+
+    <owl:Class rdf:about="#Ba">
+        <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Base -->
+
+    <owl:Class rdf:about="#Base">
+        <rdfs:subClassOf rdf:resource="#Compound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#OH_1minus"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Be -->
+
+    <owl:Class rdf:about="#Be">
+        <rdfs:label xml:lang="en">Beryllium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
+        <owl:disjointWith rdf:resource="#C"/>
+        <owl:disjointWith rdf:resource="#Cl"/>
+        <owl:disjointWith rdf:resource="#F"/>
+        <owl:disjointWith rdf:resource="#H"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Be_2plus -->
+
+    <owl:Class rdf:about="#Be_2plus">
+        <rdfs:subClassOf rdf:resource="#Be"/>
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#BiologicalProcess -->
+
+    <owl:Class rdf:about="#BiologicalProcess"/>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Br -->
+
+    <owl:Class rdf:about="#Br">
+        <rdfs:subClassOf rdf:resource="#Halogen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#C -->
+
+    <owl:Class rdf:about="#C">
+        <rdfs:label xml:lang="en">Carbon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Cl"/>
+        <owl:disjointWith rdf:resource="#F"/>
+        <owl:disjointWith rdf:resource="#H"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ca -->
+
+    <owl:Class rdf:about="#Ca">
+        <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ca_2plus -->
+
+    <owl:Class rdf:about="#Ca_2plus">
+        <rdfs:subClassOf rdf:resource="#Ca"/>
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Carbohydrate -->
+
+    <owl:Class rdf:about="#Carbohydrate">
+        <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Cation -->
+
+    <owl:Class rdf:about="#Cation">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:comment xml:lang="wikipedia"
+            >Cations are positively charged ions, formed when an atom loses electrons in a reaction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#ChemicalElement -->
+
+    <owl:Class rdf:about="#ChemicalElement">
+        <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:comment xml:lang="en"
+            >A chemical element is a type of atom that is distinguished by its atomic number; that is, by the number of protons in its nucleus</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Cl -->
+
+    <owl:Class rdf:about="#Cl">
+        <rdfs:label xml:lang="en">Chlorine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Halogen"/>
+        <owl:disjointWith rdf:resource="#F"/>
+        <owl:disjointWith rdf:resource="#H"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Cl_1minus -->
+
+    <owl:Class rdf:about="#Cl_1minus">
+        <rdfs:label xml:lang="en">Chloride</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AcidRadical"/>
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:subClassOf rdf:resource="#Cl"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Compound -->
+
+    <owl:Class rdf:about="#Compound">
+        <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Cr -->
+
+    <owl:Class rdf:about="#Cr">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Cs -->
+
+    <owl:Class rdf:about="#Cs">
+        <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Cu -->
+
+    <owl:Class rdf:about="#Cu">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#D-glucose -->
+
+    <owl:Class rdf:about="#D-glucose">
+        <rdfs:subClassOf rdf:resource="#Glucose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#F -->
+
+    <owl:Class rdf:about="#F">
+        <rdfs:label xml:lang="en">Fluorine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Halogen"/>
+        <owl:disjointWith rdf:resource="#H"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#F_1minus -->
+
+    <owl:Class rdf:about="#F_1minus">
+        <rdfs:label xml:lang="en">Fluoride</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AcidRadical"/>
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:subClassOf rdf:resource="#F"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Fe -->
+
+    <owl:Class rdf:about="#Fe">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Fe_2plus -->
+
+    <owl:Class rdf:about="#Fe_2plus">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Fe"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                        <owl:hasValue rdf:datatype="&xsd;int">3</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Fe_3plus -->
+
+    <owl:Class rdf:about="#Fe_3plus">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Fe"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#FerricChloride -->
+
+    <owl:Class rdf:about="#FerricChloride">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Cl_1minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-          <owl:Restriction>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-            >1</owl:cardinality>
-            <owl:valuesFrom>
-              <owl:Class rdf:ID="H_1plus"/>
-            </owl:valuesFrom>
-            <owl:onProperty>
-              <owl:ObjectProperty rdf:about="#hasComponent"/>
-            </owl:onProperty>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Fe_3plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">FeCl3</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#FerrousChloride -->
+
+    <owl:Class rdf:about="#FerrousChloride">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Cl_1minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-          <owl:Class rdf:ID="Molecule"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Fe_2plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
         </rdfs:subClassOf>
-      </chemistry:Water>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="SodiumHydroxide"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="SodiumChloride"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="PyridylGlycol"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Methan"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Molecule"/>
-    </rdfs:subClassOf>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >HCl</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:ID="Oxide">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Compound"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="Cation">
-    <rdfs:comment xml:lang="wikipedia">Cations are positively charged ions, formed when an atom loses electrons in a reaction.</rdfs:comment>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Ion"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="Mn">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="TransitionMetal"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="He_2plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:ID="hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >2</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#He"/>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Fe_3plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >3</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Fe"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Be_2plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >2</owl:hasValue>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Be"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#NobleGas">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="NonMetal"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#TransitionMetal"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="OtherNonMetal"/>
-    </owl:disjointWith>
-  </owl:Class>
-  <owl:Class rdf:ID="Hexose">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Monosaccharide"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#P">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#OtherNonMetal"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <rdfs:label xml:lang="en">Phosphorus</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="Br">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Halogen"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#Monosaccharide">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Carbohydrate"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="OrganicCompound">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Compound"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#NonMetal">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Atom"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="ChemicalElement">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="PhysicalMaterialEntity"/>
-    </rdfs:subClassOf>
-    <rdfs:comment xml:lang="en">A chemical element is a type of atom that is distinguished by its atomic number; that is, by the number of protons in its nucleus</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="#H_1plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:hasValue>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="H"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >H+</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="NucleicAcid">
-    <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
-  </owl:Class>
-  <owl:Class rdf:ID="MetabolicProcess">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="BiologicalProcess"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="Ba">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="AlkalineEarthMetal"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="F_1minus">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="AcidRadical"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Anion"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >-1</owl:hasValue>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="F"/>
-    </rdfs:subClassOf>
-    <rdfs:label xml:lang="en">Fluoride</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="Ca_2plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >2</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Ca"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="AlkaliMetal">
-    <owl:disjointWith>
-      <owl:Class rdf:about="#TransitionMetal"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#OtherNonMetal"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#NobleGas"/>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Lanthanide"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Halogen"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#AlkalineEarthMetal"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Metal"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#H">
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Li"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#O"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#N"/>
-    </owl:disjointWith>
-    <rdfs:label xml:lang="en">Hydrogen</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:FunctionalProperty rdf:about="#hasNumberOfProtons"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Ne"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Mg"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Na"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#OtherNonMetal"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith rdf:resource="#He"/>
-  </owl:Class>
-  <owl:Class rdf:about="#TransitionMetal">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Metal"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="P_3minus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >-3</owl:hasValue>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#P"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Anion"/>
-    </rdfs:subClassOf>
-    <rdfs:label xml:lang="en">Phosphide</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="#Ne">
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#O"/>
-    </owl:disjointWith>
-    <rdfs:label xml:lang="en">Neon</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#NobleGas"/>
-  </owl:Class>
-  <owl:Class rdf:about="#O">
-    <rdfs:label xml:lang="en">Oxygen</rdfs:label>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#P"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#OtherNonMetal"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:FunctionalProperty rdf:about="#hasNumberOfProtons"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >8</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#Anion">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Ion"/>
-    </rdfs:subClassOf>
-    <rdfs:comment xml:lang="wikipedia">Anions are negatively charged ions, formed when an atom gains electrons in a reaction.</rdfs:comment>
-    <owl:disjointWith rdf:resource="#Cation"/>
-  </owl:Class>
-  <owl:Class rdf:ID="FerricChloride">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Molecule"/>
-    </rdfs:subClassOf>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >&lt;p style="margin-top: 0"&gt;
-      FeCl3
-    &lt;/p&gt;</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="#Carbohydrate">
-    <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Mg_2plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >2</owl:hasValue>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Mg"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Atom">
-    <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:FunctionalProperty rdf:about="#hasNumberOfProtons"/>
-        </owl:onProperty>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-        >1</owl:minCardinality>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#AcidRadical">
-    <rdfs:subClassOf rdf:resource="#Anion"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Gốc axit</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="#N">
-    <owl:disjointWith rdf:resource="#P"/>
-    <rdfs:label xml:lang="en">Nitrogen</rdfs:label>
-    <owl:disjointWith rdf:resource="#O"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#OtherNonMetal"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:FunctionalProperty rdf:about="#hasNumberOfProtons"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >7</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Na"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-  </owl:Class>
-  <owl:Class rdf:about="#Ion">
-    <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-    <rdfs:comment xml:lang="en">An ion is an atom or molecule which has lost or gained one or more valence electrons, giving it a positive or negative electrical charge.</rdfs:comment>
-    <rdfs:comment xml:lang="chebi">An ion is a molecular structure having a net electric charge</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:ID="Transport">
-    <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Methan">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >4</owl:cardinality>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-        <owl:valuesFrom rdf:resource="#H"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:cardinality>
-        <owl:valuesFrom>
-          <owl:Class rdf:ID="C"/>
-        </owl:valuesFrom>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Molecule"/>
-    </rdfs:subClassOf>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >CH4</rdfs:comment>
-    <owl:disjointWith rdf:resource="#Water"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#SodiumHydroxide"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#SodiumChloride"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#PyridylGlycol"/>
-    </owl:disjointWith>
-  </owl:Class>
-  <owl:Class rdf:about="#OtherNonMetal">
-    <owl:disjointWith rdf:resource="#TransitionMetal"/>
-    <rdfs:subClassOf rdf:resource="#NonMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="MoleculeContainingMetal">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Molecule"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#Mg">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#AlkalineEarthMetal"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Na"/>
-    </owl:disjointWith>
-    <rdfs:label xml:lang="en">Magnesium</rdfs:label>
-    <owl:disjointWith rdf:resource="#N"/>
-    <owl:disjointWith rdf:resource="#O"/>
-  </owl:Class>
-  <owl:Class rdf:about="#SodiumHydroxide">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >NaOH</rdfs:comment>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Molecule"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith rdf:resource="#Water"/>
-  </owl:Class>
-  <owl:Class rdf:ID="SemiMetal">
-    <rdfs:subClassOf rdf:resource="#Atom"/>
-  </owl:Class>
-  <owl:Class rdf:about="#F">
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#He"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Li"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith rdf:resource="#O"/>
-    <rdfs:label xml:lang="en">Fluorine</rdfs:label>
-    <owl:disjointWith rdf:resource="#N"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Halogen"/>
-    </rdfs:subClassOf>
-    <owl:disjointWith rdf:resource="#H"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Na"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-  </owl:Class>
-  <owl:Class rdf:about="#Molecule">
-    <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-    <rdfs:comment xml:lang="wikipedia">A molecule is a sufficiently stable electrically neutral group of at least two atoms in a definite arrangement held together by very strong chemical bonds . It can also be defined as a unit of two or more atoms held together by covalent bonds.</rdfs:comment>
-    <rdfs:comment xml:lang="chebi">A molecule is an electrically neutral entity consisting of more than one atom.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:ID="MetalicIon">
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-    <owl:equivalentClass>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#Ion"/>
-          <owl:Class rdf:about="#Metal"/>
-        </owl:intersectionOf>
-      </owl:Class>
-    </owl:equivalentClass>
-  </owl:Class>
-  <owl:Class rdf:ID="Ag">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Metal">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >AlkaliMetal or AlkalineEarthMetal or TransitionMetal or SemiMetal or Actinide or Lanthanide</rdfs:comment>
-    <owl:disjointWith rdf:resource="#NonMetal"/>
-    <rdfs:subClassOf rdf:resource="#Atom"/>
-  </owl:Class>
-  <owl:Class rdf:about="#AlkalineEarthMetal">
-    <owl:disjointWith rdf:resource="#TransitionMetal"/>
-    <owl:disjointWith rdf:resource="#OtherNonMetal"/>
-    <owl:disjointWith rdf:resource="#NobleGas"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Lanthanide"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Halogen"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf rdf:resource="#Metal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="L-glucose">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Glucose"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#Halogen">
-    <owl:disjointWith rdf:resource="#TransitionMetal"/>
-    <owl:disjointWith rdf:resource="#OtherNonMetal"/>
-    <owl:disjointWith rdf:resource="#NobleGas"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Lanthanide"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf rdf:resource="#NonMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Aldohexose">
-    <owl:equivalentClass>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-          <owl:Class rdf:ID="Aldose"/>
-          <owl:Class rdf:about="#Hexose"/>
-        </owl:intersectionOf>
-      </owl:Class>
-    </owl:equivalentClass>
-  </owl:Class>
-  <owl:Class rdf:ID="Reaction"/>
-  <owl:Class rdf:about="#Na">
-    <rdfs:label xml:lang="en">Sodium</rdfs:label>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith rdf:resource="#O"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Actinide">
-    <rdfs:subClassOf rdf:resource="#Metal"/>
-    <owl:disjointWith rdf:resource="#TransitionMetal"/>
-    <owl:disjointWith rdf:resource="#OtherNonMetal"/>
-    <owl:disjointWith rdf:resource="#NobleGas"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Lanthanide"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#Halogen"/>
-    <owl:disjointWith rdf:resource="#AlkalineEarthMetal"/>
-    <owl:disjointWith rdf:resource="#AlkaliMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Ar">
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#N"/>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="B"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Be"/>
-    </owl:disjointWith>
-    <rdfs:label xml:lang="en">Argon</rdfs:label>
-    <owl:disjointWith rdf:resource="#H"/>
-    <rdfs:subClassOf rdf:resource="#NobleGas"/>
-    <owl:disjointWith rdf:resource="#He"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Li"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Cl"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <owl:disjointWith rdf:resource="#Na"/>
-    <owl:disjointWith rdf:resource="#F"/>
-    <owl:disjointWith rdf:resource="#O"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#C"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#P"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Li_1plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Li"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Cs">
-    <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Fe">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Aldose">
-    <rdfs:subClassOf rdf:resource="#Monosaccharide"/>
-  </owl:Class>
-  <owl:Class rdf:ID="S_2minus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >-2</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#S"/>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Anion"/>
-    <rdfs:label xml:lang="en">Sulfide</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="Base">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:minCardinality>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-        <owl:valuesFrom>
-          <owl:Class rdf:about="#OH_1minus"/>
-        </owl:valuesFrom>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Compound"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="Al_3plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >3</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Al"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#C">
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <owl:disjointWith rdf:resource="#Na"/>
-    <owl:disjointWith rdf:resource="#O"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:FunctionalProperty rdf:about="#hasNumberOfProtons"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >6</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith rdf:resource="#H"/>
-    <rdfs:label xml:lang="en">Carbon</rdfs:label>
-    <owl:disjointWith rdf:resource="#He"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Cl"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#F"/>
-    <owl:disjointWith rdf:resource="#N"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Li"/>
-    </owl:disjointWith>
-  </owl:Class>
-  <owl:Class rdf:about="#Ca">
-    <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Zn">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="PolyatomicIon">
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#Ion"/>
-          <owl:Class rdf:about="#Molecule"/>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Glucose">
-    <rdfs:subClassOf rdf:resource="#Molecule"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >C6h12O6</rdfs:comment>
-    <owl:disjointWith rdf:resource="#Water"/>
-    <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#SodiumChloride"/>
-    </owl:disjointWith>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#PyridylGlycol"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#Methan"/>
-    <owl:disjointWith rdf:resource="#HydrogenChloride"/>
-  </owl:Class>
-  <owl:Class rdf:ID="AcidixOxide">
-    <rdfs:subClassOf rdf:resource="#Oxide"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Li">
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#S"/>
-    </owl:disjointWith>
-    <rdfs:label xml:lang="en">Lithium</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#O"/>
-    <owl:disjointWith rdf:resource="#N"/>
-    <owl:disjointWith rdf:resource="#Na"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-  </owl:Class>
-  <owl:Class rdf:about="#S">
-    <rdfs:label xml:lang="en">Sulfur</rdfs:label>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:FunctionalProperty rdf:about="#hasNumberOfProtons"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >16</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Cr">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Hg">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="K">
-    <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="O_2minus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >-2</owl:hasValue>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#O"/>
-    <rdfs:subClassOf rdf:resource="#Anion"/>
-    <rdfs:label xml:lang="en">Oxide</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="MonoatomicIon">
-    <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#Atom"/>
-          <owl:Class rdf:about="#Ion"/>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#Be">
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Cl"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#O"/>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith rdf:resource="#Na"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#Si"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#C"/>
-    <owl:disjointWith rdf:resource="#N"/>
-    <owl:disjointWith rdf:resource="#H"/>
-    <rdfs:label xml:lang="en">Beryllium</rdfs:label>
-    <owl:disjointWith rdf:resource="#S"/>
-    <owl:disjointWith rdf:resource="#He"/>
-    <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
-    <owl:disjointWith rdf:resource="#Li"/>
-    <owl:disjointWith rdf:resource="#F"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Cl_1minus">
-    <rdfs:subClassOf rdf:resource="#AcidRadical"/>
-    <rdfs:subClassOf rdf:resource="#Anion"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >-1</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Cl"/>
-    </rdfs:subClassOf>
-    <rdfs:label xml:lang="en">Chloride</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="Lipid">
-    <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Cu">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Na_1plus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Na"/>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Rb">
-    <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="D-glucose">
-    <rdfs:subClassOf rdf:resource="#Glucose"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Compound">
-    <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Ti">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="SO4_2minus">
-    <rdfs:subClassOf rdf:resource="#AcidRadical"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >4</owl:cardinality>
-        <owl:valuesFrom rdf:resource="#O"/>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:valuesFrom rdf:resource="#S"/>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:cardinality>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#OH_1minus">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >-1</owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:cardinality>
-        <owl:valuesFrom rdf:resource="#H"/>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:cardinality>
-        <owl:valuesFrom rdf:resource="#O"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Anion"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Si">
-    <rdfs:label xml:lang="en">Silicon</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#SemiMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Au">
-    <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Fe_2plus">
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#Fe"/>
-          <owl:Restriction>
-            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-            >3</owl:hasValue>
-            <owl:onProperty>
-              <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-            </owl:onProperty>
-          </owl:Restriction>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Cation"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Cl">
-    <owl:disjointWith rdf:resource="#Li"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith rdf:resource="#Si"/>
-    <owl:disjointWith rdf:resource="#H"/>
-    <owl:disjointWith rdf:resource="#O"/>
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <owl:disjointWith rdf:resource="#Na"/>
-    <owl:disjointWith rdf:resource="#F"/>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith rdf:resource="#N"/>
-    <rdfs:subClassOf rdf:resource="#Halogen"/>
-    <rdfs:label xml:lang="en">Chlorine</rdfs:label>
-    <owl:disjointWith rdf:resource="#S"/>
-    <owl:disjointWith rdf:resource="#He"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Acid">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#hasComponent"/>
-        </owl:onProperty>
-        <owl:valuesFrom rdf:resource="#H_1plus"/>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1</owl:minCardinality>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Compound"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Lanthanide">
-    <rdfs:subClassOf rdf:resource="#Metal"/>
-    <owl:disjointWith rdf:resource="#TransitionMetal"/>
-    <owl:disjointWith rdf:resource="#OtherNonMetal"/>
-    <owl:disjointWith rdf:resource="#NobleGas"/>
-  </owl:Class>
-  <owl:Class rdf:about="#Al">
-    <owl:disjointWith rdf:resource="#Na"/>
-    <owl:disjointWith rdf:resource="#Cl"/>
-    <owl:disjointWith rdf:resource="#Ar"/>
-    <owl:disjointWith rdf:resource="#O"/>
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith rdf:resource="#He"/>
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <owl:disjointWith rdf:resource="#H"/>
-    <owl:disjointWith rdf:resource="#Li"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#B"/>
-    </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#Be"/>
-    <owl:disjointWith rdf:resource="#C"/>
-    <owl:disjointWith rdf:resource="#S"/>
-    <rdfs:subClassOf rdf:resource="#SemiMetal"/>
-    <owl:disjointWith rdf:resource="#Si"/>
-    <owl:disjointWith rdf:resource="#F"/>
-    <owl:disjointWith rdf:resource="#N"/>
-    <rdfs:label xml:lang="en">Aluminium</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:ID="Sr">
-    <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
-  </owl:Class>
-  <owl:Class rdf:ID="N_3minus">
-    <rdfs:label xml:lang="en">Nitride</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >-3</owl:hasValue>
-        <owl:onProperty>
-          <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#N"/>
-    <rdfs:subClassOf rdf:resource="#Anion"/>
-  </owl:Class>
-  <owl:Class rdf:ID="I">
-    <rdfs:subClassOf rdf:resource="#Halogen"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Protein">
-    <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
-  </owl:Class>
-  <owl:Class rdf:about="#B">
-    <owl:disjointWith rdf:resource="#P"/>
-    <owl:disjointWith rdf:resource="#Na"/>
-    <owl:disjointWith rdf:resource="#Cl"/>
-    <owl:disjointWith rdf:resource="#Be"/>
-    <owl:disjointWith rdf:resource="#N"/>
-    <owl:disjointWith rdf:resource="#S"/>
-    <owl:disjointWith rdf:resource="#Ne"/>
-    <owl:disjointWith rdf:resource="#Mg"/>
-    <rdfs:label xml:lang="en">Boron</rdfs:label>
-    <owl:disjointWith rdf:resource="#H"/>
-    <owl:disjointWith rdf:resource="#C"/>
-    <rdfs:subClassOf rdf:resource="#SemiMetal"/>
-    <owl:disjointWith rdf:resource="#He"/>
-    <owl:disjointWith rdf:resource="#Li"/>
-    <owl:disjointWith rdf:resource="#F"/>
-    <owl:disjointWith rdf:resource="#Si"/>
-    <owl:disjointWith rdf:resource="#O"/>
-  </owl:Class>
-  <owl:Class rdf:about="#PyridylGlycol">
-    <owl:disjointWith rdf:resource="#Water"/>
-    <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
-    <owl:disjointWith>
-      <owl:Class rdf:about="#SodiumChloride"/>
-    </owl:disjointWith>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >C24H24N4O4</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="#Molecule"/>
-  </owl:Class>
-  <owl:Class rdf:about="#SodiumChloride">
-    <rdfs:subClassOf rdf:resource="#Molecule"/>
-    <owl:disjointWith rdf:resource="#Water"/>
-    <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >NaCl</rdfs:comment>
-  </owl:Class>
-  <owl:ObjectProperty rdf:ID="hasReactant"/>
-  <owl:ObjectProperty rdf:ID="hasProduct">
-    <rdfs:domain rdf:resource="#Reaction"/>
-    <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="#hasComponent">
-    <rdfs:domain>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="#Molecule"/>
-          <owl:Class rdf:about="#Ion"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Thành phần của một chất hoặc Ion</rdfs:comment>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="isDirectPartOf">
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:ID="hasDirectPart"/>
-    </owl:inverseOf>
-    <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:ID="isPartOf"/>
-    </rdfs:subPropertyOf>
-    <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="creationOf">
-    <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:ID="actsOn"/>
-    </rdfs:subPropertyOf>
-    <rdfs:domain rdf:resource="#BiologicalProcess"/>
-    <rdfs:range rdf:resource="#Molecule"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="#hasDirectPart">
-    <rdfs:subPropertyOf>
-      <owl:TransitiveProperty rdf:ID="hasPart"/>
-    </rdfs:subPropertyOf>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="#actsOn">
-    <rdfs:range rdf:resource="#Molecule"/>
-    <rdfs:domain rdf:resource="#BiologicalProcess"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="destructionOf">
-    <rdfs:subPropertyOf rdf:resource="#actsOn"/>
-    <rdfs:range rdf:resource="#Molecule"/>
-    <rdfs:domain rdf:resource="#BiologicalProcess"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="#isPartOf">
-    <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
-    <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:ID="hasNumberOfElectrons"/>
-  <owl:DatatypeProperty rdf:ID="hasOxidationStates">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Số oxy hóa.</rdfs:comment>
-    <rdfs:domain rdf:resource="#Atom"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="hasName">
-    <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="hasNumberOfAtomics">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    <rdfs:domain rdf:resource="#Atom"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="DatatypeProperty_16">
-    <rdfs:domain rdf:resource="#Water"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="hasFormula">
-    <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    ></rdfs:comment>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="hasFoation"/>
-  <owl:DatatypeProperty rdf:about="#hasNumberElectrovalency">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    <rdfs:domain rdf:resource="#Ion"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="hasNumberAtomic">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Nguyên tử khối</rdfs:comment>
-  </owl:DatatypeProperty>
-  <owl:TransitiveProperty rdf:ID="produces">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </owl:TransitiveProperty>
-  <owl:TransitiveProperty rdf:about="#hasPart">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="#PhysicalMaterialEntity"/>
-    <owl:inverseOf rdf:resource="#isPartOf"/>
-    <rdfs:domain rdf:resource="#PhysicalMaterialEntity"/>
-  </owl:TransitiveProperty>
-  <owl:TransitiveProperty rdf:ID="joinWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </owl:TransitiveProperty>
-  <owl:FunctionalProperty rdf:about="#hasNumberOfProtons">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    <rdfs:domain rdf:resource="#ChemicalElement"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </owl:FunctionalProperty>
-  <owl:FunctionalProperty rdf:ID="hasNumberOfNeutrons">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    <rdfs:domain rdf:resource="#ChemicalElement"/>
-  </owl:FunctionalProperty>
-  <owl:Thing rdf:ID="Reaction_3">
-    <rdf:type rdf:resource="#Reaction"/>
-    <chemistry:hasReactant>
-      <owl:Thing rdf:ID="Hydrogen">
+        <rdfs:comment rdf:datatype="&xsd;string">FeCl2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#FerrousOxide -->
+
+    <owl:Class rdf:about="#FerrousOxide">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:comment rdf:datatype="&xsd;string">FeO</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Glucose -->
+
+    <owl:Class rdf:about="#Glucose">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <owl:disjointWith rdf:resource="#HydrogenChloride"/>
+        <owl:disjointWith rdf:resource="#Methan"/>
+        <owl:disjointWith rdf:resource="#PyridylGlycol"/>
+        <owl:disjointWith rdf:resource="#SodiumChloride"/>
+        <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
+        <owl:disjointWith rdf:resource="#Water"/>
+        <rdfs:comment rdf:datatype="&xsd;string">C6h12O6</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#H -->
+
+    <owl:Class rdf:about="#H">
+        <rdfs:label xml:lang="en">Hydrogen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
         <rdfs:subClassOf>
-          <owl:Restriction>
-            <owl:onProperty rdf:resource="#hasComponent"/>
-            <owl:valuesFrom rdf:resource="#H"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-            >2</owl:cardinality>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+            </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="#Molecule"/>
-        <rdf:type rdf:resource="#Hydrogen"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-      </owl:Thing>
-    </chemistry:hasReactant>
-    <chemistry:hasReactant>
-      <owl:Thing rdf:ID="FerrousOxide">
-        <rdfs:subClassOf rdf:resource="#Molecule"/>
-        <rdf:type rdf:resource="#FerrousOxide"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >FeO</rdfs:comment>
-      </owl:Thing>
-    </chemistry:hasReactant>
-    <chemistry:hasProduct rdf:resource="#Water"/>
-    <chemistry:hasProduct>
-      <owl:Thing rdf:ID="Iron">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >Fe</rdfs:comment>
-        <rdf:type rdf:resource="#Iron"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:subClassOf rdf:resource="#Molecule"/>
-      </owl:Thing>
-    </chemistry:hasProduct>
-  </owl:Thing>
-  <chemistry:Reaction rdf:ID="Reaction_2">
-    <chemistry:hasProduct rdf:resource="#Hydrogen"/>
-    <chemistry:hasProduct>
-      <owl:Thing rdf:ID="FerrousChloride">
-        <rdfs:subClassOf rdf:resource="#Molecule"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >FeCl2</rdfs:comment>
-        <rdf:type rdf:resource="#FerrousChloride"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-      </owl:Thing>
-    </chemistry:hasProduct>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <chemistry:hasReactant rdf:resource="#Iron"/>
-    <chemistry:hasReactant>
-      <chemistry:HydrogenChloride rdf:ID="HydroChloride">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </chemistry:HydrogenChloride>
-    </chemistry:hasReactant>
-  </chemistry:Reaction>
-  <rdf:Description rdf:ID="datatypeProperty_9">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Tên hóa học</rdfs:comment>
-  </rdf:Description>
-  <chemistry:MoleculeContainingMetal rdf:ID="MoleculeContainingMetal_5">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </chemistry:MoleculeContainingMetal>
-  <owl:Thing rdf:ID="Reaction_4">
-    <chemistry:hasReactant>
-      <owl:Thing rdf:ID="Rust">
-        <rdfs:subClassOf rdf:resource="#Molecule"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >Fe2O3</rdfs:comment>
-        <rdf:type rdf:resource="#Rust"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-      </owl:Thing>
-    </chemistry:hasReactant>
-    <chemistry:hasReactant rdf:resource="#HydroChloride"/>
-    <rdf:type rdf:resource="#Reaction"/>
-    <chemistry:hasProduct rdf:resource="#Water"/>
-    <chemistry:hasProduct>
-      <owl:Thing rdf:ID="FerricChloride_1">
-        <rdf:type rdf:resource="#FerricChloride"/>
-      </owl:Thing>
-    </chemistry:hasProduct>
-  </owl:Thing>
-  <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-1">
-    <swrl:head>
-      <swrl:AtomList>
-        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        <rdf:first>
-          <swrl:IndividualPropertyAtom>
-            <swrl:argument2>
-              <swrl:Variable rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction1"/>
-            </swrl:argument2>
-            <swrl:argument1>
-              <swrl:Variable rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
-            </swrl:argument1>
-            <swrl:propertyPredicate rdf:resource="#joinWith"/>
-          </swrl:IndividualPropertyAtom>
-        </rdf:first>
-      </swrl:AtomList>
-    </swrl:head>
-    <swrl:body>
-      <swrl:AtomList>
-        <rdf:first>
-          <swrl:IndividualPropertyAtom>
-            <swrl:argument1>
-              <swrl:Variable rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-            </swrl:argument1>
-            <swrl:argument2>
-              <swrl:Variable rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/y"/>
-            </swrl:argument2>
-            <swrl:propertyPredicate rdf:resource="#hasProduct"/>
-          </swrl:IndividualPropertyAtom>
-        </rdf:first>
-        <rdf:rest>
-          <swrl:AtomList>
-            <rdf:rest>
-              <swrl:AtomList>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                <rdf:first>
-                  <swrl:IndividualPropertyAtom>
-                    <swrl:propertyPredicate rdf:resource="#joinWith"/>
-                    <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/y"/>
-                    <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction1"/>
-                  </swrl:IndividualPropertyAtom>
-                </rdf:first>
-              </swrl:AtomList>
-            </rdf:rest>
-            <rdf:first>
-              <swrl:IndividualPropertyAtom>
-                <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-                <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
-                <swrl:propertyPredicate rdf:resource="#joinWith"/>
-              </swrl:IndividualPropertyAtom>
-            </rdf:first>
-          </swrl:AtomList>
-        </rdf:rest>
-      </swrl:AtomList>
-    </swrl:body>
-  </swrl:Imp>
-  <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-2">
-    <swrl:body>
-      <swrl:AtomList>
-        <rdf:first>
-          <swrl:IndividualPropertyAtom>
-            <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
-            <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-            <swrl:propertyPredicate rdf:resource="#hasReactant"/>
-          </swrl:IndividualPropertyAtom>
-        </rdf:first>
-        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-      </swrl:AtomList>
-    </swrl:body>
-    <swrl:head>
-      <swrl:AtomList>
-        <rdf:first>
-          <swrl:IndividualPropertyAtom>
-            <swrl:propertyPredicate rdf:resource="#joinWith"/>
-            <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
-            <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-          </swrl:IndividualPropertyAtom>
-        </rdf:first>
-        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-      </swrl:AtomList>
-    </swrl:head>
-  </swrl:Imp>
-  <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-3">
-    <swrl:body>
-      <swrl:AtomList>
-        <rdf:first>
-          <swrl:ClassAtom>
-            <swrl:classPredicate rdf:resource="#Molecule"/>
-            <swrl:argument1>
-              <swrl:Variable rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/a"/>
-            </swrl:argument1>
-          </swrl:ClassAtom>
-        </rdf:first>
-        <rdf:rest>
-          <swrl:AtomList>
-            <rdf:first>
-              <swrl:ClassAtom>
-                <swrl:classPredicate rdf:resource="#Molecule"/>
-                <swrl:argument1>
-                  <swrl:Variable rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/b"/>
-                </swrl:argument1>
-              </swrl:ClassAtom>
-            </rdf:first>
-            <rdf:rest>
-              <swrl:AtomList>
-                <rdf:rest>
-                  <swrl:AtomList>
-                    <rdf:rest>
-                      <swrl:AtomList>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                        <rdf:first>
-                          <swrl:IndividualPropertyAtom>
-                            <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-                            <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/a"/>
-                            <swrl:propertyPredicate rdf:resource="#hasReactant"/>
-                          </swrl:IndividualPropertyAtom>
-                        </rdf:first>
-                      </swrl:AtomList>
-                    </rdf:rest>
-                    <rdf:first>
-                      <swrl:IndividualPropertyAtom>
-                        <swrl:propertyPredicate rdf:resource="#hasProduct"/>
-                        <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/b"/>
-                        <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-                      </swrl:IndividualPropertyAtom>
-                    </rdf:first>
-                  </swrl:AtomList>
-                </rdf:rest>
-                <rdf:first>
-                  <swrl:ClassAtom>
-                    <swrl:classPredicate rdf:resource="#Reaction"/>
-                    <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-                  </swrl:ClassAtom>
-                </rdf:first>
-              </swrl:AtomList>
-            </rdf:rest>
-          </swrl:AtomList>
-        </rdf:rest>
-      </swrl:AtomList>
-    </swrl:body>
-    <swrl:head>
-      <swrl:AtomList>
-        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        <rdf:first>
-          <swrl:IndividualPropertyAtom>
-            <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/b"/>
-            <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/a"/>
-            <swrl:propertyPredicate rdf:resource="#produces"/>
-          </swrl:IndividualPropertyAtom>
-        </rdf:first>
-      </swrl:AtomList>
-    </swrl:head>
-  </swrl:Imp>
-  <swrl:Imp rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/ontology/nullRule-4">
-    <swrl:head>
-      <swrl:AtomList>
-        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        <rdf:first>
-          <swrl:IndividualPropertyAtom>
-            <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-            <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/y"/>
-            <swrl:propertyPredicate rdf:resource="#produces"/>
-          </swrl:IndividualPropertyAtom>
-        </rdf:first>
-      </swrl:AtomList>
-    </swrl:head>
-    <swrl:body>
-      <swrl:AtomList>
-        <rdf:first>
-          <swrl:IndividualPropertyAtom>
-            <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/reaction"/>
-            <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
-            <swrl:propertyPredicate rdf:resource="#hasProduct"/>
-          </swrl:IndividualPropertyAtom>
-        </rdf:first>
-        <rdf:rest>
-          <swrl:AtomList>
-            <rdf:first>
-              <swrl:IndividualPropertyAtom>
-                <swrl:propertyPredicate rdf:resource="#produces"/>
-                <swrl:argument1 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/x"/>
-                <swrl:argument2 rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/ontology/y"/>
-              </swrl:IndividualPropertyAtom>
-            </rdf:first>
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </swrl:AtomList>
-        </rdf:rest>
-      </swrl:AtomList>
-    </swrl:body>
-  </swrl:Imp>
-  <chemistry:Reaction rdf:ID="Reaction-FeO">
-    <chemistry:hasProduct rdf:resource="#FerrousOxide"/>
-    <chemistry:hasReactant>
-      <chemistry:Oxygen rdf:ID="Oxygen">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:disjointWith rdf:resource="#He"/>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#H_1plus -->
+
+    <owl:Class rdf:about="#H_1plus">
+        <rdfs:label rdf:datatype="&xsd;string">H+</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#H"/>
         <rdfs:subClassOf>
-          <owl:Restriction>
-            <owl:valuesFrom rdf:resource="#O"/>
-            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-            >2</owl:cardinality>
-            <owl:onProperty rdf:resource="#hasComponent"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+            </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Halogen -->
+
+    <owl:Class rdf:about="#Halogen">
+        <rdfs:subClassOf rdf:resource="#NonMetal"/>
+        <owl:disjointWith rdf:resource="#Lanthanide"/>
+        <owl:disjointWith rdf:resource="#NobleGas"/>
+        <owl:disjointWith rdf:resource="#OtherNonMetal"/>
+        <owl:disjointWith rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#He -->
+
+    <owl:Class rdf:about="#He">
+        <rdfs:label xml:lang="en">Helium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NobleGas"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Li"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#He_2plus -->
+
+    <owl:Class rdf:about="#He_2plus">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#He"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Hexose -->
+
+    <owl:Class rdf:about="#Hexose">
+        <rdfs:subClassOf rdf:resource="#Monosaccharide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Hg -->
+
+    <owl:Class rdf:about="#Hg">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Hydrogen -->
+
+    <owl:Class rdf:about="#Hydrogen">
         <rdfs:subClassOf rdf:resource="#Molecule"/>
-      </chemistry:Oxygen>
-    </chemistry:hasReactant>
-    <chemistry:hasReactant rdf:resource="#Iron"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </chemistry:Reaction>
-  <chemistry:Reaction rdf:ID="Reaction-Fe2O3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <chemistry:hasReactant rdf:resource="#Oxygen"/>
-    <chemistry:hasReactant rdf:resource="#Iron"/>
-    <chemistry:hasProduct rdf:resource="#Rust"/>
-  </chemistry:Reaction>
-  <chemistry:Reaction rdf:ID="Reaction_1">
-    <chemistry:hasProduct rdf:resource="#Water"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <chemistry:hasReactant rdf:resource="#Oxygen"/>
-    <chemistry:hasReactant rdf:resource="#Hydrogen"/>
-  </chemistry:Reaction>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#HydrogenChloride -->
+
+    <owl:Class rdf:about="#HydrogenChloride">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#H_1plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Cl_1minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Methan"/>
+        <owl:disjointWith rdf:resource="#PyridylGlycol"/>
+        <owl:disjointWith rdf:resource="#SodiumChloride"/>
+        <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
+        <owl:disjointWith rdf:resource="#Water"/>
+        <rdfs:comment rdf:datatype="&xsd;string">HCl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#I -->
+
+    <owl:Class rdf:about="#I">
+        <rdfs:subClassOf rdf:resource="#Halogen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ion -->
+
+    <owl:Class rdf:about="#Ion">
+        <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:comment xml:lang="chebi"
+            >An ion is a molecular structure having a net electric charge</rdfs:comment>
+        <rdfs:comment xml:lang="en"
+            >An ion is an atom or molecule which has lost or gained one or more valence electrons, giving it a positive or negative electrical charge.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#K -->
+
+    <owl:Class rdf:about="#K">
+        <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#L-glucose -->
+
+    <owl:Class rdf:about="#L-glucose">
+        <rdfs:subClassOf rdf:resource="#Glucose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Lanthanide -->
+
+    <owl:Class rdf:about="#Lanthanide">
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+        <owl:disjointWith rdf:resource="#NobleGas"/>
+        <owl:disjointWith rdf:resource="#OtherNonMetal"/>
+        <owl:disjointWith rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Li -->
+
+    <owl:Class rdf:about="#Li">
+        <rdfs:label xml:lang="en">Lithium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
+        <owl:disjointWith rdf:resource="#Mg"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Li_1plus -->
+
+    <owl:Class rdf:about="#Li_1plus">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Li"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Lipid -->
+
+    <owl:Class rdf:about="#Lipid">
+        <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#MetabolicProcess -->
+
+    <owl:Class rdf:about="#MetabolicProcess">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Metal -->
+
+    <owl:Class rdf:about="#Metal">
+        <rdfs:subClassOf rdf:resource="#Atom"/>
+        <owl:disjointWith rdf:resource="#NonMetal"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >AlkaliMetal or AlkalineEarthMetal or TransitionMetal or SemiMetal or Actinide or Lanthanide</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#MetalicIon -->
+
+    <owl:Class rdf:about="#MetalicIon">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Ion"/>
+                    <rdf:Description rdf:about="#Metal"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Methan -->
+
+    <owl:Class rdf:about="#Methan">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <owl:disjointWith rdf:resource="#PyridylGlycol"/>
+        <owl:disjointWith rdf:resource="#SodiumChloride"/>
+        <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
+        <owl:disjointWith rdf:resource="#Water"/>
+        <rdfs:comment rdf:datatype="&xsd;string">CH4</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Mg -->
+
+    <owl:Class rdf:about="#Mg">
+        <rdfs:label xml:lang="en">Magnesium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
+        <owl:disjointWith rdf:resource="#N"/>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Mg_2plus -->
+
+    <owl:Class rdf:about="#Mg_2plus">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Mg"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Mn -->
+
+    <owl:Class rdf:about="#Mn">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Molecule -->
+
+    <owl:Class rdf:about="#Molecule">
+        <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:comment xml:lang="chebi"
+            >A molecule is an electrically neutral entity consisting of more than one atom.</rdfs:comment>
+        <rdfs:comment xml:lang="wikipedia"
+            >A molecule is a sufficiently stable electrically neutral group of at least two atoms in a definite arrangement held together by very strong chemical bonds . It can also be defined as a unit of two or more atoms held together by covalent bonds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#MonoatomicIon -->
+
+    <owl:Class rdf:about="#MonoatomicIon">
+        <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Atom"/>
+                    <rdf:Description rdf:about="#Ion"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Monosaccharide -->
+
+    <owl:Class rdf:about="#Monosaccharide">
+        <rdfs:subClassOf rdf:resource="#Carbohydrate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#N -->
+
+    <owl:Class rdf:about="#N">
+        <rdfs:label xml:lang="en">Nitrogen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Na"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#N_3minus -->
+
+    <owl:Class rdf:about="#N_3minus">
+        <rdfs:label xml:lang="en">Nitride</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:subClassOf rdf:resource="#N"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Na -->
+
+    <owl:Class rdf:about="#Na">
+        <rdfs:label xml:lang="en">Sodium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
+        <owl:disjointWith rdf:resource="#Ne"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Na_1plus -->
+
+    <owl:Class rdf:about="#Na_1plus">
+        <rdfs:subClassOf rdf:resource="#Cation"/>
+        <rdfs:subClassOf rdf:resource="#Na"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ne -->
+
+    <owl:Class rdf:about="#Ne">
+        <rdfs:label xml:lang="en">Neon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NobleGas"/>
+        <owl:disjointWith rdf:resource="#O"/>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#NobleGas -->
+
+    <owl:Class rdf:about="#NobleGas">
+        <rdfs:subClassOf rdf:resource="#NonMetal"/>
+        <owl:disjointWith rdf:resource="#OtherNonMetal"/>
+        <owl:disjointWith rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#NonMetal -->
+
+    <owl:Class rdf:about="#NonMetal">
+        <rdfs:subClassOf rdf:resource="#Atom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#NucleicAcid -->
+
+    <owl:Class rdf:about="#NucleicAcid">
+        <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#O -->
+
+    <owl:Class rdf:about="#O">
+        <rdfs:label xml:lang="en">Oxygen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">8</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#P"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#OH_1minus -->
+
+    <owl:Class rdf:about="#OH_1minus">
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#O_2minus -->
+
+    <owl:Class rdf:about="#O_2minus">
+        <rdfs:label xml:lang="en">Oxide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:subClassOf rdf:resource="#O"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#OrganicCompound -->
+
+    <owl:Class rdf:about="#OrganicCompound">
+        <rdfs:subClassOf rdf:resource="#Compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#OtherNonMetal -->
+
+    <owl:Class rdf:about="#OtherNonMetal">
+        <rdfs:subClassOf rdf:resource="#NonMetal"/>
+        <owl:disjointWith rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Oxide -->
+
+    <owl:Class rdf:about="#Oxide">
+        <rdfs:subClassOf rdf:resource="#Compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Oxygen -->
+
+    <owl:Class rdf:about="#Oxygen">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#O"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ozone -->
+
+    <owl:Class rdf:about="#Ozone">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#O"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#P -->
+
+    <owl:Class rdf:about="#P">
+        <rdfs:label xml:lang="en">Phosphorus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
+        <owl:disjointWith rdf:resource="#S"/>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#P_3minus -->
+
+    <owl:Class rdf:about="#P_3minus">
+        <rdfs:label xml:lang="en">Phosphide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:subClassOf rdf:resource="#P"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#PhysicalMaterialEntity -->
+
+    <owl:Class rdf:about="#PhysicalMaterialEntity"/>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#PolyatomicIon -->
+
+    <owl:Class rdf:about="#PolyatomicIon">
+        <rdfs:subClassOf rdf:resource="#PhysicalMaterialEntity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Ion"/>
+                    <rdf:Description rdf:about="#Molecule"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Protein -->
+
+    <owl:Class rdf:about="#Protein">
+        <rdfs:subClassOf rdf:resource="#OrganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#PyridylGlycol -->
+
+    <owl:Class rdf:about="#PyridylGlycol">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <owl:disjointWith rdf:resource="#SodiumChloride"/>
+        <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
+        <owl:disjointWith rdf:resource="#Water"/>
+        <rdfs:comment rdf:datatype="&xsd;string">C24H24N4O4</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Rb -->
+
+    <owl:Class rdf:about="#Rb">
+        <rdfs:subClassOf rdf:resource="#AlkaliMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Reaction -->
+
+    <owl:Class rdf:about="#Reaction"/>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Rust -->
+
+    <owl:Class rdf:about="#Rust">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Fe_3plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#O_2minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">Fe2O3</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#S -->
+
+    <owl:Class rdf:about="#S">
+        <rdfs:label xml:lang="en">Sulfur</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OtherNonMetal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberOfProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">16</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Si"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#SO4_2minus -->
+
+    <owl:Class rdf:about="#SO4_2minus">
+        <rdfs:subClassOf rdf:resource="#AcidRadical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#S_2minus -->
+
+    <owl:Class rdf:about="#S_2minus">
+        <rdfs:label xml:lang="en">Sulfide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Anion"/>
+        <rdfs:subClassOf rdf:resource="#S"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Salt -->
+
+    <owl:Class rdf:about="#Salt">
+        <rdfs:subClassOf rdf:resource="#Compound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Cation"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#AcidRadical"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#SemiMetal -->
+
+    <owl:Class rdf:about="#SemiMetal">
+        <rdfs:subClassOf rdf:resource="#Atom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Si -->
+
+    <owl:Class rdf:about="#Si">
+        <rdfs:label xml:lang="en">Silicon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SemiMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#SodiumChloride -->
+
+    <owl:Class rdf:about="#SodiumChloride">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Cl_1minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#Na_1plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#SodiumHydroxide"/>
+        <owl:disjointWith rdf:resource="#Water"/>
+        <rdfs:comment rdf:datatype="&xsd;string">NaCl</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#SodiumHydroxide -->
+
+    <owl:Class rdf:about="#SodiumHydroxide">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <owl:disjointWith rdf:resource="#Water"/>
+        <rdfs:comment rdf:datatype="&xsd;string">NaOH</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Sr -->
+
+    <owl:Class rdf:about="#Sr">
+        <rdfs:subClassOf rdf:resource="#AlkalineEarthMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Ti -->
+
+    <owl:Class rdf:about="#Ti">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#TransitionMetal -->
+
+    <owl:Class rdf:about="#TransitionMetal">
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Transport -->
+
+    <owl:Class rdf:about="#Transport">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Water -->
+
+    <owl:Class rdf:about="#Water">
+        <rdfs:subClassOf rdf:resource="#Molecule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#OH_1minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasComponent"/>
+                <owl:onClass rdf:resource="#H_1plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">H2O</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#Zn -->
+
+    <owl:Class rdf:about="#Zn">
+        <rdfs:subClassOf rdf:resource="#TransitionMetal"/>
+    </owl:Class>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.4.3, Build 572)  http://protege.stanford.edu -->
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
