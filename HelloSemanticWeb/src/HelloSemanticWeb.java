@@ -44,11 +44,13 @@ public class HelloSemanticWeb {
 		//OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_DL_MEM_RDFS_INF);
         // we have a local copy of the wine ontology
         
-        m.getDocumentManager().addAltEntry( "file:Ontologies/chemistryv2.owl",
-                                            "file:Ontologies/chemistryv2.owl" );
+        m.getDocumentManager().addAltEntry( "file:Ontologies/chemistry4_1.owl",
+                                           "file:Ontologies/chemistryv4_1.owl" );
         
 
-        m.read( "file:Ontologies/chemistryv2.owl",null, "RDF/XML" );
+        m.read( "file:Ontologies/chemistryv4_1.owl",null, "RDF/XML" );
+        
+              	
         
        
         
@@ -56,7 +58,10 @@ public class HelloSemanticWeb {
         
         System.out.println("\nSay Hello to Myself");
 		//hello.mySelf(m);
-        hello.produceElement(m);
+        //hello.produceElement(m);
+        //hello.reactionChain(m);
+        hello.askChemical(m);
+        
         
 	}
 	
@@ -95,11 +100,41 @@ public class HelloSemanticWeb {
 				"SELECT ?formulaReactant ?formulaProduct " +
 				"WHERE { " +
 				"?reactant chemistry:produces ?product." +
-				"?reactant rdf:type chemistry:Oxygen. " +
-				
+				"?reactant rdf:type chemistry:Iron. " +
+				"?product rdf:type chemistry:MoleculeContainingMetal. " +
 				"?reactant chemistry:hasFormula ?formulaReactant." +
 				"?product chemistry:hasFormula ?formulaProduct." +
 				
+				"}", model);  //add the query string" +
+	}
+	
+	private void reactionChain(Model model)
+	{
+		runQuery("PREFIX chemistry: <http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#> " +
+				"SELECT ?reaction " +
+				"WHERE {" +
+				//"?a chemistry:produces ?reaction. " +
+				"?a chemistry:joinWith ?reaction . " +
+				"?reaction chemistry:produces ?b." +
+				"?reaction rdf:type chemistry:Reaction. " +
+				"?a rdf:type chemistry:Iron. " +
+				//"?a chemistry:produces ?b . " +
+				"?b  rdf:type chemistry:FerricChloride " +
+				//"  FILTER (?c != ?a) " +
+				
+				"}", model);  //add the query string" +
+	}
+	
+	private void askChemical(Model model)
+	{
+		runQuery("PREFIX chemistry: <http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#> " +
+				"SELECT ?chemical " +
+				"WHERE {" +
+				//"?chemical rdfs:subClassOf chemistry:Molecule. " +
+				//"?chemical rdfs:subClassOf ?class. " +
+				//"?class owl:sameAs chemistry:Acid. " +
+				"?chemical rdfs:subClassOf chemistry:Molecule. " +
+								
 				"}", model);  //add the query string" +
 	}
 	
@@ -107,7 +142,7 @@ public class HelloSemanticWeb {
 	private void runQuery(String queryRequest, Model model){
 		
 		StringBuffer queryStr = new StringBuffer();
-		// Establish Prefixes
+		// Establish Prefixe
 		//Set default Name space first
 		queryStr.append("PREFIX people" + ": <" + defaultNameSpace + "> ");
 		queryStr.append("PREFIX rdfs" + ": <" + "http://www.w3.org/2000/01/rdf-schema#" + "> ");
@@ -121,21 +156,21 @@ public class HelloSemanticWeb {
 		QueryExecution qexec = QueryExecutionFactory.create(query, model);
 		try {
 		ResultSet response = qexec.execSelect();
-		
-		Vector<RDFNode> product = new Vector<RDFNode>();
-		Vector<RDFNode> reactant = new Vector<RDFNode>();
+		System.out.println("\nQuery done");
+		//Vector<RDFNode> product = new Vector<RDFNode>();
+		//Vector<RDFNode> reactant = new Vector<RDFNode>();
 		Vector<RDFNode> reaction = new Vector<RDFNode>(); 
 		
 		//RDFNode reaction, reactant, product;
 		
 		while( response.hasNext()){
 			QuerySolution soln = response.nextSolution();
-			System.out.println(soln.hashCode() + "\n");
-			RDFNode name = soln.get("?formulaProduct");
-			RDFNode name1 = soln.get("?formulaReactant");
-			//RDFNode name2 = soln.get("?reaction");
-
-			System.out.println("P: " + name.toString());
+			//System.out.println(soln.hashCode() + "\n");
+			//RDFNode name = soln.get("?formulaProduct");
+			//RDFNode name1 = soln.get("?formulaReactant");
+			RDFNode name2 = soln.get("?chemical");
+			System.out.println(soln.varNames().next().toString());
+			/*System.out.println("P: " + name.toString());
 			if(!product.contains(name))
 				product.add(name);
 
@@ -143,31 +178,31 @@ public class HelloSemanticWeb {
 			if(!reactant.contains(name1))
 			{
 				reactant.add(name1);
-			}
+			}*/
 			
-			/*System.out.println("R: " + name2.toString());
-			if(!reaction.contains(name2))
+			System.out.println("R: " + name2.toString());
+			//if(!reaction.contains(name2))
 			{
 				reaction.add(name2);
-			}*/
+			}
 		}
-		/*
+		
 		System.out.print("Reaction : ");
 		for (RDFNode node : reaction) {
 			System.out.println(node.toString() + " ");
-		}*/
-		
+		}
+		/*
 		System.out.print("Reactant : ");
 		for (RDFNode node : reactant) {
-			System.out.println(node.toString() + " ");
+			System.out.println(node.asNode().getLiteral().getLexicalForm() + " ");
 		}
 		
 		System.out.println("");
 		
 		System.out.print("Product : ");
 		for (RDFNode node : product) {
-			System.out.println(node.toString() + " ");
-		}
+			System.out.println(node.asNode().getLiteral().getLexicalForm() + " ");
+		}*/
 		
 		
 		
