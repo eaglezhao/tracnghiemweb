@@ -25,6 +25,7 @@ import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.reasoner.ValidityReport;
 import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
 import com.hp.hpl.jena.reasoner.rulesys.Rule;
+import com.hp.hpl.jena.reasoner.transitiveReasoner.TransitiveReasoner;
 import com.hp.hpl.jena.util.FileManager;
 
 
@@ -35,20 +36,20 @@ public class HelloSemanticWeb {
 	Model schema = null;
 	InfModel inferredFriends = null;
 
-	public static void main(String[] args) throws IOException {
+	public static void mainRun(String[] args) throws IOException {
 		
 		Reasoner reasoner =	PelletReasonerFactory.theInstance().create();
+		//Reasoner reasoner = new TransitiveReasoner();
 		Model infModel = ModelFactory.createInfModel(reasoner, ModelFactory.createDefaultModel());
 				
-		OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_DL_MEM, infModel );
+		OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_MEM_RULE_INF, infModel );
 		//OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_DL_MEM_RDFS_INF);
-        // we have a local copy of the wine ontology
+        //we have a local copy of the wine ontology
         
-        m.getDocumentManager().addAltEntry( "file:Ontologies/chemistry4_1.owl",
-                                           "file:Ontologies/chemistryv4_1.owl" );
-        
-
-        m.read( "file:Ontologies/chemistryv4_1.owl",null, "RDF/XML" );
+        m.getDocumentManager().addAltEntry(
+        		"file:Ontologies/chemistryv4_1.owl",
+                "file:Ontologies/chemistryv4_1.owl");
+        m.read( "file:Ontologies/chemistryv4_1.owl",null, "RDF/XML-ABBREV" );
         
               	
         
@@ -130,10 +131,10 @@ public class HelloSemanticWeb {
 		runQuery("PREFIX chemistry: <http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#> " +
 				"SELECT ?chemical " +
 				"WHERE {" +
-				//"?chemical rdfs:subClassOf chemistry:Molecule. " +
+				"?chemical rdf:type chemistry:Acid. " +
 				//"?chemical rdfs:subClassOf ?class. " +
 				//"?class owl:sameAs chemistry:Acid. " +
-				"?chemical rdfs:subClassOf chemistry:Molecule. " +
+				//"?class owl:equivalentTo chemistry:Acid. " +
 								
 				"}", model);  //add the query string" +
 	}
@@ -165,11 +166,12 @@ public class HelloSemanticWeb {
 		
 		while( response.hasNext()){
 			QuerySolution soln = response.nextSolution();
+			System.out.println(1);
 			//System.out.println(soln.hashCode() + "\n");
 			//RDFNode name = soln.get("?formulaProduct");
 			//RDFNode name1 = soln.get("?formulaReactant");
 			RDFNode name2 = soln.get("?chemical");
-			System.out.println(soln.varNames().next().toString());
+			//System.out.println(soln.varNames().next().toString());
 			/*System.out.println("P: " + name.toString());
 			if(!product.contains(name))
 				product.add(name);
@@ -180,7 +182,7 @@ public class HelloSemanticWeb {
 				reactant.add(name1);
 			}*/
 			
-			System.out.println("R: " + name2.toString());
+			//System.out.println("R: " + name2.toString());
 			//if(!reaction.contains(name2))
 			{
 				reaction.add(name2);
@@ -188,6 +190,7 @@ public class HelloSemanticWeb {
 		}
 		
 		System.out.print("Reaction : ");
+		if (!reaction.isEmpty())
 		for (RDFNode node : reaction) {
 			System.out.println(node.toString() + " ");
 		}
@@ -205,10 +208,10 @@ public class HelloSemanticWeb {
 		}*/
 		
 		
+		} finally { qexec.close();}		
 		
-		System.out.println("");
 		
-		} finally { qexec.close();}				
+		System.out.println("Done");		
 	}
 		
 }
