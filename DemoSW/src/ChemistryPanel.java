@@ -63,7 +63,7 @@ public class ChemistryPanel extends JFrame
 	{
 		Collections.sort(vector);
 		Vector<String> names = new Vector<String>();
-		for (String string : vector) names.add(HTMLShow.formatName(string));
+		for (String string : vector) names.add(string);//HTMLShow.formatName(string)
 		this.listReturn.setListData(names);
 	}
 }
