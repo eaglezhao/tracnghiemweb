@@ -27,7 +27,7 @@ public class HTMLShow
 	
 static String numberRome [] = new String [] {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"}; 
 	
-	public static Vector<String> formatFormula (String formula)
+	public static String formatFormula (String formula)
 	{
 		Vector<String> s = new Vector<String>();
 		String tempNumber = "";
@@ -47,11 +47,29 @@ static String numberRome [] = new String [] {"", "I", "II", "III", "IV", "V", "V
 				if (Character.isUpperCase(d)) {s.add(tempName); tempName = "";}
 				tempName += d;
 			}
-			else s.add("" + d);
+			else
+			{
+				if (tempName != "") {s.add(tempName); tempName = "";}
+				else if (tempNumber != "") {s.add(tempNumber); tempNumber = "";}
+				s.add("" + d);
+			}
 		}
 		if (tempName != "") s.add(tempName);
 		if (tempNumber != "") s.add(tempNumber);
-		return s;
+		
+		String html = "<html> <font size=\"6\">";
+		
+		for (String string : s)
+		{
+			if (string == "") continue;
+			if (Character.isDigit(string.charAt(0))) html += subNumber(string);
+			else if (Character.isLetter(string.charAt(0))) html += symbol(string);
+			else html += string;
+			
+		}
+		html += "</font> </html>";
+		
+		return html;
 	}
 	
 	public static String formatName (String name)

@@ -59,11 +59,14 @@ public class ChemistryPanel extends JFrame
 	}
 	
 	public void setContentQuery (String query) {this.textQuery.setText(query);}	
-	public void setContentReturn (Vector<String> vector)
+	public void setContentReturn (Vector<String> vector, int type)
 	{
 		Collections.sort(vector);
 		Vector<String> names = new Vector<String>();
-		for (String string : vector) names.add(string);//HTMLShow.formatName(string)
+		
+		if (type == 1) for (String string : vector) names.add(HTMLShow.formatFormula(string));
+		else if (type == 2) for (String string : vector) names.add(HTMLShow.formatName(string));
+		
 		this.listReturn.setListData(names);
 	}
 }
