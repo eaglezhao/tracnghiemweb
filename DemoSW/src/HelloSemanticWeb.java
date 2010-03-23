@@ -6,10 +6,6 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import org.mindswap.pellet.jena.PelletReasonerFactory;
-
-
-
-
 import com.hp.hpl.jena.Jena;
 import com.hp.hpl.jena.ontology.OntDocumentManager;
 import com.hp.hpl.jena.ontology.OntModel;

@@ -15,7 +15,6 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.reasoner.Reasoner;
 
-
 public class QueryCollection {
 	Reasoner reasoner;
 	Model infModel;
