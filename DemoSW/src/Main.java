@@ -10,8 +10,7 @@ public class Main
 	public static void main(String[] args)
 	{
 
-		query.moleculeList();
 		panel.setContentQuery(query.getQueryString(query.MOLECULE_LIST));
-		panel.setContentReturn(query.queryString(query.MOLECULE_LIST));
+		panel.setContentReturn(query.getQueryResult(query.MOLECULE_LIST));
 	}
 }

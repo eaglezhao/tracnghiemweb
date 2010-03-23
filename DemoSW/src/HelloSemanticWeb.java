@@ -29,7 +29,7 @@ public class HelloSemanticWeb
 {	
 	public static void main(String[] args) throws IOException
 	{
-		QueryCollection query = new QueryCollection();
-		query.moleculeList();
+		//QueryCollection query = new QueryCollection();
+		//query.moleculeList();
 	}	
 }
