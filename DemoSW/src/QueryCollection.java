@@ -23,19 +23,22 @@ public class QueryCollection {
 					"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
 					"PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
 					"PREFIX chemistry: <http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#> ";
-	public QueryCollection() {
+	
+	public QueryCollection()
+	{
 		// TODO Auto-generated constructor stub
 		reasoner =	PelletReasonerFactory.theInstance().create();
 		infModel = ModelFactory.createInfModel(reasoner, ModelFactory.createDefaultModel());			
-		m = ModelFactory.createOntologyModel( OntModelSpec.OWL_MEM, infModel );
+		m = ModelFactory.createOntologyModel (OntModelSpec.OWL_MEM, infModel);
         
         m.getDocumentManager().addAltEntry(
-        		"file:Ontologies/chemistryv4.owl",
-                "file:Ontologies/chemistryv4.owl");
-        m.read( "file:Ontologies/chemistryv4.owl",null, "RDF/XML" );
-        
+        	   "file:Ontologies/chemistryv4.owl",
+               "file:Ontologies/chemistryv4.owl");
+        m.read("file:Ontologies/chemistryv4.owl",null, "RDF/XML");
 	}
-
+	
+	public static String queryString = "";
+	public static Vector<String> returnString = new Vector<String>();
 	
 	public void moleculeList()
 	{
@@ -51,35 +54,27 @@ public class QueryCollection {
 		Query query = QueryFactory.create(queryStr.toString());
 		QueryExecution qexec = QueryExecutionFactory.create(query, m);
 		
-		try {
+		queryString = queryStr.toString();
+		returnString.clear();
+		try
+		{
 			ResultSet response = qexec.execSelect();
 			System.out.println("\nQuery done");
 			Vector<RDFNode> molecule = new Vector<RDFNode>();
 			
-			while( response.hasNext()){
+			while( response.hasNext())
+			{
 				QuerySolution soln = response.nextSolution();
 				RDFNode name1 = soln.get("?molecule");
 
-				if(name1!=null)
-				{
-					molecule.add(name1);
-				}
+				if(name1!=null) molecule.add(name1);
 			}
-			System.out.print("Molecule : ");
-			for (RDFNode node : molecule) {
-				System.out.println(node+ " ");
-			}
-			
-			System.out.println("");
-			
-			
-			} finally { qexec.close();}		
-			
-			
-			System.out.println("Done");	
-		
-		
+			//System.out.println ("Molecule :");
+			for (RDFNode node : molecule) returnString.add(node.asNode().getLocalName());
+			//System.out.println(node.asNode().getLocalName());			
+			//System.out.println("");
+		}
+		finally { qexec.close();}		
+		System.out.println("Done");		
 	}
-	
-	
 }

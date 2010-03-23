@@ -1,6 +1,9 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.util.Vector;
+
 import javax.swing.BoxLayout;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -50,5 +53,17 @@ public class ChemistryPanel extends JFrame
 		this.setVisible(true);
 		this.setEnabled(true);
 		this.setResizable(false);
+	}
+	
+	public void setContentQuery (String query)
+	{
+		this.textQuery.setText(query);
+	}
+	
+	public void setContentReturn (Vector<String> vector)
+	{
+		DefaultListModel model = new DefaultListModel();
+		for (String string : vector) model.addElement(string);
+		this.listReturn.setModel(model);
 	}
 }
