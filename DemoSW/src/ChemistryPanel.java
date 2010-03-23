@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.util.Collections;
 import java.util.Vector;
 
 import javax.swing.BoxLayout;
@@ -58,5 +59,11 @@ public class ChemistryPanel extends JFrame
 	}
 	
 	public void setContentQuery (String query) {this.textQuery.setText(query);}	
-	public void setContentReturn (Vector<String> vector) {this.listReturn.setListData(vector);}
+	public void setContentReturn (Vector<String> vector)
+	{
+		Collections.sort(vector);
+		Vector<String> names = new Vector<String>();
+		for (String string : vector) names.add(HTMLShow.formatName(string));
+		this.listReturn.setListData(names);
+	}
 }

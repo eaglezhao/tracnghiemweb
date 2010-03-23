@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 
 public class HTMLShow
 {	
@@ -21,5 +23,73 @@ public class HTMLShow
 	public static String number (String s)
 	{
 		return "<font color=\"red\" size=\"6\" face=\"Times New Roman\">" + s + "</font>";
+	}
+	
+static String numberRome [] = new String [] {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"}; 
+	
+	public static Vector<String> formatFormula (String formula)
+	{
+		Vector<String> s = new Vector<String>();
+		String tempNumber = "";
+		String tempName = "";
+		char c [] = formula.toCharArray();
+		
+		for (char d : c)
+		{
+			if (Character.isDigit(d))
+			{
+				if (tempName != ""){ s.add(tempName); tempName = "";}
+				tempNumber += d;
+			}
+			else if (Character.isLetter(d))
+			{
+				if (tempNumber != "") {s.add(tempNumber); tempNumber = "";}
+				if (Character.isUpperCase(d)) {s.add(tempName); tempName = "";}
+				tempName += d;
+			}
+			else s.add("" + d);
+		}
+		if (tempName != "") s.add(tempName);
+		if (tempNumber != "") s.add(tempNumber);
+		return s;
+	}
+	
+	public static String formatName (String name)
+	{
+		String s = "";
+		String tempNumber = "";
+		String tempName = "";
+		char c [] = name.toCharArray();
+		
+		for (char d : c)
+		{
+			if (Character.isDigit(d))
+			{
+				if (tempName != ""){ s += tempName; tempName = "";}
+				tempNumber += d;
+			}
+			else if (Character.isLetter(d))
+			{
+				if (tempNumber != "") {s += "(" + numberRome [new Integer (tempNumber)] + ")"; tempNumber = "";}
+				if (tempName == "")
+				{
+					if (s != "") s += " ";
+					tempName += Character.toUpperCase(d);
+				}
+				else
+				{
+					if (Character.isUpperCase(d))
+					{
+						if (s != "") s += " ";
+						else {s += tempName + " "; tempName = "";}
+					}
+					tempName += d;
+				}
+			}
+			else if (tempName != "") {s += tempName; tempName = "";}
+		}
+		if (tempName != "") s += tempName;
+		if (tempNumber != "") s += tempNumber;
+		return s;
 	}
 }
