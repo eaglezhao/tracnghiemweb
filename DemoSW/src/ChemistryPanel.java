@@ -1,5 +1,8 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.ItemSelectable;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Collections;
 import java.util.Vector;
 
@@ -22,6 +25,8 @@ public class ChemistryPanel extends JFrame
 	private JList listReturn = new JList();
 	private JButton runButton = new JButton("Run");
 	
+	static QueryCollection query = new QueryCollection();
+	
 	public ChemistryPanel()
 	{
 		super();	
@@ -35,6 +40,43 @@ public class ChemistryPanel extends JFrame
 		panel_3.add(new JLabel("List Query: "));
 		panel_3.add(comboListQuery);
 		panel_3.add(runButton);
+		
+		ActionListener actionListener = new ActionListener() {
+		      public void actionPerformed(ActionEvent actionEvent) {
+		        //System.out.println("Command: " + actionEvent.getActionCommand());
+		        ItemSelectable is = (ItemSelectable)actionEvent.getSource();
+		        
+		        System.out.println(", Selected: " + selectedString(is));
+
+		      }
+		      
+		      private String selectedString(ItemSelectable is) {
+		  	    Object selected[] = is.getSelectedObjects();
+		  	    MyItem a = (MyItem)selected[0];
+		  	    setContentQuery(query.getQueryString(a.id));
+		  	    return ((selected.length == 0) ? "null" : selected[0].toString());
+		  	 }
+		      
+		       
+		    };
+		comboListQuery.addActionListener(actionListener);
+
+		
+		int i = 1;
+		for(String s : query.queryName)
+			comboListQuery.addItem(new MyItem(s, i++));
+		
+		
+		runButton.addActionListener(new ActionListener() {
+		      public void actionPerformed(ActionEvent actionEvent) {
+		        //System.out.println("Command: " + actionEvent.getActionCommand());
+		    	MyItem i = (MyItem) comboListQuery.getSelectedItem();
+		        //ItemSelectable is = (ItemSelectable)actionEvent.getSource();
+		        setContentReturn(query.getQueryResult(i.id), 1);
+
+		      }
+
+		    });
 
 		panel_2.add(new JScrollPane(textQuery));
 		panel_2.add(panel_3, BorderLayout.NORTH);
@@ -62,11 +104,28 @@ public class ChemistryPanel extends JFrame
 	public void setContentReturn (Vector<String> vector, int type)
 	{
 		Collections.sort(vector);
-		Vector<String> names = new Vector<String>();
+		//Vector<String> names = new Vector<String>();
 		
-		if (type == 1) for (String string : vector) names.add(HTMLShow.formatFormula(string));
-		else if (type == 2) for (String string : vector) names.add(HTMLShow.formatName(string));
+		//if (type == 1) for (String string : vector) names.add(HTMLShow.formatFormula(string));
+		//else if (type == 2) for (String string : vector) names.add(HTMLShow.formatName(string));
 		
-		this.listReturn.setListData(names);
+		this.listReturn.setListData(vector);
+	}
+	
+	
+	
+	class MyItem
+	{
+		String name;
+		public int id;
+		public MyItem(String name, int id) {
+			// TODO Auto-generated constructor stub
+			this.name = name;this.id = id;
+		}
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return name;
+		}
 	}
 }
