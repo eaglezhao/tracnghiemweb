@@ -157,11 +157,91 @@
     
 
 
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasProduct_1 -->
+
+    <owl:ObjectProperty rdf:about="#hasProduct_1">
+        <rdfs:subPropertyOf rdf:resource="#hasProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasProduct_2 -->
+
+    <owl:ObjectProperty rdf:about="#hasProduct_2">
+        <rdfs:subPropertyOf rdf:resource="#hasProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasProduct_3 -->
+
+    <owl:ObjectProperty rdf:about="#hasProduct_3">
+        <rdfs:subPropertyOf rdf:resource="#hasProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasProduct_4 -->
+
+    <owl:ObjectProperty rdf:about="#hasProduct_4">
+        <rdfs:subPropertyOf rdf:resource="#hasProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasProduct_5 -->
+
+    <owl:ObjectProperty rdf:about="#hasProduct_5">
+        <rdfs:subPropertyOf rdf:resource="#hasProduct"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasReactant -->
 
     <owl:ObjectProperty rdf:about="#hasReactant">
         <rdfs:range rdf:resource="#Molecule"/>
         <rdfs:domain rdf:resource="#Reaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasReactant_1 -->
+
+    <owl:ObjectProperty rdf:about="#hasReactant_1">
+        <rdfs:subPropertyOf rdf:resource="#hasReactant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasReactant_2 -->
+
+    <owl:ObjectProperty rdf:about="#hasReactant_2">
+        <rdfs:subPropertyOf rdf:resource="#hasReactant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasReactant_3 -->
+
+    <owl:ObjectProperty rdf:about="#hasReactant_3">
+        <rdfs:subPropertyOf rdf:resource="#hasReactant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasReactant_4 -->
+
+    <owl:ObjectProperty rdf:about="#hasReactant_4">
+        <rdfs:subPropertyOf rdf:resource="#hasReactant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ea3888.univ-rennes1.fr/dameron/ontology/chemistry.owl#hasReactant_5 -->
+
+    <owl:ObjectProperty rdf:about="#hasReactant_5">
+        <rdfs:subPropertyOf rdf:resource="#hasReactant"/>
     </owl:ObjectProperty>
     
 
@@ -402,12 +482,6 @@
     <owl:Class rdf:about="#Ag_1plus">
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Ag +</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#Ag"/>
@@ -417,6 +491,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Ag +</owl:hasValue>
+            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -459,6 +539,12 @@
     <owl:Class rdf:about="#Al_3plus">
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Al 3+</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#Al"/>
@@ -468,12 +554,6 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Al 3+</owl:hasValue>
-            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -559,14 +639,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#Al"/>
+                <owl:onClass rdf:resource="#O"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#O"/>
+                <owl:onClass rdf:resource="#Al"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -582,15 +662,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#O_2minus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#Al_3plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#Al_3plus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#O_2minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">AlO2</rdfs:comment>
@@ -628,15 +708,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#OH_1minus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#Al_3plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#Al_3plus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#OH_1minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Al(OH)3</rdfs:comment>
@@ -651,15 +731,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#H"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#N"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#N"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#H"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -730,14 +810,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Au +</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Au +</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -782,14 +862,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Ba 2+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Ba 2+</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -849,14 +929,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Be 2+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Be 2+</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -945,13 +1025,6 @@
         <rdfs:subClassOf rdf:resource="#PolyatomicAnion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#N"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasFormula"/>
                 <owl:hasValue>CN</owl:hasValue>
             </owl:Restriction>
@@ -960,6 +1033,13 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
                 <owl:onClass rdf:resource="#C"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#ContainAtom"/>
+                <owl:onClass rdf:resource="#N"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1086,14 +1166,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicAnion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasName"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Chloride</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">-1</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasName"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Chloride</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1155,14 +1235,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Cu 2+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Cu 2+</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1227,6 +1307,12 @@
     <owl:Class rdf:about="#Fe_2plus">
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Fe 2+</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#Fe"/>
@@ -1236,12 +1322,6 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Fe 2+</owl:hasValue>
-            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -1252,12 +1332,6 @@
     <owl:Class rdf:about="#Fe_3plus">
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Fe 3+</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="#Fe"/>
@@ -1267,6 +1341,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Fe 3+</owl:hasValue>
+            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -1279,15 +1359,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#Cl_1minus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#Fe_3plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#Fe_3plus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#Cl_1minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">FeCl3</rdfs:comment>
@@ -1302,15 +1382,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#O"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#Fe"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#Fe"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#O"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Fe2O3</rdfs:comment>
@@ -1421,14 +1501,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">H 1+</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">H 1+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1600,15 +1680,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#H"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#O"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#O"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#H"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">H2O</rdfs:comment>
@@ -1623,14 +1703,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#H_1plus"/>
+                <owl:onClass rdf:resource="#I_1minus"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#I_1minus"/>
+                <owl:onClass rdf:resource="#H_1plus"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1655,14 +1735,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicAnion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">-1</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasName"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Iodide</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasName"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Iodide</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">-1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1696,14 +1776,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">K +</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">K +</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1753,14 +1833,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Li +</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Li +</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1876,14 +1956,14 @@
         <rdfs:subClassOf rdf:resource="#MonoatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Mg 2+</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">2</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Mg 2+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1979,13 +2059,6 @@
         <rdfs:subClassOf rdf:resource="#PolyatomicCation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#N"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">4</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
                 <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
@@ -1993,14 +2066,21 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainAtom"/>
-                <owl:onClass rdf:resource="#H"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#N"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">4</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#hasFormula"/>
                 <owl:hasValue rdf:datatype="&xsd;string">NH4 +</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#ContainAtom"/>
+                <owl:onClass rdf:resource="#H"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2024,14 +2104,14 @@
         <rdfs:subClassOf rdf:resource="#N"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasName"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Nitride</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">-3</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasName"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Nitride</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2059,14 +2139,14 @@
         <rdfs:subClassOf rdf:resource="#Na"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Na +</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Na +</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;int">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2101,14 +2181,14 @@
         <rdfs:subClassOf rdf:resource="#Ni"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue>Ni 2+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue>Ni 2+</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2447,14 +2527,14 @@
         <rdfs:subClassOf rdf:resource="#S"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasName"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Sulfide</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">-2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">-2</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasName"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Sulfide</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2605,15 +2685,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#H_1plus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#SO4_2minus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#SO4_2minus"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="#H_1plus"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>H2SO4</rdfs:comment>
@@ -2660,14 +2740,14 @@
         <rdfs:subClassOf rdf:resource="#Zn"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
-                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasFormula"/>
+                <owl:hasValue>Zn 2+</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="#hasFormula"/>
-                <owl:hasValue>Zn 2+</owl:hasValue>
+                <owl:onProperty rdf:resource="#hasNumberElectrovalency"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2799,14 +2879,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#CO3_2minus"/>
+                <owl:onClass rdf:resource="#Ca_2plus"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#Ca_2plus"/>
+                <owl:onClass rdf:resource="#CO3_2minus"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3012,14 +3092,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#Cl_1minus"/>
+                <owl:onClass rdf:resource="#Au_1plus"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="#ContainIon"/>
-                <owl:onClass rdf:resource="#Au_1plus"/>
+                <owl:onClass rdf:resource="#Cl_1minus"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3228,9 +3308,9 @@
 
     <Burn rdf:about="#Oxy_Iron">
         <rdf:type rdf:resource="&owl;Thing"/>
-        <hasProduct rdf:resource="#FerricOxide"/>
-        <hasReactant rdf:resource="#Iron"/>
-        <hasReactant rdf:resource="#Oxygen"/>
+        <hasProduct_1 rdf:resource="#FerricOxide"/>
+        <hasReactant_1 rdf:resource="#Iron"/>
+        <hasReactant_2 rdf:resource="#Oxygen"/>
     </Burn>
     
 
