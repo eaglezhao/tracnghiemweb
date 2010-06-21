@@ -1,0 +1,5 @@
+E:\Projects\USACO\Client\Client\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\USACO\Client\Client\bin\Debug\Client.exe
+E:\Projects\USACO\Client\Client\bin\Debug\Client.pdb
+E:\Projects\USACO\Client\Client\obj\Debug\Client.exe
+E:\Projects\USACO\Client\Client\obj\Debug\Client.pdb
