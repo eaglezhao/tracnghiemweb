@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TransformSample - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPD1F5.TMP" with contents
+[
+/nologo /MTd /W3 /GX /Z7 /Od /I "..\..\BaseClasses" /I "..\..\..\..\..\include" /D "NC_OLE2" /D "STRICT" /D _WIN32_WINNT=0x0400 /D "WIN32" /D "_WIN32" /D "_MT" /D "_DLL" /D _X86_=1 /D WINVER=0x0400 /D DBG=1 /D "DEBUG" /D "_DEBUG" /D try=__try /D except=__except /D leave=__leave /D finally=__finally /Fp"Debug/TransformSample.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\mssdk\samples\Multimedia\DirectShow\DirectShow Projects\TransformSample\TransformSample.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPD1F5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPD1F6.TMP" with contents
+[
+..\..\BaseClasses\debug\strmbasd.lib msvcrtd.lib quartz.lib vfw32.lib winmm.lib kernel32.lib advapi32.lib version.lib largeint.lib user32.lib gdi32.lib comctl32.lib ole32.lib olepro32.lib oleaut32.lib uuid.lib /nologo /entry:"DllEntryPoint@12" /dll /incremental:no /pdb:"Debug/TransformSample.pdb" /debug /machine:I386 /nodefaultlib /def:".\TransformSample.def" /out:"Debug/TransformSample.ax" /implib:"Debug/TransformSample.lib" /pdbtype:sept /libpath:"..\..\..\..\lib" 
+".\Debug\TransformSample.obj"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPD1F6.TMP"
+<h3>Output Window</h3>
+Compiling...
+TransformSample.cpp
+Linking...
+   Creating library Debug/TransformSample.lib and object Debug/TransformSample.exp
+
+
+
+<h3>Results</h3>
+TransformSample.ax - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

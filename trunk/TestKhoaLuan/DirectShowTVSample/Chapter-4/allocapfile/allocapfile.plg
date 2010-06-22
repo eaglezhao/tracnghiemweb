@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: allocapfile - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP22E0.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\BaseClasses" /I "..\..\..\..\..\include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/allocapfile.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\mssdk\samples\Multimedia\DirectShow\DirectShow Projects\allocapfile\allocapfile.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP22E0.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22E1.TMP" with contents
+[
+..\..\BaseClasses\debug\strmbasd.lib msvcrtd.lib quartz.lib vfw32.lib winmm.lib kernel32.lib advapi32.lib version.lib largeint.lib user32.lib gdi32.lib comctl32.lib ole32.lib olepro32.lib oleaut32.lib uuid.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/allocapfile.pdb" /debug /machine:I386 /out:"Debug/allocapfile.exe" /pdbtype:sept 
+".\Debug\allocapfile.obj"
+".\Debug\StdAfx.obj"
+"..\..\..\..\..\lib\strmiids.lib"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP22E1.TMP"
+<h3>Output Window</h3>
+Compiling...
+allocapfile.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+allocapfile.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

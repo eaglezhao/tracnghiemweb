@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ASF Writer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ken20001\LOCALS~1\Temp\RSP184.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\BaseClasses" /I "..\..\..\..\..\include" /I "C:\WMSDK\WMFSDK\include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/ASF Writer.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ken20001\LOCALS~1\Temp\RSP184.tmp" 
+Creating temporary file "C:\DOCUME~1\ken20001\LOCALS~1\Temp\RSP185.tmp" with contents
+[
+wmstub.lib wmvcore.lib C:\WMSDK\WMFSDK\samples\genprofile\lib\Debug\genprofile.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/ASF Writer.pdb" /debug /machine:I386 /out:"Debug/ASF Writer.exe" /pdbtype:sept 
+".\Debug\ASF Writer.obj"
+".\Debug\StdAfx.obj"
+"..\..\..\lib\strmiids.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ken20001\LOCALS~1\Temp\RSP185.tmp"
+<h3>Output Window</h3>
+Compiling...
+ASF Writer.cpp
+c:\wmsdk\wmfsdk9\samples\wmgenprofile\exe\genprofile.h(31) : error C2504: 'CWinApp' : base class undefined
+c:\wmsdk\wmfsdk9\samples\wmgenprofile\exe\genprofile.h(49) : error C2143: syntax error : missing ';' before '}'
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(130) : error C2065: 'AUDIO_PARAMS' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(130) : error C2146: syntax error : missing ';' before identifier 'ap'
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(130) : error C2065: 'ap' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(131) : error C2065: 'VIDEO_PARAMS' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(131) : error C2146: syntax error : missing ';' before identifier 'rgvp'
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(131) : error C2065: 'rgvp' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(131) : error C2109: subscript requires array or pointer type
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(132) : error C2065: 'SCRIPT_PARAMS' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(132) : error C2146: syntax error : missing ';' before identifier 'sp'
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(132) : error C2065: 'sp' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(135) : error C2228: left of '.dwBitrate' must have class/struct/union type
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(135) : error C2065: 'DEFAULT_SCRIPT_STREAM_BANDWIDTH' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(140) : error C2228: left of '.dwFormatTag' must have class/struct/union type
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(140) : error C2065: 'CODEC_AUDIO_MSAUDIO' : undeclared identifier
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(141) : error C2228: left of '.dwBitrate' must have class/struct/union type
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(142) : error C2228: left of '.dwSampleRate' must have class/struct/union type
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(143) : error C2228: left of '.dwChannels' must have class/struct/union type
+F:\Programming DirectShow\Chapter-12\ASF Writer\ASF Writer.cpp(144) : error C2065: 'GenerateProfile' : undeclared identifier
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+ASF Writer.exe - 20 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

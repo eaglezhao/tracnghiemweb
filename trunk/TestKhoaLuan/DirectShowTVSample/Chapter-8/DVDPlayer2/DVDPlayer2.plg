@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DVDPlayer2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPF064.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/DVDPlayer2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\mssdk\samples\Multimedia\DirectShow\DirectShow Projects\DVDPlayer2\DVDPlayer2.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPF064.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPF065.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comctl32.lib quartz.lib strmiids.lib winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/DVDPlayer2.pdb" /debug /machine:I386 /out:"Debug/DVDPlayer2.exe" /pdbtype:sept /libpath:"..\..\..\..\..\lib" 
+".\Debug\StdAfx.obj"
+".\Debug\DVDPlayer2.res"
+".\Debug\DVDPlayer2.obj"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPF065.TMP"
+<h3>Output Window</h3>
+Compiling...
+DVDPlayer2.cpp
+C:\mssdk\samples\Multimedia\DirectShow\DirectShow Projects\DVDPlayer2\DVDPlayer2.cpp(96) : warning C4700: local variable 'cmdObj2' used without having been initialized
+Linking...
+
+
+
+<h3>Results</h3>
+DVDPlayer2.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

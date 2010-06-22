@@ -1,0 +1,20 @@
+readme.txt
+[!if INPLACE_TRANSFORM]
+ip_iroot.h
+ip_resource.h
+ip_root.cpp
+ip_root.def
+ip_root.h
+ip_root.rc
+ip_rootProp.cpp
+ip_rootProp.h
+[!else]
+t_iroot.h
+t_resource.h
+t_root.cpp
+t_root.def
+t_root.h
+t_root.rc
+t_rootProp.cpp
+t_rootProp.h
+[!endif]
