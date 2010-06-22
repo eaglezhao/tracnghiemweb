@@ -1,0 +1,21 @@
+
+Classes:
+
+CAudioCapDlg		Dialog for selecting the audio capture device
+CBaseDialog		Manages dialog windows 
+CCaptureGraph		Manages a capture graph (subclasses CGraph)
+CConfigDialog		Dialog for setting the video device properties
+CDeviceHelper		Base class for managing DShow device interfaces
+CDeviceList		Keeps a list of device monikers
+CDVProp			Dialog for the VTR functions
+CExtDevice		Manages the VTR transport
+CGraph			Manages the graph
+CGraphEventHandler	Defines a callback for DShow graph events
+CMainDialog		The main app dialog
+CNonModalDialog		Manages non-modal dialog windows
+CTimer			Simple Win32 timer
+CTunerProp		Dialog for TV tuning
+CVideoConfig		Helper class for IAMStreamConfig
+StillCap		Callback for getting still images via ISampleGrabber
+
+

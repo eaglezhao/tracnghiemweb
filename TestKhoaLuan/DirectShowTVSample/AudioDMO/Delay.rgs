@@ -1,0 +1,14 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {AD90F22E-C51D-4F1C-B440-C1F2A01D5F1F} = s 'Delay Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val MERIT = d '0'
+		}
+	}
+}

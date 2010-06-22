@@ -1,0 +1,8 @@
+LIBRARY YuvGray.DLL
+DESCRIPTION 'YUV Gray Transform'
+EXPORTS 
+    DllGetClassObject   PRIVATE
+    DllCanUnloadNow     PRIVATE
+    DllRegisterServer   PRIVATE
+    DllUnregisterServer PRIVATE
+

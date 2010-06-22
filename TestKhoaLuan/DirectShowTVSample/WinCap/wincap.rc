@@ -1,0 +1,341 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_WINCAP              ICON                    "WinCap.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_WINCAP MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Set &Capture File ",          IDM_FILE_SET_CAPTURE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       1
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Audio Capture Device...",    IDM_OPTIONS_AUDIOCAPTUREDEVICE
+
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 22, 17, 260, 247
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION
+CAPTION "WinCap"
+MENU IDC_WINCAP
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_VIDWIN,"Static",SS_BLACKRECT,0,0,260,160
+    PUSHBUTTON      "Select Device",IDC_PREVIEW,133,172,50,14
+    DEFPUSHBUTTON   "Quit",IDOK,199,229,50,14,WS_GROUP
+    LTEXT           "Video Capture Devices",IDC_STATIC,4,163,82,8
+    LISTBOX         IDC_DEVICE_LIST,0,172,128,71,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Configure",IDC_CONFIGURE,133,210,50,14,WS_DISABLED
+    PUSHBUTTON      "Start Capture",IDC_CAPTURE,133,191,50,14,WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,0,0,20,20
+    PUSHBUTTON      "Button2",IDC_SHOW_TV_PROP,204,193,18,17,BS_BITMAP | 
+                    WS_DISABLED
+    PUSHBUTTON      "Button1",IDC_SHOW_DV_PROP,226,193,18,17,BS_BITMAP | 
+                    WS_DISABLED
+    GROUPBOX        "Device Features",IDC_STATIC,190,181,68,40
+    LTEXT           "TV",IDC_STATIC,208,211,9,8
+    LTEXT           "VTR",IDC_STATIC,229,211,14,8
+    PUSHBUTTON      "Snapshot",IDC_SNAPSHOT,133,229,50,14,WS_DISABLED
+END
+
+IDD_CONFIG_PROP DIALOGEX 280, 100, 332, 198
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Configure the Device"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Full",IDC_DVDEC_FULL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_GROUP,15,21,27,10
+    CONTROL         "Half",IDC_DVDEC_HALF,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,34,29,10
+    CONTROL         "Quarter",IDC_DVDEC_QUARTER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,47,41,10
+    CONTROL         "DC",IDC_DVDEC_DC,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,60,25,10
+    CONTROL         "",IDC_BRIGHTNESS,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,191,19,127,15
+    CONTROL         "",IDC_CONTRAST,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,191,35,127,15
+    CONTROL         "",IDC_HUE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_DISABLED | WS_TABSTOP,191,51,127,15
+    CONTROL         "",IDC_SATURATION,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,191,67,127,15
+    CONTROL         "",IDC_SHARPNESS,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,191,83,127,15
+    CONTROL         "",IDC_GAMMA,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_DISABLED | WS_TABSTOP,191,99,127,15
+    CONTROL         "",IDC_WHITE_BALANCE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,191,115,127,15
+    CONTROL         "",IDC_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_DISABLED | WS_TABSTOP,191,131,127,15
+    DEFPUSHBUTTON   "OK",IDOK,221,177,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,275,177,50,14
+    GROUPBOX        "DV Output",IDC_STATIC,7,7,55,71
+    GROUPBOX        "Camera Settings",IDC_STATIC,138,7,187,159
+    RTEXT           "Brightness",IDC_STATIC,152,22,37,8
+    RTEXT           "Contrast",IDC_STATIC,160,38,29,8
+    RTEXT           "Hue",IDC_STATIC,175,54,14,8
+    RTEXT           "Saturation",IDC_STATIC,155,70,34,8
+    RTEXT           "Sharpness",IDC_STATIC,155,86,34,8
+    RTEXT           "Gamma",IDC_STATIC,165,102,24,8
+    RTEXT           "White Balance",IDC_STATIC,143,118,46,8
+    RTEXT           "Gain",IDC_STATIC,174,134,15,8
+    PUSHBUTTON      "Restore Defaults",IDC_PROCAMP_RESTORE_DEFAULT,259,148,
+                    59,14
+    PUSHBUTTON      "Source",IDC_VFW_SOURCE,76,18,45,14,WS_DISABLED
+    PUSHBUTTON      "Format",IDC_VFW_FORMAT,76,38,45,14,WS_DISABLED
+    PUSHBUTTON      "Display",IDC_VFW_DISPLAY,76,57,45,14,WS_DISABLED
+    GROUPBOX        "VFW Dialogs",IDC_STATIC,72,7,55,71
+    GROUPBOX        "Video Format",IDC_STATIC,7,87,126,63
+    COMBOBOX        IDC_VIDEO_TYPES,16,100,108,102,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_HEIGHT,74,129,40,14,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    CONTROL         "",IDC_HEIGHT_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_DISABLED,116,129,11,
+                    14
+    EDITTEXT        IDC_WIDTH,16,129,40,14,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    CONTROL         "",IDC_WIDTH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_DISABLED,56,129,11,14
+    LTEXT           "Width",IDC_STATIC,17,120,20,8
+    LTEXT           "Height",IDC_STATIC,75,120,22,8
+END
+
+IDD_TV_PROP DIALOGEX 400, 15, 97, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Television"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "1",IDC_TV_CHAN1,9,29,13,11
+    PUSHBUTTON      "2",IDC_TV_CHAN2,24,29,13,11
+    PUSHBUTTON      "3",IDC_TV_CHAN3,39,29,13,11
+    PUSHBUTTON      "4",IDC_TV_CHAN4,9,41,13,11
+    PUSHBUTTON      "5",IDC_TV_CHAN5,24,41,13,11
+    PUSHBUTTON      "6",IDC_TV_CHAN6,39,41,13,11
+    PUSHBUTTON      "7",IDC_TV_CHAN7,9,53,13,11
+    PUSHBUTTON      "8",IDC_TV_CHAN8,24,53,13,11
+    PUSHBUTTON      "9",IDC_TV_CHAN9,39,53,13,11
+    PUSHBUTTON      "0",IDC_TV_CHAN0,9,65,13,11
+    PUSHBUTTON      "Enter",IDC_CHAN_ENTER,23,65,29,11
+    CONTROL         "Mute",IDC_TV_AUDIO_MUTE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,62,20,28,10
+    CONTROL         "CC",IDC_TV_CC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,62,
+                    32,25,10
+    DEFPUSHBUTTON   "Close",IDOK,28,140,50,14
+    CONTROL         "",IDC_CHANNEL_DRAW,"Static",SS_OWNERDRAW,7,7,45,18
+    PUSHBUTTON      "Button1",IDC_TV_CHAN_UP,66,59,15,7,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_TV_CHAN_DOWN,66,67,15,7,BS_BITMAP
+    LTEXT           "Scan",IDC_STATIC,67,49,16,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,58,45,32,30
+    CONTROL         "TV",IDC_TUNER_MODE_TV,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,101,24,10
+    CONTROL         "FM",IDC_TUNER_MODE_FM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,112,25,10
+    CONTROL         "AM",IDC_TUNER_MODE_AM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,15,123,26,10
+    GROUPBOX        "Mode",IDC_STATIC,7,92,41,43
+END
+
+IDD_DV_PROP DIALOGEX 400, 15, 92, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "VTR"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,21,97,50,14
+    PUSHBUTTON      "Button2",IDC_VTR_PLAY,6,7,24,22,BS_BITMAP | WS_DISABLED
+    PUSHBUTTON      "Button2",IDC_VTR_STOP,34,7,24,22,BS_BITMAP | 
+                    WS_DISABLED
+    PUSHBUTTON      "Button2",IDC_VTR_TRANSMIT,61,7,24,22,BS_BITMAP | 
+                    WS_DISABLED
+    CTEXT           "Stopped",IDC_VTR_MODE,8,59,76,12,SS_SUNKEN
+    CTEXT           "00:00:00",IDC_TIMECODE,8,74,76,10
+    PUSHBUTTON      "Button1",IDC_VTR_REW,21,36,18,14,BS_BITMAP | 
+                    WS_DISABLED
+    PUSHBUTTON      "Button2",IDC_VTR_FF,51,36,18,14,BS_BITMAP | WS_DISABLED
+END
+
+IDD_AUDIO_DEVICE DIALOGEX 0, 0, 313, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select an Audio Capture Device"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,201,108,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,255,108,50,14
+    LISTBOX         IDC_AUDIO_DEVICE_LIST,7,17,164,86,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_AUDIO_PIN_LIST,181,17,124,86,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Audio Capture Device",IDC_STATIC,7,7,132,8
+    LTEXT           "Audio Input",IDC_STATIC,181,7,38,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 258
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_CONFIG_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 191
+    END
+
+    IDD_TV_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 90
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_DV_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_AUDIO_DEVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PLAY                BITMAP                  "play.bmp"
+IDB_STOP                BITMAP                  "bitmap1.bmp"
+IDB_TRANSMIT            BITMAP                  "bitmap2.bmp"
+IDB_TV                  BITMAP                  "play1.bmp"
+IDB_TV_CHAN_UP          BITMAP                  "bmp00001.bmp"
+IDB_TV_CHAN_DOWN        BITMAP                  "tv_chan_.bmp"
+IDB_DV                  BITMAP                  "tv1.bmp"
+IDB_VTR_REW             BITMAP                  "bmp00002.bmp"
+IDB_VTR_FF              BITMAP                  "vtr_rew1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "WinCap"
+    IDC_WINCAP              "WINCAP"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

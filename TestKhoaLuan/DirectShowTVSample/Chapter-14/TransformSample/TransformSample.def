@@ -1,0 +1,6 @@
+LIBRARY        TransformSample.Ax
+EXPORTS
+               DllGetClassObject PRIVATE
+               DllCanUnloadNow PRIVATE
+               DllRegisterServer PRIVATE
+               DllUnregisterServer PRIVATE

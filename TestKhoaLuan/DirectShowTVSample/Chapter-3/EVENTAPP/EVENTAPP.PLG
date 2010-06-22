@@ -1,0 +1,28 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: eventapp - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPD072.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\My Documents\DirectShow Documents\Chapter II\Applications\Eventapp\eventapp.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPD072.TMP" 
+<h3>Output Window</h3>
+Compiling...
+Command line warning D4028 : minimal rebuild failure, reverting to normal build
+eventapp.cpp
+c:\my documents\directshow documents\chapter ii\applications\eventapp\eventapp.cpp(0) : fatal error C1033: cannot open program database 'c:\my documents\directshow documents\chapter ii\applications\eventapp\debug\vc60.pdb'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+eventapp.obj - 1 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

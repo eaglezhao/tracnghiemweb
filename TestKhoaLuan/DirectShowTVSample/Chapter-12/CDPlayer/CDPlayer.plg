@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CDPlayer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPD202.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/CDPlayer.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\mssdk\samples\Multimedia\DirectShow\DirectShow Projects\CDPlayer\CDPlayer.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPD202.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPD203.TMP" with contents
+[
+strmbasd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/CDPlayer.pdb" /debug /machine:I386 /out:"Debug/CDPlayer.exe" /pdbtype:sept 
+".\Debug\CDPlayer.obj"
+".\Debug\StdAfx.obj"
+".\Debug\CDPlayer.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPD203.TMP"
+<h3>Output Window</h3>
+Compiling...
+CDPlayer.cpp
+c:\mssdk\include\strmif.h(860) : error C2146: syntax error : missing ';' before identifier 'HSEMAPHORE'
+c:\mssdk\include\strmif.h(860) : fatal error C1004: unexpected end of file found
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+CDPlayer.exe - 2 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
