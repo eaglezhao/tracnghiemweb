@@ -7,6 +7,7 @@ using System.Threading;
 using System.Net;
 using System.IO;
 using System.Windows.Forms;
+using System.Drawing;
 
 
 namespace AsynchIOServer
@@ -17,9 +18,9 @@ namespace AsynchIOServer
     //    {
     //        TcpListener tcpListener = new TcpListener(10);
     //        tcpListener.Start();
-            
+
     //        Socket socketForClient = tcpListener.AcceptSocket();//Accept();
-            
+
     //        if (socketForClient.Connected)
     //        {
     //            Console.WriteLine("Client connected");
@@ -206,6 +207,18 @@ namespace AsynchIOServer
     ////    }
     ////}
 
+    public class StateObject
+    {
+        // Client  socket.
+        public Socket workSocket = null;
+        // Size of receive buffer.
+        public const int BufferSize = 1024;
+        // Receive buffer.
+        public byte[] buffer = new byte[BufferSize];
+        // Received data string.
+        public StringBuilder sb = new StringBuilder();
+    }
+
     /// <summary>
     /// Description of SocketServer.	
     /// </summary>
@@ -231,8 +244,17 @@ namespace AsynchIOServer
 
         public AsyncCallback pfnWorkerCallBack;
         private Socket m_mainSocket;
+        private Socket m_dataSocket;
         private Socket[] m_workerSocket = new Socket[10];
+        private Socket[] m_dataWorkerSocket = new Socket[10];
         private int m_clientCount = 0;
+        private int m_dataClientCount = 0;
+
+        public const int COM_SOCKET = 4115;
+        public const int DATA_SOCKET = 4116;
+
+        public byte[] imageData;
+        public int nLength;
 
         public SocketServer()
         {
@@ -438,12 +460,17 @@ namespace AsynchIOServer
                     return;
                 }
                 string portStr = textBoxPort.Text;
-                int port = System.Convert.ToInt32(portStr);
+                //int port = System.Convert.ToInt32(portStr);
+                int comPort = COM_SOCKET, dataPort = DATA_SOCKET;
                 // Create the listening socket...
                 m_mainSocket = new Socket(AddressFamily.InterNetwork,
                                           SocketType.Stream,
                                           ProtocolType.Tcp);
-                IPEndPoint ipLocal = new IPEndPoint(IPAddress.Any, port);
+                m_dataSocket = new Socket(AddressFamily.InterNetwork,
+                                          SocketType.Stream,
+                                          ProtocolType.Tcp);
+                IPEndPoint ipLocal = new IPEndPoint(IPAddress.Any, comPort);
+                IPEndPoint ipDataLocal = new IPEndPoint(IPAddress.Any, dataPort);
                 // Bind to local IP Address...
                 m_mainSocket.Bind(ipLocal);
                 // Start listening...
@@ -451,7 +478,24 @@ namespace AsynchIOServer
                 // Create the call back for any client connections...
                 m_mainSocket.BeginAccept(new AsyncCallback(OnClientConnect), null);
 
-                UpdateControls(true); Socket e;e.sendfile
+                // Bind to local IP Address...
+                m_dataSocket.Bind(ipDataLocal);
+                // Start listening...
+                m_dataSocket.Listen(4);
+                // Create the call back for any client connections...
+                m_dataSocket.BeginAccept(new AsyncCallback(OnDataClientConnect), null);
+
+                MemoryStream ms = new MemoryStream();
+                PictureBox pictureBox1 = new PictureBox();
+                pictureBox1.Image = Image.FromFile(@"C:\Documents and Settings\son.lehoang\My Documents\My Pictures\imagesCAP16NL2.jpg");
+                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg); //
+
+                nLength = (int)ms.Length;
+                imageData = new byte[nLength];
+                ms.Position = 0;
+                ms.Read(imageData, 0, nLength);
+
+                UpdateControls(true);
 
             }
             catch (SocketException se)
@@ -481,11 +525,44 @@ namespace AsynchIOServer
                 ++m_clientCount;
                 // Display this client connection as a status message on the GUI	
                 String str = String.Format("Client # {0} connected", m_clientCount);
-                textBoxMsg.Text = str;
+                //textBoxMsg.Text = str;
 
                 // Since the main Socket is now free, it can go back and wait for
                 // other clients who are attempting to connect
                 m_mainSocket.BeginAccept(new AsyncCallback(OnClientConnect), null);
+
+            }
+            catch (ObjectDisposedException)
+            {
+                System.Diagnostics.Debugger.Log(0, "1", "\n OnClientConnection: Socket has been closed\n");
+            }
+            catch (SocketException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+
+        }
+
+        public void OnDataClientConnect(IAsyncResult asyn)
+        {
+            try
+            {
+                // Here we complete/end the BeginAccept() asynchronous call
+                // by calling EndAccept() - which returns the reference to
+                // a new Socket object
+                m_dataWorkerSocket[m_dataClientCount] = m_dataSocket.EndAccept(asyn);
+                // Let the worker Socket do the further processing for the 
+                // just connected client
+                //WaitForData(m_dataWorkerSocket[m_dataClientCount]);
+                // Now increment the client count
+                ++m_dataClientCount;
+                // Display this client connection as a status message on the GUI	
+                //String str = String.Format("Client # {0} connected", m_clientCount);
+                //textBoxMsg.Text = str;
+
+                // Since the main Socket is now free, it can go back and wait for
+                // other clients who are attempting to connect
+                m_dataSocket.BeginAccept(new AsyncCallback(OnDataClientConnect), null);
             }
             catch (ObjectDisposedException)
             {
@@ -512,17 +589,24 @@ namespace AsynchIOServer
                     // Specify the call back function which is to be 
                     // invoked when there is any write activity by the 
                     // connected client
-                    pfnWorkerCallBack = new AsyncCallback(OnDataReceived);
+                    //pfnWorkerCallBack = new AsyncCallback(OnDataReceived);ReadCallback
+                    pfnWorkerCallBack = new AsyncCallback(ReadCallback);
                 }
-                SocketPacket theSocPkt = new SocketPacket();
-                theSocPkt.m_currentSocket = soc;
-                // Start receiving any data written by the connected client
-                // asynchronously
-                soc.BeginReceive(theSocPkt.dataBuffer, 0,
-                                   theSocPkt.dataBuffer.Length,
-                                   SocketFlags.None,
-                                   pfnWorkerCallBack,
-                                   theSocPkt);
+                //SocketPacket theSocPkt = new SocketPacket();
+                //theSocPkt.m_currentSocket = soc;
+                //// Start receiving any data written by the connected client
+                //// asynchronously
+                //soc.BeginReceive(theSocPkt.dataBuffer, 0,
+                //                   theSocPkt.dataBuffer.Length,
+                //                   SocketFlags.None,
+                //                   pfnWorkerCallBack,
+                //                   theSocPkt);
+
+
+                StateObject state = new StateObject();
+                state.workSocket = soc;
+                soc.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
+                    new AsyncCallback(ReadCallback), state);
             }
             catch (SocketException se)
             {
@@ -548,7 +632,22 @@ namespace AsynchIOServer
                 int charLen = d.GetChars(socketData.dataBuffer,
                                          0, iRx, chars, 0);
                 System.String szData = new System.String(chars);
-                richTextBoxReceivedMsg.AppendText(szData);
+                //richTextBoxReceivedMsg.AppendText(szData);
+
+
+
+                if (szData.Equals("REQUEST"))
+                {
+                    SendMsg("ACCEPT");
+                }
+                else if (szData.Equals("LENGTH"))
+                {
+                    SendMsg("LENGTH " + nLength);
+                }
+                else if (szData.Equals("BEGIN"))
+                {
+                    m_dataWorkerSocket[0].Send(imageData);
+                }
 
                 // Continue the waiting for data on the Socket
                 WaitForData(socketData.m_currentSocket);
@@ -562,11 +661,89 @@ namespace AsynchIOServer
                 MessageBox.Show(se.Message);
             }
         }
+
+        public void ReadCallback(IAsyncResult ar)
+        {
+            String content = String.Empty;
+
+            // Retrieve the state object and the handler socket
+            // from the asynchronous state object.
+            StateObject state = (StateObject)ar.AsyncState;
+            Socket handler = state.workSocket;
+
+            // Read data from the client socket. 
+            int bytesRead = handler.EndReceive(ar);
+
+            if (bytesRead > 0)
+            {
+                // There  might be more data, so store the data received so far.
+                state.sb.Append(Encoding.ASCII.GetString(
+                    state.buffer, 0, bytesRead));
+
+                // Check for end-of-file tag. If it is not there, read 
+                // more data.
+                content = state.sb.ToString();
+                if (content.IndexOf("<EOF>") > -1 || content.IndexOf("\n") > -1)
+                {
+                    // All the data has been read from the 
+                    // client. Display it on the console.
+                    Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
+                        content.Length, content);
+                    // Echo the data back to the client.
+                    //Send(handler, content);
+                    if (content.StartsWith("REQUEST"))
+                    {
+                        SendMsg("ACCEPT");
+                    }
+                    else if (content.StartsWith("LENGTH"))
+                    {
+                        SendMsg("LENGTH " + nLength);
+                    }
+                    else if (content.StartsWith("BEGIN"))
+                    {
+                        SendMsg("BEGIN");
+                        m_dataWorkerSocket[0].Send(imageData);
+                    }
+                    state.sb.Remove(0, state.sb.Length);
+                }
+                //else
+                //{
+                    // Not all data received. Get more.
+                    handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
+                    new AsyncCallback(ReadCallback), state);
+                //}
+            }
+        }
+
         void ButtonSendMsgClick(object sender, System.EventArgs e)
         {
             try
             {
                 Object objData = richTextBoxSendMsg.Text;
+                byte[] byData = System.Text.Encoding.ASCII.GetBytes(objData.ToString());
+                for (int i = 0; i < m_clientCount; i++)
+                {
+                    if (m_workerSocket[i] != null)
+                    {
+                        if (m_workerSocket[i].Connected)
+                        {
+                            m_workerSocket[i].Send(byData);
+                        }
+                    }
+                }
+
+            }
+            catch (SocketException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+        }
+
+        void SendMsg(String msg)
+        {
+            try
+            {
+                Object objData = msg + "\n";
                 byte[] byData = System.Text.Encoding.ASCII.GetBytes(objData.ToString());
                 for (int i = 0; i < m_clientCount; i++)
                 {
@@ -615,9 +792,10 @@ namespace AsynchIOServer
         }
         void CloseSockets()
         {
-            if (m_mainSocket != null)
+            if (m_mainSocket != null && m_dataSocket != null)
             {
                 m_mainSocket.Close();
+                m_dataSocket.Close();
             }
             for (int i = 0; i < m_clientCount; i++)
             {
@@ -625,6 +803,12 @@ namespace AsynchIOServer
                 {
                     m_workerSocket[i].Close();
                     m_workerSocket[i] = null;
+                }
+
+                if (m_dataWorkerSocket[i] != null)
+                {
+                    m_dataWorkerSocket[i].Close();
+                    m_dataWorkerSocket[i] = null;
                 }
             }
         }
