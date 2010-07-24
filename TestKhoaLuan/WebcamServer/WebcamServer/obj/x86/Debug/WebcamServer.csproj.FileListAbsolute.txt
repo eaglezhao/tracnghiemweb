@@ -1,0 +1,9 @@
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\obj\x86\Debug\WebcamServer.Properties.Resources.resources
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\bin\Debug\WebcamServer.exe
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\bin\Debug\WebcamServer.pdb
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\obj\x86\Debug\WebcamServer.exe
+c:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WebcamServer\WebcamServer\obj\x86\Debug\WebcamServer.pdb
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WebcamServer\WebcamServer\obj\x86\Debug\WebcamServer.WebcamServer.resources

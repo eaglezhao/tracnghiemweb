@@ -1,0 +1,9 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\obj\x86\Debug\WebcamClient.Properties.Resources.resources
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\obj\x86\Debug\WebCamClient.Form1.resources
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\bin\Debug\WebcamClient.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\bin\Debug\WebcamClient.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\obj\x86\Debug\WebcamClient.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamClient\WebcamClient\obj\x86\Debug\WebcamClient.pdb

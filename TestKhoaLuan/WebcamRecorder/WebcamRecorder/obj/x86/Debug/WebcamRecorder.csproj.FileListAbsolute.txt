@@ -1,0 +1,10 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\obj\x86\Debug\WebcamRecorder.RecorderForm.resources
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\obj\x86\Debug\WebcamRecorder.Properties.Resources.resources
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\bin\Debug\WebcamRecorder.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\bin\Debug\WebcamRecorder.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\bin\Debug\DirectShowLib-2005.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\obj\x86\Debug\WebcamRecorder.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WebcamRecorder\WebcamRecorder\obj\x86\Debug\WebcamRecorder.pdb
