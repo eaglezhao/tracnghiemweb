@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfWebcamRecorder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Webcam Recorder" Height="280" Width="400" ResizeMode="NoResize" Closed="Window_Closed">
+    <Canvas>
+        <ListBox Name="msgListBox" Canvas.Top="10" Canvas.Left="10" Width="200" Height="231"/>
+        <TextBlock Text="Device:" Canvas.Top="10" Canvas.Left="230"/>
+        <ComboBox Name="deviceComboBox" Width="164" Canvas.Top="30" Canvas.Left="216"/>
+        <TextBlock Text="Device status:" Canvas.Top="60" Canvas.Left="230"/>
+        <TextBlock Name="statusTextBlock" Text="Stopped" Canvas.Top="80" Canvas.Left="230" FontStyle="Italic" FontWeight="Bold"/>
+        <Button Name="actionButton" Width="70" Content="Start" Canvas.Top="75" Canvas.Left="308"/>
+        
+        <GroupBox Header="Options" Width="162" Height="131" Canvas.Top="110" Canvas.Left="216">
+            <Canvas>
+                <TextBlock Text="Port:" Canvas.Top="10" Canvas.Left="10"/>
+                <TextBox Name="portTextBox" Width="50" Canvas.Top="5" Canvas.Left="40" IsEnabled="False"/>
+                <Button Name="portButton" Canvas.Top="5" Canvas.Left="100" Content="Change"/>
+                
+                <TextBlock Text="Alarm sound:" Canvas.Top="35" Canvas.Left="10"/>
+                <TextBox Name="soundTextBox" Width="110" Canvas.Top="55" Canvas.Left="10" IsEnabled="False"/>
+                <Button Name="selectButton" Content="..." Canvas.Top="54" Canvas.Left="125"/>
+                
+                <CheckBox Name="startModeCheckBox" Canvas.Top="92" Canvas.Left="10" Content="Start with Windows"/>
+            </Canvas>
+        </GroupBox>
+    </Canvas>
+</Window>
