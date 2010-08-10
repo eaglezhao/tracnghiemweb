@@ -1,0 +1,5 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\AVIWriter\bin\Debug\AVIWriter.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\AVIWriter\bin\Debug\AVIWriter.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\AVIWriter\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\AVIWriter\obj\Debug\AVIWriter.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\AVIWriter\obj\Debug\AVIWriter.pdb

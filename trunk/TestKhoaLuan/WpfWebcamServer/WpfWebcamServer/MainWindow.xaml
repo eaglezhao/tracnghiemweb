@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfWebcamServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Webcam Server" Height="640" Width="900" MinHeight="640" MinWidth="900" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="160"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+
+            <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="0" Margin="5, 10, 5, 5">
+                <Image Name="pictureBox" Grid.Row="0" Grid.Column="0"/>
+            </Border>
+            <StackPanel Grid.Row="0" Grid.Column="1" Margin="5">
+                <TextBlock Text="Device List" Background="Black" Foreground="White" FontWeight="Bold" Padding="5"/>
+                <ListBox Name="deviceListBox" Height="120" SelectionChanged="deviceListBox_SelectionChanged" />
+                <TextBlock Text="Client List" Background="Black" Foreground="White" FontWeight="Bold" Padding="5"/>
+                <ListBox Name="clientListBox" Height="120"/>
+                <GroupBox Header="Settings" Margin="0, 10">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Content="Video Recording" Margin="15, 15, 0, 0" Padding="10, 0, 0, 0"/>
+                            <TextBlock Text="Configure" Foreground="Blue" FontStyle="Italic" Margin="40, 15, 0, 0" Cursor="Hand"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Content="Email Notification" Margin="15, 10, 0, 0" Padding="10, 0, 0, 0"/>
+                            <TextBlock Text="Configure" Foreground="Blue" FontStyle="Italic" Margin="35, 10, 0, 10" Cursor="Hand"/>
+                        </StackPanel>
+                        <Separator BorderBrush="BurlyWood" BorderThickness="1"/>
+                        <StackPanel Orientation="Horizontal" Margin="0, 5, 0, 5">
+                            <TextBlock Text="Broadcast" Margin="15, 0, 5, 0"/>
+                            <TextBlock Text="Webcam" Margin="5, 0"/>
+                            <TextBlock Text="Client" Margin="5, 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 18">
+                            <TextBox Name="broadcastTextBox" Margin="15, 0, 5, 0" Width="45" IsEnabled="False"/>
+                            <TextBox Name="webcamTextBox" Margin="5, 0" Width="45" IsEnabled="False"/>
+                            <TextBox Name="clientTextBox" Margin="5, 0" Width="45" IsEnabled="False"/>
+                            <TextBlock Text="Change" Foreground="Blue" FontStyle="Italic" Margin="5, 5, 0, 0" Cursor="Hand" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp" />
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Grid>
+
+        <TabControl Grid.Row="1" Grid.Column="0">
+            <TabItem Header="Status">
+                <ListBox Name="statusListBox"/>
+            </TabItem>
+            <TabItem Header="Recording">
+                <Table Name="fileTable">
+                    <Table.Columns>
+                        
+                    </Table.Columns>
+                </Table>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
