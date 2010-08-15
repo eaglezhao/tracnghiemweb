@@ -18,18 +18,21 @@
                 <Image Name="pictureBox" Grid.Row="0" Grid.Column="0"/>
             </Border>
             <StackPanel Grid.Row="0" Grid.Column="1" Margin="5">
-                <TextBlock Text="Device List" Background="Black" Foreground="White" FontWeight="Bold" Padding="5"/>
+                <StackPanel Background="Black" Orientation="Horizontal">
+                    <TextBlock Text="Device List" Foreground="White" FontWeight="Bold" Padding="5"/>
+                    <Button Name="autoDetectButton" Content="Auto Detect" Margin="100, 0" Padding="2, 0, 3, 0" Click="autoDetectButton_Click" />
+                </StackPanel>
                 <ListBox Name="deviceListBox" Height="120" SelectionChanged="deviceListBox_SelectionChanged" />
                 <TextBlock Text="Client List" Background="Black" Foreground="White" FontWeight="Bold" Padding="5"/>
                 <ListBox Name="clientListBox" Height="120"/>
                 <GroupBox Header="Settings" Margin="0, 10">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <CheckBox Content="Video Recording" Margin="15, 15, 0, 0" Padding="10, 0, 0, 0"/>
-                            <TextBlock Text="Configure" Foreground="Blue" FontStyle="Italic" Margin="40, 15, 0, 0" Cursor="Hand"/>
+                            <CheckBox Name="recordCheckBox" Content="Video Recording" Margin="15, 15, 0, 0" Padding="10, 0, 0, 0" Checked="recordCheckBox_Checked" />
+                            <TextBlock Name="configureTextBlock" Text="Configure" Foreground="Blue" FontStyle="Italic" Margin="40, 15, 0, 0" Cursor="Hand" MouseLeftButtonUp="configureTextBlock_MouseLeftButtonUp" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <CheckBox Content="Email Notification" Margin="15, 10, 0, 0" Padding="10, 0, 0, 0"/>
+                            <CheckBox Name="emailCheckBox" Content="Email Notification" Margin="15, 10, 0, 0" Padding="10, 0, 0, 0"/>
                             <TextBlock Text="Configure" Foreground="Blue" FontStyle="Italic" Margin="35, 10, 0, 10" Cursor="Hand"/>
                         </StackPanel>
                         <Separator BorderBrush="BurlyWood" BorderThickness="1"/>

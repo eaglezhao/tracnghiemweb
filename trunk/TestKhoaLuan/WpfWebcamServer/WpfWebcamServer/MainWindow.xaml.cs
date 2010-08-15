@@ -26,6 +26,8 @@ namespace WpfWebcamServer
         {
             InitializeComponent();
 
+            statusListBox.Items.Add("Starting server...");
+
             int broadcastPort = Properties.Settings.Default.broadcastPort;
             int webcamPort = Properties.Settings.Default.webcamPort;
             int clientPort = Properties.Settings.Default.clientPort;
@@ -39,12 +41,52 @@ namespace WpfWebcamServer
             clientTextBox.Text = clientPort.ToString();
 
             conManager = new ConnectionManager(this, broadcastPort, webcamPort, clientPort, basePath);
-            conManager.WebcamDetected += new ConnectionHandler(conManager_DeviceDetected);
+            conManager.WebcamEventRaised += new ConnectionHandler(HandleWebcamEvent);
+            conManager.ClientEventRaised += new ConnectionHandler(HandleClientEvent);
+
+            statusListBox.Items.Add("Ready!");
         }
 
-        private void conManager_DeviceDetected(object sender, string message)
+        private void HandleWebcamEvent(object sender, string message)
         {
-            deviceListBox.Dispatcher.BeginInvoke(new Action(() => deviceListBox.Items.Add(message)));
+            string[] msg = message.Split(' ');
+
+            if (msg[0] == "connect")
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        deviceListBox.Items.Add(msg[1]);
+                        statusListBox.Items.Add("Webcam " + msg[1] + " is now connected");
+                    }));
+            else if (msg[0] == "disconnect")
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        deviceListBox.Items.Remove(msg[1]);
+                        statusListBox.Items.Add("Webcam " + msg[1] + " has disconnected");
+                    }));
+        }
+
+        private void HandleClientEvent(object sender, string message)
+        {
+            string[] msg = message.Split(' ');
+
+            if (msg[0] == "connect")
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    clientListBox.Items.Add(msg[1]);
+                    statusListBox.Items.Add("Client " + msg[1] + " is now connected");
+                }));
+            else if (msg[0] == "disconnect")
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    clientListBox.Items.Remove(msg[1]);
+                    statusListBox.Items.Add("Client " + msg[1] + " has disconnected");
+                }));
+            else if (msg[0] == "start")
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                    statusListBox.Items.Add("Client " + msg[1] + " requested webcam " + msg[2])));
+            else if (msg[0] == "stop")
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                    statusListBox.Items.Add("Client " + msg[1] + " stopped viewing webcam " + msg[2])));
         }
 
         public void OnFrameReceived(object sender, byte[] b)
@@ -69,7 +111,8 @@ namespace WpfWebcamServer
 
         private void deviceListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            conManager.StopViewing((string)deviceListBox.SelectedItem);
+            if(e.RemovedItems.Count > 0)
+                conManager.StopViewing(e.RemovedItems[0].ToString());
 
             if (deviceListBox.SelectedItem != null)
                 conManager.ViewCamera((string)deviceListBox.SelectedItem);
@@ -117,6 +160,22 @@ namespace WpfWebcamServer
                         MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
+        }
+
+        private void autoDetectButton_Click(object sender, RoutedEventArgs e)
+        {
+            statusListBox.Items.Add("Detecting devices...");
+            conManager.AutoDetect();
+        }
+
+        private void configureTextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void recordCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

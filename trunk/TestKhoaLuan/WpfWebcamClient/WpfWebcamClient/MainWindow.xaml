@@ -51,15 +51,15 @@
                     </Grid.ColumnDefinitions>
                     
                     <TextBlock Text="Refresh" Foreground="Blue" Cursor="Hand" Grid.Row="0" Grid.Column="0" Margin="0, 5, 11, 0"/>
-                    <ComboBox Name="cbxWebcam" Width="120" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Button Name="btnStart" Content="Start" Grid.Row="1" Grid.Column="1" Margin="5" Click="btnStart_Click" />
-                    <Button Name="btnStop" Content="Stop" Grid.Row="1" Grid.Column="2" Margin="5"/>
+                    <ComboBox Name="cbxWebcam" Width="120" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" IsEnabled="False"/>
+                    <Button Name="btnStart" Content="Start" Grid.Row="1" Grid.Column="1" Margin="5" IsEnabled="False" Click="btnStart_Click" />
+                    <Button Name="btnStop" Content="Stop" Grid.Row="1" Grid.Column="2" Margin="5" IsEnabled="False" Click="btnStop_Click" />
                 </Grid>
             </GroupBox>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
             <TextBlock Text="Status" Margin="5, 0, 0, 0"/>
-            <ListBox Name="lstStatus" Height="90" Margin="5"/>
+            <ListBox Name="lstStatus" Height="90" Margin="5" FontFamily="Arial"/>
         </StackPanel>
     </Grid>
 </Window>
