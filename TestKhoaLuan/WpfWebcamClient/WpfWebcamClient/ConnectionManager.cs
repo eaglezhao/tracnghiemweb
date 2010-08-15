@@ -19,26 +19,31 @@ namespace WpfWebcamClient
 
         public void Connect(string address, int port)
         {
-            tcpClient = new TcpClient(address, port);
-            networkStream = tcpClient.GetStream();
+            try
+            {
+                tcpClient = new TcpClient(address, port);
+                networkStream = tcpClient.GetStream();
 
-            ThreadStart listener = new ThreadStart(OnReceive);
-            Thread thread = new Thread(listener);
-            thread.Start();
+                ThreadStart listener = new ThreadStart(OnReceive);
+                Thread thread = new Thread(listener);
+                thread.Start();
+            }
+            catch
+            {
+                Disconnect();
+                throw;
+            }
         }
 
         public void Disconnect()
         {
-            if(networkStream != null)
+            if (networkStream != null)
                 networkStream.Close();
-            if(tcpClient != null)
+            if (tcpClient != null)
                 tcpClient.Close();
 
             networkStream = null;
             tcpClient = null;
-
-            if (Disconnected != null)
-                Disconnected(this, "Disconnected to sever");
         }
 
         public void SendMessage(string msg)
@@ -46,7 +51,7 @@ namespace WpfWebcamClient
             if (tcpClient != null)
             {
                 byte[] buffer = Encoding.ASCII.GetBytes(msg);
-                
+
                 tcpClient.Client.Send(Encoding.ASCII.GetBytes((buffer.Length).ToString("d8") + "\r\n"));
                 tcpClient.Client.Send(buffer);
             }
@@ -59,16 +64,19 @@ namespace WpfWebcamClient
 
             try
             {
+                bool done = false;
+
                 do
                 {
                     byte[] byteBuffer = new byte[11];
 
                     // Read the fixed length string that tells the message size and type
                     iBytesRead = networkStream.Read(byteBuffer, 0, 11);
-                    
+
                     if (iBytesRead != 11)
                     {
-                        Disconnect();
+                        if (Disconnected != null)
+                            Disconnected(this, "Disconnected to server");
                         break;
                     }
 
@@ -86,8 +94,12 @@ namespace WpfWebcamClient
                         if (iBytesRead != 0)
                             iOffset += iBytesRead;
                         else
-                            Disconnect();
-                    } while (iOffset != iBytesComing);
+                        {
+                            if (Disconnected != null)
+                                Disconnected(this, "Disconnected to server");
+                            done = true;
+                        }
+                    } while ((iOffset != iBytesComing) && !done);
 
                     if (type == "0" && MessageReceived != null)
                     {
@@ -98,9 +110,14 @@ namespace WpfWebcamClient
                     {
                         FrameReceived(this, byteBuffer);
                     }
-                } while (true);
+                } while (!done);
             }
             catch
+            {
+                if (Disconnected != null)
+                    Disconnected(this, "Disconnected to server");
+            }
+            finally
             {
                 Disconnect();
             }

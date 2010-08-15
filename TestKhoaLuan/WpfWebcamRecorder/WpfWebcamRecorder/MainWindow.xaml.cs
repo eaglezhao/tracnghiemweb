@@ -26,13 +26,14 @@ namespace WpfWebcamRecorder
     public partial class MainWindow : Window
     {
         protected Thread thread;
-        private volatile bool stopCondition;
-        private volatile bool requested;
         private Webcam cam;
         private ConnectionManager conManager;
         private EncoderParameters myEncoderParameters;
         private ImageCodecInfo myImageCodecInfo;
         private StreamWriter sw;
+        private volatile bool stopCondition;
+        private volatile bool requested;
+        private double alarmLevel;
 
         public MainWindow()
         {
@@ -40,6 +41,7 @@ namespace WpfWebcamRecorder
             msgListBox.Items.Add("Starting...");
 
             portTextBox.Text = Properties.Settings.Default.Port;
+            alarmLevel = sensitivitySlider.Value;
             requested = false;
             string[] webcamList = Webcam.GetWebcamList();
 
@@ -54,7 +56,7 @@ namespace WpfWebcamRecorder
                 try
                 {
                     // Set up logging
-                    sw = File.AppendText(@"c:\WebCam.log");
+                    sw = File.AppendText(Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\WebCam.log");
 
                     ConfigureImageQuality();
                     ConfigureDevice();
@@ -113,7 +115,10 @@ namespace WpfWebcamRecorder
             Font fontOverlay = new Font("Times New Roman", 14, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point);
             MotionDetector motionDetector = new MotionDetector();
+            motionDetector.MotionLevelCalculation = true;
             stopCondition = false;
+            bool isRecording = false;
+            DateTime lastMotion = DateTime.Now;
 
             cam.Start();
 
@@ -125,8 +130,26 @@ namespace WpfWebcamRecorder
                     ip = cam.GetBitMap();
                     image = new Bitmap(cam.Width, cam.Height, cam.Stride, System.Drawing.Imaging.PixelFormat.Format24bppRgb, ip);
                     image.RotateFlip(RotateFlipType.RotateNoneFlipY);
-
+                    
                     motionDetector.ProcessFrame(ref image);
+                   
+                    if (motionDetector.MotionLevel >= alarmLevel)
+                    {
+                        if (!isRecording)
+                        {
+                            conManager.SendMessage("record");
+                            isRecording = true;
+                        }
+                        lastMotion = DateTime.Now;
+                    }
+                    else
+                    {
+                        if (DateTime.Now.Subtract(lastMotion).Seconds > 5)
+                        {
+                            conManager.SendMessage("stop-record");
+                            isRecording = false;
+                        }
+                    }
 
                     // add text that displays date time to the image
                     image.AddText(fontOverlay, 10, 10, DateTime.Now.ToString());
@@ -227,6 +250,11 @@ namespace WpfWebcamRecorder
                     return encoders[j];
             }
             return null;
+        }
+
+        private void sensitivitySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            alarmLevel = sensitivitySlider.Value;
         }
     }
 }

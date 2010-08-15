@@ -6,9 +6,8 @@
         <ListBox Name="msgListBox" Canvas.Top="10" Canvas.Left="10" Width="200" Height="231"/>
         <TextBlock Text="Device:" Canvas.Top="10" Canvas.Left="230"/>
         <ComboBox Name="deviceComboBox" Width="164" Canvas.Top="30" Canvas.Left="216"/>
-        <TextBlock Text="Device status:" Canvas.Top="60" Canvas.Left="230"/>
-        <TextBlock Name="statusTextBlock" Text="Stopped" Canvas.Top="80" Canvas.Left="230" FontStyle="Italic" FontWeight="Bold"/>
-        <Button Name="actionButton" Width="70" Content="Start" Canvas.Top="75" Canvas.Left="308"/>
+        <TextBlock Text="Motion Sensitivity:" Canvas.Top="60" Canvas.Left="230"/>
+        <Slider Name="sensitivitySlider" Width="164" Minimum="0.001" Maximum="0.1" Ticks="0.001, 0.025, 0.05, 0.075, 0.1" TickPlacement="BottomRight" IsDirectionReversed="True" Value="0.025" Canvas.Top="80" Canvas.Left="216" ValueChanged="sensitivitySlider_ValueChanged" />
         
         <GroupBox Header="Options" Width="162" Height="131" Canvas.Top="110" Canvas.Left="216">
             <Canvas>
@@ -19,8 +18,6 @@
                 <TextBlock Text="Alarm sound:" Canvas.Top="35" Canvas.Left="10"/>
                 <TextBox Name="soundTextBox" Width="110" Canvas.Top="55" Canvas.Left="10" IsEnabled="False"/>
                 <Button Name="selectButton" Content="..." Canvas.Top="54" Canvas.Left="125"/>
-                
-                <CheckBox Name="startModeCheckBox" Canvas.Top="92" Canvas.Left="10" Content="Start with Windows"/>
             </Canvas>
         </GroupBox>
     </Canvas>

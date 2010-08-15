@@ -34,7 +34,7 @@ namespace WpfWebcamClient
 
         private void btnConnect_Click(object sender, RoutedEventArgs e)
         {
-            if (((string) btnConnect.Content) == "Connect")
+            if (((string)btnConnect.Content) == "Connect")
             {
                 try
                 {
@@ -42,8 +42,9 @@ namespace WpfWebcamClient
                 }
                 catch
                 {
-                    MessageBox.Show("Address or port is invalid", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    conManager.Disconnect();
+                    MessageBox.Show("Cannot connect to server! Please make sure you enter the valid address and port number", "Connection failed",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                    UpdateStatus("Failed to connect to server");
                 }
             }
             else
@@ -63,7 +64,9 @@ namespace WpfWebcamClient
                         txtAddress.IsEnabled = false;
                         txtPort.IsEnabled = false;
                         btnConnect.Content = "Disconnect";
-                        lstStatus.Items.Add("Connected to server " + txtAddress.Text);
+                        btnStart.IsEnabled = true;
+                        cbxWebcam.IsEnabled = true;
+                        UpdateStatus("Connected to server " + txtAddress.Text);
                     }));
                 conManager.SendMessage("get-list");
             }
@@ -71,6 +74,7 @@ namespace WpfWebcamClient
             {
                 cbxWebcam.Dispatcher.BeginInvoke(new Action(() =>
                     {
+                        cbxWebcam.Items.Clear();
                         for (int i = 1; i < msg.Length; i++)
                             cbxWebcam.Items.Add(msg[i]);
                     }));
@@ -92,25 +96,47 @@ namespace WpfWebcamClient
             }));
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            conManager.Disconnect();
-        }
-
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             conManager.SendMessage("start " + cbxWebcam.SelectedItem);
+            btnStart.IsEnabled = false;
+            btnStop.IsEnabled = true;
+            cbxWebcam.IsEnabled = false;
+            UpdateStatus("Requesting video from webcam " + cbxWebcam.SelectedItem);
         }
 
         private void OnDisconnect(object sender, string message)
         {
             this.Dispatcher.BeginInvoke(new Action(() =>
                 {
-                    lstStatus.Items.Add(message);
+                    UpdateStatus(message);
                     txtAddress.IsEnabled = true;
                     txtPort.IsEnabled = true;
+                    btnStart.IsEnabled = false;
+                    btnStop.IsEnabled = false;
+                    cbxWebcam.IsEnabled = false;
+                    cbxWebcam.Items.Clear();
                     btnConnect.Content = "Connect";
                 }));
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            conManager.Disconnect();
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            conManager.SendMessage("stop " + cbxWebcam.SelectedItem);
+            btnStart.IsEnabled = true;
+            btnStop.IsEnabled = false;
+            cbxWebcam.IsEnabled = true;
+            UpdateStatus("Stop viewing webcam " + cbxWebcam.SelectedItem);
+        }
+
+        private void UpdateStatus(string status)
+        {
+            lstStatus.Items.Add(string.Format("{0, -30}{1}", DateTime.Now.ToLongTimeString(), status));
         }
     }
 }

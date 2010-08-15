@@ -22,7 +22,6 @@ namespace WpfWebcamRecorder
         private UdpClient udpSender;
         private TcpClient tcpClient;
         private int listenPort;
-        private volatile bool done;
         private NetworkStream networkStream;
 
         #endregion
@@ -31,7 +30,6 @@ namespace WpfWebcamRecorder
         {
             listenPort = nPortListen;
             udpReceiver = new UdpClient(listenPort);
-            done = false;
 
             udpReceiver.BeginReceive(new AsyncCallback(OnUdpReceived), udpReceiver);
         }
@@ -40,14 +38,14 @@ namespace WpfWebcamRecorder
         {
             lock (this)
             {
-                // close everything down
+                CloseConnection();
+
                 if (udpReceiver != null)
                     udpReceiver.Close();
-
                 udpReceiver = null;
-                done = true;
             }
         }
+
         ~ConnectionManager()
         {
             Dispose();
@@ -61,7 +59,7 @@ namespace WpfWebcamRecorder
 
         public void SendImage(MemoryStream m)
         {
-            if(udpSender != null)
+            if (udpSender != null)
                 SendImage(m.GetBuffer());
         }
 
@@ -100,7 +98,6 @@ namespace WpfWebcamRecorder
                         if (Connected != null)
                             Connected(this, "Connected to server " + remoteEP.Address.ToString() + " : " + messages[1]);
 
-                        done = false;
                         ThreadStart listener = new ThreadStart(OnTcpReceived);
                         Thread thread = new Thread(listener);
                         thread.Start();
@@ -110,14 +107,7 @@ namespace WpfWebcamRecorder
                 }
                 catch
                 {
-                    if (tcpClient != null)
-                        tcpClient.Close();
-                    if (udpSender != null)
-                        udpSender.Close();
-
-                    tcpClient = null;
-                    udpSender = null;
-
+                    CloseConnection();
                     udpReceiver.BeginReceive(new AsyncCallback(OnUdpReceived), udpReceiver);
                 }
             }
@@ -129,9 +119,9 @@ namespace WpfWebcamRecorder
             int iBytesComing, iBytesRead, iOffset;
             string message;
 
-            do
+            try
             {
-                try
+                do
                 {
                     byte[] byteBuffer = new byte[10];
 
@@ -156,13 +146,9 @@ namespace WpfWebcamRecorder
                         iBytesRead = networkStream.Read(byteBuffer, iOffset, iBytesComing - iOffset);
                         if (iBytesRead != 0)
                             iOffset += iBytesRead;
-                        else
-                            if (Disconnected != null)
-                            {
-                                Disconnected(this, "Server has disconnected");
-                                done = true;
-                            }
-                    } while ((iOffset != iBytesComing) && (!done));
+                        else if (Disconnected != null)
+                            Disconnected(this, "Server has disconnected");
+                    } while (iOffset != iBytesComing);
 
                     message = Encoding.ASCII.GetString(byteBuffer);
 
@@ -174,28 +160,32 @@ namespace WpfWebcamRecorder
                     }
                     else if (MessageReceived != null)
                         MessageReceived(this, message);
-                }
-                catch (Exception e)
-                {
-                    if (Disconnected != null)
-                        Disconnected(this, "Server has disconnected");
-                    done = true;
-                }
-            } while (!done);
+                } while (true);
+            }
+            catch (Exception)
+            {
+                if (Disconnected != null)
+                    Disconnected(this, "Server has disconnected");
+            }
 
-            if(networkStream != null)
-                networkStream.Close();
-            if(tcpClient != null)
-                tcpClient.Close();
-            if(udpSender != null)
-                udpSender.Close();
-            
-            networkStream = null;
-            tcpClient = null;
-            udpSender = null;
+            CloseConnection();
 
             if (udpReceiver != null)
                 udpReceiver.BeginReceive(new AsyncCallback(OnUdpReceived), udpReceiver);
+        }
+
+        private void CloseConnection()
+        {
+            if (networkStream != null)
+                networkStream.Close();
+            if (tcpClient != null)
+                tcpClient.Close();
+            if (udpSender != null)
+                udpSender.Close();
+
+            networkStream = null;
+            tcpClient = null;
+            udpSender = null;
         }
 
         public event ConnectionHandler Connected;
