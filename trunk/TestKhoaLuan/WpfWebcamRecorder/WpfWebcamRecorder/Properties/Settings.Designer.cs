@@ -34,5 +34,17 @@ namespace WpfWebcamRecorder.Properties {
                 this["Port"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Sound {
+            get {
+                return ((string)(this["Sound"]));
+            }
+            set {
+                this["Sound"] = value;
+            }
+        }
     }
 }

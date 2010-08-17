@@ -17,6 +17,7 @@ using Imaging;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Runtime.InteropServices;
+using Microsoft.Win32;
 
 namespace WpfWebcamRecorder
 {
@@ -31,9 +32,13 @@ namespace WpfWebcamRecorder
         private EncoderParameters myEncoderParameters;
         private ImageCodecInfo myImageCodecInfo;
         private StreamWriter sw;
+        private System.Media.SoundPlayer player;
         private volatile bool stopCondition;
         private volatile bool requested;
+        private bool isRecording;
+        private bool isAlarming;
         private double alarmLevel;
+        private string filePath;
 
         public MainWindow()
         {
@@ -41,6 +46,7 @@ namespace WpfWebcamRecorder
             msgListBox.Items.Add("Starting...");
 
             portTextBox.Text = Properties.Settings.Default.Port;
+            soundTextBox.Text = Properties.Settings.Default.Sound;
             alarmLevel = sensitivitySlider.Value;
             requested = false;
             string[] webcamList = Webcam.GetWebcamList();
@@ -73,7 +79,7 @@ namespace WpfWebcamRecorder
 
         private void ConfigureImageQuality()
         {
-            const long JPEGQUALITY = 30; // 1-100 or 0 for default
+            const long JPEGQUALITY = 20; // 1-100 or 0 for default
 
             myImageCodecInfo = GetEncoderInfo("image/jpeg");
 
@@ -99,7 +105,7 @@ namespace WpfWebcamRecorder
         private void ConfigureConnection()
         {
             // Set up connection manager
-            int portNumber = (int)portTextBox.Dispatcher.Invoke(new Func<int>(() => Convert.ToInt32(portTextBox.Text)));
+            int portNumber = Convert.ToInt32(portTextBox.Text);
             conManager = new ConnectionManager(portNumber);
             conManager.MessageReceived += new MessageHandler(ProcessMessage);
             conManager.Connected += new ConnectionHandler(OnConnect);
@@ -115,10 +121,15 @@ namespace WpfWebcamRecorder
             Font fontOverlay = new Font("Times New Roman", 14, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point);
             MotionDetector motionDetector = new MotionDetector();
-            motionDetector.MotionLevelCalculation = true;
-            stopCondition = false;
-            bool isRecording = false;
             DateTime lastMotion = DateTime.Now;
+            int interval = 5;
+
+            stopCondition = false;
+            isRecording = false;
+            player = new System.Media.SoundPlayer();
+
+            motionDetector.MotionLevelCalculation = true;
+            player.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler((obj, arg) => player.PlayLooping());
 
             cam.Start();
 
@@ -135,19 +146,25 @@ namespace WpfWebcamRecorder
                    
                     if (motionDetector.MotionLevel >= alarmLevel)
                     {
-                        if (!isRecording)
-                        {
+                        if (!isRecording && (DateTime.Now.Second % interval == 0))
                             conManager.SendMessage("record");
-                            isRecording = true;
-                        }
+
                         lastMotion = DateTime.Now;
                     }
                     else
                     {
-                        if (DateTime.Now.Subtract(lastMotion).Seconds > 5)
+                        if (DateTime.Now.Subtract(lastMotion).Seconds > interval)
                         {
-                            conManager.SendMessage("stop-record");
-                            isRecording = false;
+                            if (isRecording)
+                            {
+                                conManager.SendMessage("stop-record");
+                                isRecording = false;
+                            }
+                            if (isAlarming)
+                            {
+                                player.Stop();
+                                isAlarming = false;
+                            }
                         }
                     }
 
@@ -156,17 +173,10 @@ namespace WpfWebcamRecorder
 
                     // save it to jpeg using quality options
                     image.Save(m, myImageCodecInfo, myEncoderParameters);
-
+                    
                     // send the jpeg image if server requests it
                     if (requested)
                         conManager.SendImage(m);
-
-                    // Empty the stream
-                    m.SetLength(0);
-
-                    // remove the image from memory
-                    image.Dispose();
-                    image = null;
                 }
                 catch (Exception ex)
                 {
@@ -179,6 +189,16 @@ namespace WpfWebcamRecorder
                 }
                 finally
                 {
+                    // Empty the stream
+                    m.SetLength(0);
+
+                    // remove the image from memory
+                    if (image != null)
+                    {
+                        image.Dispose();
+                        image = null;
+                    }
+
                     if (ip != IntPtr.Zero)
                     {
                         Marshal.FreeCoTaskMem(ip);
@@ -188,6 +208,7 @@ namespace WpfWebcamRecorder
             }
 
             cam.Pause();
+            player.Stop();
             fontOverlay.Dispose();
         }
 
@@ -213,9 +234,11 @@ namespace WpfWebcamRecorder
             string[] message = msg.Split(' ');
 
             if (message[0] == "start")
-            {
                 requested = true;
-            }
+            else if (message[0] == "recording")
+                isRecording = true;
+            else if (message[0] == "alarm")
+                Alarm();
         }
 
         private void OnConnect(object sender, string msg)
@@ -232,6 +255,33 @@ namespace WpfWebcamRecorder
             ShowMessage(msg);
             stopCondition = true;
             requested = false;
+        }
+
+        private void Alarm()
+        {
+            if (!isAlarming)
+            {
+                try
+                {
+                    if (!string.IsNullOrEmpty(filePath))
+                        player.SoundLocation = filePath;
+                    else
+                        player.Stream = Properties.Resources.alarm;
+
+                    player.LoadAsync();
+                    isAlarming = true;
+                }
+                catch
+                {
+                    try
+                    {
+                        player.Stream = Properties.Resources.alarm;
+                        player.LoadAsync();
+                        isAlarming = true;
+                    }
+                    catch { }
+                }
+            }
         }
 
         private void ShowMessage(string msg)
@@ -255,6 +305,52 @@ namespace WpfWebcamRecorder
         private void sensitivitySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             alarmLevel = sensitivitySlider.Value;
+        }
+
+        private void selectButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "WAV Files(*.wav)|*.wav";
+            dialog.CheckFileExists = true;
+            if (dialog.ShowDialog() == true)
+            {
+                soundTextBox.Text = dialog.FileName;
+                Properties.Settings.Default.Sound = dialog.FileName;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void portButton_Click(object sender, RoutedEventArgs e)
+        {
+            if ((string) portButton.Content == "Change")
+            {
+                portTextBox.IsEnabled = true;
+                portButton.Content = "Save";
+            }
+            else
+            {
+                try
+                {
+                    Convert.ToInt32(portTextBox.Text);
+                    Properties.Settings.Default.Port = portTextBox.Text;
+                    Properties.Settings.Default.Save();
+                    portTextBox.IsEnabled = false;
+                    portButton.Content = "Change";
+                    MessageBox.Show("Changes will take effect after you restart the application", "Message",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+
+                }
+                catch
+                {
+                    MessageBox.Show("Invalid port number. Valid values are from 0 to 65535", "Input Error",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void soundTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            filePath = soundTextBox.Text;
         }
     }
 }

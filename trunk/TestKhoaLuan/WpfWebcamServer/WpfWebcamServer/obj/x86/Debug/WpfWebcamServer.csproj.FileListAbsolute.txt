@@ -11,6 +11,8 @@ c:\documents and settings\administrator\my documents\visual studio 2010\Projects
 c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\obj\x86\Debug\GenerateResource.write.1.tlog
 c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\obj\x86\Debug\WpfWebcamServer.exe
 c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\obj\x86\Debug\WpfWebcamServer.pdb
-c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\bin\Debug\AVIWriter.dll
-c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\bin\Debug\AVIWriter.pdb
 C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\bin\Debug\WpfWebcamServer.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\obj\x86\Debug\ConfigDialog.baml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\obj\x86\Debug\ConfigDialog.g.cs
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\bin\Debug\AForge.Video.VFW.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamServer\WpfWebcamServer\bin\Debug\AForge.Video.dll

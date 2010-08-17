@@ -11,11 +11,15 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
+using System.Linq;
 
 namespace WpfWebcamRecorder
 {
-    internal class ConnectionManager : IDisposable
+    internal sealed class ConnectionManager : IDisposable
     {
+        // maximum udp packet size
+        private const int MaxSize = 60000;
+
         #region Member variables
 
         private UdpClient udpReceiver;
@@ -54,7 +58,11 @@ namespace WpfWebcamRecorder
         public void SendImage(byte[] b)
         {
             if (udpSender != null)
+            {
+                if (b.Length > MaxSize)
+                    b = b.Take(MaxSize).ToArray();
                 udpSender.Send(b, b.Length);
+            }
         }
 
         public void SendImage(MemoryStream m)
@@ -68,7 +76,7 @@ namespace WpfWebcamRecorder
             if (tcpClient != null)
             {
                 byte[] buffer = Encoding.ASCII.GetBytes(msg);
-
+                
                 tcpClient.Client.Send(Encoding.ASCII.GetBytes((buffer.Length).ToString("d8") + "\r\n"));
                 tcpClient.Client.Send(buffer);
             }

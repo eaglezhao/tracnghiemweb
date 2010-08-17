@@ -7,17 +7,17 @@
         <TextBlock Text="Device:" Canvas.Top="10" Canvas.Left="230"/>
         <ComboBox Name="deviceComboBox" Width="164" Canvas.Top="30" Canvas.Left="216"/>
         <TextBlock Text="Motion Sensitivity:" Canvas.Top="60" Canvas.Left="230"/>
-        <Slider Name="sensitivitySlider" Width="164" Minimum="0.001" Maximum="0.1" Ticks="0.001, 0.025, 0.05, 0.075, 0.1" TickPlacement="BottomRight" IsDirectionReversed="True" Value="0.025" Canvas.Top="80" Canvas.Left="216" ValueChanged="sensitivitySlider_ValueChanged" />
+        <Slider Name="sensitivitySlider" Width="164" Minimum="0.001" Maximum="0.1" Ticks="0.001, 0.025, 0.05, 0.075, 0.1" TickPlacement="BottomRight" IsDirectionReversed="True" Value="0.05" Canvas.Top="80" Canvas.Left="216" ValueChanged="sensitivitySlider_ValueChanged" />
         
         <GroupBox Header="Options" Width="162" Height="131" Canvas.Top="110" Canvas.Left="216">
             <Canvas>
                 <TextBlock Text="Port:" Canvas.Top="10" Canvas.Left="10"/>
                 <TextBox Name="portTextBox" Width="50" Canvas.Top="5" Canvas.Left="40" IsEnabled="False"/>
-                <Button Name="portButton" Canvas.Top="5" Canvas.Left="100" Content="Change"/>
+                <Button Name="portButton" Canvas.Top="5" Canvas.Left="100" Content="Change" Click="portButton_Click" />
                 
                 <TextBlock Text="Alarm sound:" Canvas.Top="35" Canvas.Left="10"/>
-                <TextBox Name="soundTextBox" Width="110" Canvas.Top="55" Canvas.Left="10" IsEnabled="False"/>
-                <Button Name="selectButton" Content="..." Canvas.Top="54" Canvas.Left="125"/>
+                <TextBox Name="soundTextBox" Width="110" Canvas.Top="55" Canvas.Left="10" TextChanged="soundTextBox_TextChanged" />
+                <Button Name="selectButton" Content="..." Canvas.Top="54" Canvas.Left="125" Click="selectButton_Click" />
             </Canvas>
         </GroupBox>
     </Canvas>
