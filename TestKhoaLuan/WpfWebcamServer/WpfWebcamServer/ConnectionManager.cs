@@ -112,6 +112,7 @@ namespace WpfWebcamServer
                     webcamManager.AddWebcam(w);
                     w.Connected += new ConnectionHandler(OnWebcamDetected);
                     w.Disconnected += new ConnectionHandler(OnWebcamDisconnect);
+                    w.MotionAlarmed += new ConnectionHandler(OnMotionAlarm);
                 }
                 while (true);
             }
@@ -209,6 +210,35 @@ namespace WpfWebcamServer
 
             webcamManager.RemoveWebcam(w);
             w.Dispose();
+        }
+
+        private void OnMotionAlarm(object sender, string message)
+        {
+            Webcam w = (Webcam) sender;
+
+            if (message == "start")
+            {
+                if (WebcamEventRaised != null && w.MotionDetected == false)
+                {
+                    WebcamEventRaised(sender, "motion " + w.Name);
+                    w.MotionDetected = true;
+                }
+                if (mainWindow.AllowRecord)
+                {
+                    w.StartRecording();
+                    WebcamEventRaised(sender, "record " + w.Name);
+                }
+                if (mainWindow.AllowSoundAlarm)
+                {
+                    w.Alarm();
+                }
+            }
+            if (message == "stop")
+            {
+                w.StopRecording();
+                w.MotionDetected = false;
+                WebcamEventRaised(sender, "stop-record " + w.Name);
+            }
         }
 
         private void OnClientConnect(object sender, string message)

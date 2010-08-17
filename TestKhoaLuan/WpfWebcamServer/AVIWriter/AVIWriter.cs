@@ -25,7 +25,7 @@ namespace Video.IO
 		private int		stride;
 		private string	codec = "DIB ";
 		private int		quality = -1;
-		private int		rate = 25;
+		private int		rate = 15;
 		private int		position;
 
 		// CurrentPosition property

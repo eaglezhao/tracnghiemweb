@@ -5,5 +5,8 @@
     <Setting Name="Port" Type="System.String" Scope="User">
       <Value Profile="(Default)">2222</Value>
     </Setting>
+    <Setting Name="Sound" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

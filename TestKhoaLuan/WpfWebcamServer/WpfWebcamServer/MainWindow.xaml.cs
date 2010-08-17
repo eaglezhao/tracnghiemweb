@@ -21,6 +21,9 @@ namespace WpfWebcamServer
     public partial class MainWindow : Window
     {
         private ConnectionManager conManager;
+        private string basePath;
+        private volatile bool allowRecord;
+        private volatile bool allowSoundAlarm;
 
         public MainWindow()
         {
@@ -31,7 +34,7 @@ namespace WpfWebcamServer
             int broadcastPort = Properties.Settings.Default.broadcastPort;
             int webcamPort = Properties.Settings.Default.webcamPort;
             int clientPort = Properties.Settings.Default.clientPort;
-            string basePath = Properties.Settings.Default.basePath;
+            basePath = Properties.Settings.Default.basePath;
 
             if (string.IsNullOrEmpty(basePath))
                 basePath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -46,6 +49,9 @@ namespace WpfWebcamServer
 
             statusListBox.Items.Add("Ready!");
         }
+
+        public bool AllowRecord { get { return allowRecord; } }
+        public bool AllowSoundAlarm { get { return allowSoundAlarm; } }
 
         private void HandleWebcamEvent(object sender, string message)
         {
@@ -63,6 +69,14 @@ namespace WpfWebcamServer
                         deviceListBox.Items.Remove(msg[1]);
                         statusListBox.Items.Add("Webcam " + msg[1] + " has disconnected");
                     }));
+            else if (msg[0] == "motion")
+            {
+                this.Dispatcher.BeginInvoke(new Action(() => statusListBox.Items.Add("Webcam " + msg[1] + " detected motion")));
+            }
+            else if (msg[0] == "record")
+                this.Dispatcher.BeginInvoke(new Action(() => statusListBox.Items.Add("Webcam " + msg[1] + " started recording")));
+            else if (msg[0] == "stop-record")
+                this.Dispatcher.BeginInvoke(new Action(() => statusListBox.Items.Add("Webcam " + msg[1] + " stopped recording")));
         }
 
         private void HandleClientEvent(object sender, string message)
@@ -111,7 +125,7 @@ namespace WpfWebcamServer
 
         private void deviceListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(e.RemovedItems.Count > 0)
+            if (e.RemovedItems.Count > 0)
                 conManager.StopViewing(e.RemovedItems[0].ToString());
 
             if (deviceListBox.SelectedItem != null)
@@ -140,6 +154,7 @@ namespace WpfWebcamServer
                     Properties.Settings.Default.broadcastPort = bPort;
                     Properties.Settings.Default.webcamPort = wPort;
                     Properties.Settings.Default.clientPort = cPort;
+                    Properties.Settings.Default.Save();
 
                     broadcastTextBox.IsEnabled = false;
                     webcamTextBox.IsEnabled = false;
@@ -170,12 +185,18 @@ namespace WpfWebcamServer
 
         private void configureTextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
+            ConfigDialog configDialog = new ConfigDialog(basePath, this);
+            configDialog.ShowDialog();
         }
 
         private void recordCheckBox_Checked(object sender, RoutedEventArgs e)
         {
+            allowRecord = recordCheckBox.IsChecked ?? false;
+        }
 
+        private void soundCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            allowSoundAlarm = soundCheckBox.IsChecked ?? false;
         }
     }
 }

@@ -36,9 +36,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>..\..\..\..\..\..\..\AForge.NET\Release\AForge.Video.VFW.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,12 +60,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Client\ClientManager.cs" />
-    <Compile Include="Webcam\WebcamManager.cs" />
-    <Compile Include="Client\Client.cs" />
-    <Compile Include="Webcam\Webcam.cs" />
+    <Compile Include="Clients\ClientManager.cs" />
+    <Compile Include="ConfigDialog.xaml.cs">
+      <DependentUpon>ConfigDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Webcams\WebcamManager.cs" />
+    <Compile Include="Clients\Client.cs" />
+    <Compile Include="Webcams\Webcam.cs" />
     <Compile Include="ConnectionManager.cs" />
-    <Compile Include="Webcam\ImageReceiver.cs" />
+    <Compile Include="Webcams\ImageReceiver.cs" />
+    <Page Include="ConfigDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,12 +110,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AVIWriter\AVIWriter.csproj">
-      <Project>{35366108-8CAD-42E0-B73A-10EA6845AB62}</Project>
-      <Name>AVIWriter</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
