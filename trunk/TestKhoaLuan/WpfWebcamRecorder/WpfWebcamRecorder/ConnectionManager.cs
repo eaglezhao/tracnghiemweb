@@ -42,11 +42,13 @@ namespace WpfWebcamRecorder
         {
             lock (this)
             {
-                CloseConnection();
+                //CloseConnection();
 
                 if (udpReceiver != null)
+                {
                     udpReceiver.Close();
-                udpReceiver = null;
+                    udpReceiver = null;
+                }
             }
         }
 
@@ -108,6 +110,7 @@ namespace WpfWebcamRecorder
 
                         ThreadStart listener = new ThreadStart(OnTcpReceived);
                         Thread thread = new Thread(listener);
+                        thread.IsBackground = true;
                         thread.Start();
                     }
                     else
@@ -121,7 +124,7 @@ namespace WpfWebcamRecorder
             }
         }
 
-        // Client has sent data, or has disconnected
+        // Server has sent data, or has disconnected
         private void OnTcpReceived()
         {
             int iBytesComing, iBytesRead, iOffset;
@@ -184,16 +187,19 @@ namespace WpfWebcamRecorder
 
         private void CloseConnection()
         {
-            if (networkStream != null)
-                networkStream.Close();
-            if (tcpClient != null)
-                tcpClient.Close();
-            if (udpSender != null)
-                udpSender.Close();
+            lock (this)
+            {
+                if (networkStream != null)
+                    networkStream.Close();
+                if (tcpClient != null)
+                    tcpClient.Close();
+                if (udpSender != null)
+                    udpSender.Close();
 
-            networkStream = null;
-            tcpClient = null;
-            udpSender = null;
+                networkStream = null;
+                tcpClient = null;
+                udpSender = null;
+            }
         }
 
         public event ConnectionHandler Connected;

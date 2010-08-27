@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWebcamRecorder", "WpfWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imaging", "Imaging\Imaging.csproj", "{A4EAF389-1DAD-4384-8648-EDA19F59CCA7}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingWebcamRecorder", "ModelingWebcamRecorder\ModelingWebcamRecorder.modelproj", "{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{A4EAF389-1DAD-4384-8648-EDA19F59CCA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A4EAF389-1DAD-4384-8648-EDA19F59CCA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A4EAF389-1DAD-4384-8648-EDA19F59CCA7}.Release|x86.ActiveCfg = Release|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{887B65F1-4B62-46B3-BDA9-0A71BD2B14A3}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
