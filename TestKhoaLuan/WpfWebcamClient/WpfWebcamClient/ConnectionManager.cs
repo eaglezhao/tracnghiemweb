@@ -84,7 +84,7 @@ namespace WpfWebcamClient
                     byteBuffer = byteBuffer.Skip(1).ToArray();
                     iBytesComing = Convert.ToInt32(Encoding.ASCII.GetString(byteBuffer));
                     byteBuffer = new byte[iBytesComing];
-
+                    
                     // Read the message
                     iOffset = 0;
 

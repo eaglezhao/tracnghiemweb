@@ -138,5 +138,10 @@ namespace WpfWebcamClient
         {
             lstStatus.Items.Add(string.Format("{0, -30}{1}", DateTime.Now.ToLongTimeString(), status));
         }
+
+        private void txtRefresh_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            conManager.SendMessage("get-list");
+        }
     }
 }

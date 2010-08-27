@@ -135,7 +135,7 @@ namespace WpfWebcamServer
                     c.RequestReceived += new ConnectionHandler(ProcessClientRequest);
                     c.Send(null, Encoding.ASCII.GetBytes("hello"), MessageType.Command);
 
-                    OnClientConnect(c, "connect " + ((IPEndPoint) c.TcpClient.Client.RemoteEndPoint).Address);
+                    OnClientConnect(c, "connect " + c.IP);
                 }
                 while (true);
             }
@@ -151,17 +151,27 @@ namespace WpfWebcamServer
 
             if (message[0] == "start")
             {
-                Webcam wc = webcamManager.FindWebcam(message[1]);
-                if (wc != null)
+                Webcam wc = null;
+
+                lock (this)
                 {
-                    wc.AddClient(c.Send);
-                    lock (this)
+                    if (relations.ContainsKey(c))
+                        wc = relations[c];
+                    if (wc != null)
                     {
-                        relations.Add(c, wc);
+                        wc.RemoveClient(c.Send);
+                        relations.Remove(c);
                     }
-                    if (ClientEventRaised != null)
-                        ClientEventRaised(c, string.Format("start {0} {1}",
-                            ((IPEndPoint)c.TcpClient.Client.RemoteEndPoint).Address, wc.Name));
+
+                    wc = webcamManager.FindWebcam(message[1]);
+                    if (wc != null)
+                    {
+                        wc.AddClient(c.Send);
+                        relations.Add(c, wc);
+                        if (ClientEventRaised != null)
+                            ClientEventRaised(c, string.Format("start {0} {1}",
+                                c.IP, wc.Name));
+                    }
                 }
             }
             else if (message[0] == "stop")
@@ -176,7 +186,7 @@ namespace WpfWebcamServer
                     }
                     if (ClientEventRaised != null)
                         ClientEventRaised(c, string.Format("stop {0} {1}",
-                            ((IPEndPoint)c.TcpClient.Client.RemoteEndPoint).Address, wc.Name));
+                            c.IP, wc.Name));
                 }
             }
             else if (message[0] == "get-list")
@@ -200,10 +210,13 @@ namespace WpfWebcamServer
         private void OnWebcamDisconnect(object sender, string message)
         {
             Webcam w = (Webcam)sender;
-            IEnumerable<Client> clients = from k in relations.Keys where relations[k] == w select k;
-                
-            foreach (Client c in clients)
-                relations.Remove(c);
+            Client[] clients = relations.Keys.Where(k => relations[k] == w).ToArray();
+
+            lock (this)
+            {
+                foreach (Client c in clients)
+                    relations.Remove(c);
+            }
 
             if (WebcamEventRaised != null)
                 WebcamEventRaised(sender, "disconnect " + w.Name);
@@ -214,7 +227,7 @@ namespace WpfWebcamServer
 
         private void OnMotionAlarm(object sender, string message)
         {
-            Webcam w = (Webcam) sender;
+            Webcam w = (Webcam)sender;
 
             if (message == "start")
             {
@@ -223,17 +236,15 @@ namespace WpfWebcamServer
                     WebcamEventRaised(sender, "motion " + w.Name);
                     w.MotionDetected = true;
                 }
+
                 if (mainWindow.AllowRecord)
-                {
                     w.StartRecording();
-                    WebcamEventRaised(sender, "record " + w.Name);
-                }
                 if (mainWindow.AllowSoundAlarm)
-                {
                     w.Alarm();
-                }
             }
-            if (message == "stop")
+            else if(message == "recording")
+                WebcamEventRaised(sender, "record " + w.Name);
+            else if (message == "stop")
             {
                 w.StopRecording();
                 w.MotionDetected = false;
@@ -252,15 +263,18 @@ namespace WpfWebcamServer
             Client c = (Client)sender;
             Webcam w = null;
 
-            if (relations.ContainsKey(c))
+            lock (this)
             {
-                w = relations[c];
-                w.RemoveClient(c.Send);
-                relations.Remove(c);
+                if (relations.ContainsKey(c))
+                {
+                    w = relations[c];
+                    w.RemoveClient(c.Send);
+                    relations.Remove(c);
+                }
             }
-
+            
             if (ClientEventRaised != null)
-                ClientEventRaised(c, "disconnect " + ((IPEndPoint)c.TcpClient.Client.RemoteEndPoint).Address);
+                ClientEventRaised(c, "disconnect " + c.IP);
 
             clientManager.RemoveClient(c);
             c.Dispose();

@@ -206,7 +206,7 @@ namespace WpfWebcamRecorder
                     }
                 }
             }
-
+            
             cam.Pause();
             player.Stop();
             fontOverlay.Dispose();

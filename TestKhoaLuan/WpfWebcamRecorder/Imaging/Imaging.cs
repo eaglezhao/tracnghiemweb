@@ -29,5 +29,15 @@ namespace Imaging
             // dispose of the various objects
             g.Dispose();
         }
+
+        /*public static Bitmap Scale(this Bitmap image, int width, int height)
+        {
+            
+        }*/
+
+        /*public static byte[] Scale(this byte[] buffer)
+        {
+
+        }*/
     }
 }

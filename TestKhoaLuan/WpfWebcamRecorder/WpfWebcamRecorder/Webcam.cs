@@ -93,11 +93,14 @@ namespace WpfWebcamRecorder
         /// <summary> release everything. </summary>
         public void Dispose()
         {
-            CloseInterfaces();
-            if (m_PictureReady != null)
+            lock (this)
             {
-                m_PictureReady.Close();
-                m_PictureReady = null;
+                CloseInterfaces();
+                if (m_PictureReady != null)
+                {
+                    m_PictureReady.Close();
+                    m_PictureReady = null;
+                }
             }
         }
         // Destructor
@@ -172,12 +175,15 @@ namespace WpfWebcamRecorder
         // isn't needed.
         public void Pause()
         {
-            if (m_bRunning)
+            lock (this)
             {
-                int hr = m_mediaCtrl.Pause();
-                DsError.ThrowExceptionForHR(hr);
+                if (m_bRunning)
+                {
+                    int hr = m_mediaCtrl.Pause();
+                    DsError.ThrowExceptionForHR(hr);
 
-                m_bRunning = false;
+                    m_bRunning = false;
+                }
             }
         }
 
@@ -346,12 +352,12 @@ namespace WpfWebcamRecorder
             DsUtils.FreeAMMediaType(media);
             media = null;
         }
-
+        
         /// <summary> Shut down capture </summary>
         private void CloseInterfaces()
         {
             int hr;
-
+            
             try
             {
                 if (m_mediaCtrl != null)
