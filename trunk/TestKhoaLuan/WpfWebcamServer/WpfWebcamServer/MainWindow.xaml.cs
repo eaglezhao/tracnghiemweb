@@ -48,6 +48,7 @@ namespace WpfWebcamServer
             conManager.ClientEventRaised += new ConnectionHandler(HandleClientEvent);
 
             statusListBox.Items.Add("Ready!");
+            refreshTextBlock_MouseLeftButtonUp(null, null);
         }
 
         public bool AllowRecord { get { return allowRecord; } }
@@ -197,6 +198,54 @@ namespace WpfWebcamServer
         private void soundCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             allowSoundAlarm = soundCheckBox.IsChecked ?? false;
+        }
+
+        private void LoadVideoList()
+        {
+            DirectoryInfo dir = new DirectoryInfo(basePath);
+
+            if (dir.Exists)
+            {
+                FileInfo[] fileInfo = dir.GetFiles("*.avi", SearchOption.AllDirectories);
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    videoPanel.Children.Clear();
+                    foreach (FileInfo f in fileInfo)
+                    {
+                        StackPanel panel = new StackPanel();
+                        panel.Orientation = Orientation.Vertical;
+                        panel.Margin = new Thickness(5);
+                        panel.Cursor = Cursors.Hand;
+                        panel.Tag = f.FullName;
+                        panel.MouseLeftButtonUp += new MouseButtonEventHandler(panel_MouseLeftButtonUp);
+
+                        Image img = new Image();
+                        img.Width = 80;
+                        img.Height = 60;
+                        img.Source = new BitmapImage(new Uri("/Images/video_icon.png", UriKind.Relative));
+
+                        TextBlock textBlock = new TextBlock();
+                        textBlock.Text = f.Name;
+
+                        panel.Children.Add(img);
+                        panel.Children.Add(textBlock);
+                        videoPanel.Children.Add(panel);
+                    }
+                }));
+            }
+        }
+
+        private void panel_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            string fileName = "\"" + (string)((StackPanel)sender).Tag + "\"";
+            System.Diagnostics.Process.Start("wmplayer.exe", fileName);
+        }
+
+        private void refreshTextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            System.Threading.ThreadStart ts = new System.Threading.ThreadStart(LoadVideoList);
+            System.Threading.Thread t = new System.Threading.Thread(ts);
+            t.Start();
         }
     }
 }

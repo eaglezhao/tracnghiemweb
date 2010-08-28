@@ -57,11 +57,12 @@
                 <ListBox Name="statusListBox"/>
             </TabItem>
             <TabItem Header="Recording">
-                <Table Name="fileTable">
-                    <Table.Columns>
-                        
-                    </Table.Columns>
-                </Table>
+                <StackPanel>
+                    <TextBlock Name="refreshTextBlock" Text="Refresh" Foreground="Blue" FontStyle="Italic" Margin="10, 5" Cursor="Hand" MouseLeftButtonUp="refreshTextBlock_MouseLeftButtonUp"/>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <WrapPanel Name="videoPanel" Background="White"></WrapPanel>
+                    </Border>
+                </StackPanel>
             </TabItem>
         </TabControl>
     </Grid>
