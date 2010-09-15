@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0305006c-d3c1-4325-91b5-236a81c0a1cd"
+  name="DirectShowLib"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d90aad96-e6b1-42c2-a268-1df33de52673"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=DirectShowLib"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="8b764c3c-1259-49b9-881a-a744dc6d660a">
+      <profileInstance
+        Id="f010f4d4-7bbe-412a-82a3-79365ef60f7e"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="99a4ec42-58a0-433b-8827-7b589d358810"
+        name="DsDevice"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9104dcc7-7300-4bfd-be62-999c86917758"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=DsDevice"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3358ba4e-b0cb-49af-919a-717ef6be6a96"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c8e0212-a425-42cf-bd2e-d19e858d25a9">
+                <propertyInstance
+                  Id="112911cf-e1ac-4764-bd7a-564c1afaa4ee"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="749543e1-e7d7-4191-8e99-e4d1cee6a16f">
+                <propertyInstance
+                  Id="7979d7fe-031d-4a70-8796-39a6d61d62ad"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1547cc82-ced1-40db-9552-f2b75309bd0f">
+                <propertyInstance
+                  Id="d8a723bc-f175-4102-8438-16ec7566667a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="80895476-b1a8-46c9-bbff-535f8c9d2f0b">
+                <propertyInstance
+                  Id="863e42be-de9f-4fcf-b27d-41c6c366b3bc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f51297d-64ec-4084-a0f3-601f9642fc20">
+                <propertyInstance
+                  Id="bb4d3065-1ccd-4c20-9377-06b463c8b1c8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="db78f0fa-2a7d-4678-8d74-5c4570941298">
+            <interfaceMoniker
+              Id="8565df97-1aae-4ba4-a3fa-ad96a980fe5c"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package1_2201.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6723fce2-fd80-4028-bf23-6dd966bc49e4"
+        name="ISampleGrabber"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="13c57b47-9e28-4d79-a78d-88cc07795000"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=ISampleGrabber"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1fd2f22a-2388-49db-8fa7-759ccfeb95a6"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3a5c277d-f6c8-4aac-9043-323de71e7c1d">
+                <propertyInstance
+                  Id="4edb376e-64f2-4074-b2f3-7b54ea7f2b7e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eb57ad77-802b-4a15-a047-17ecb97d65cb">
+                <propertyInstance
+                  Id="4f27d31e-7024-4d38-b573-d82f0d9407a6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8907af1b-c22e-4ed6-9ee3-4b00cbad6bc6">
+                <propertyInstance
+                  Id="e70d3769-e4da-428d-bc9d-fd2a273a08da"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="becb6ff0-d0a3-4fc6-8776-523001cce574">
+                <propertyInstance
+                  Id="db907109-5b32-4cea-82bc-c3ffb200eeb7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7bff22db-b52e-4b84-8391-0836df0c1fb0"
+        name="ICaptureGraphBuilder2"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="44e37fa0-6120-447e-be46-677c2fdc8f37"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=ICaptureGraphBuilder2"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="35315db0-4488-46f3-82ab-1db67fead92e"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="79ca33c2-d75a-4ee4-b2ba-84b0227bab21">
+                <propertyInstance
+                  Id="1586f6c0-28bd-46d5-a855-2a878f2010f7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e648f21b-3535-4f21-99c8-2d0b1d6e2fc8">
+                <propertyInstance
+                  Id="74c99a9f-6cfc-413c-a2a5-c3edba51b8c3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69790cc9-36bf-4daa-918f-29cab1ef0576">
+                <propertyInstance
+                  Id="dcddf2ab-16c3-4cdb-875d-d1349adb8865"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f420063-5963-4c46-9d8b-b74de5324049">
+                <propertyInstance
+                  Id="aedc85b8-ca48-4c01-aceb-b0a0c2099ed3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="63ea2c78-7144-4ea8-bdc6-d03f4147d76a"
+        name="IBaseFilter"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="e6153f62-e54e-43bd-a42a-c34deec71de6"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=IBaseFilter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1c42cb8c-31f6-4c4b-bada-a37fa28dd331"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="71a75272-c310-4aaa-a5ec-75dfb75ccfde">
+                <propertyInstance
+                  Id="5ef6fcd2-dc13-40c1-9463-4f9147ac007c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fc688cd8-17d2-4aab-af19-2a6432e7571e">
+                <propertyInstance
+                  Id="874d768a-73cf-49ae-9f76-f5b8404fbf5a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="10d577d9-3b6c-48e5-a356-ff514dc2a97d">
+                <propertyInstance
+                  Id="8c73b490-058e-470d-bf1a-24fdbf1584ea"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4542eb08-4a7e-43fe-8b71-bcc51e6066dd">
+                <propertyInstance
+                  Id="4f529d2f-5112-4057-9be3-c3174d7f0438"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="71a25c13-b050-4e92-ae35-71588d9704c9"
+        name="IMediaSample"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="0108509f-5945-41c6-9c50-0060eb56295b"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=IMediaSample"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a83b8510-8a93-4f11-a8e8-8efcff87af31"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eb6be9b1-0f96-44a9-ac30-6da03d6877d0">
+                <propertyInstance
+                  Id="4b62baf2-c768-4cfe-bfbd-d0ef6774d695"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3a28dd4d-de22-4de7-bde5-090bad9aeb10">
+                <propertyInstance
+                  Id="b2425dca-23f3-41b7-b88a-221576371105"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e476b9f-51d5-49ff-ba48-88da4c059c01">
+                <propertyInstance
+                  Id="39b6ba5f-ed23-427d-a25f-8a4571318561"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e483479c-560b-409d-b1c6-0995413e00da">
+                <propertyInstance
+                  Id="bf1caf1e-68b6-45b9-9d05-a60371dc0cae"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d52016df-1c00-4299-bf5a-40f809bdc3fe"
+        name="IFilterGraph2"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="3e013535-f4ab-487e-9145-cff06edab36e"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=IFilterGraph2"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="134a54bf-c490-4b01-a3fa-fb45cf83fd50"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b8eda6e3-f3d8-4dab-a9d5-99181a4eeee6">
+                <propertyInstance
+                  Id="f048b95e-5d87-4678-9305-a4ed10d295fc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="13e5dee4-cfc2-408b-8f07-635f7e7b0dcc">
+                <propertyInstance
+                  Id="30f78d54-8032-448e-8116-55d2660b311f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a4d686fd-99f1-4146-baa3-b73c1251dd19">
+                <propertyInstance
+                  Id="0def54ba-b087-440e-8dd6-2b6d46b75ed3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ae89830c-6e63-424b-bdc9-e1f7ff050992">
+                <propertyInstance
+                  Id="68f2071a-0887-464e-a9dc-d4659144a4dd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="cd9031bd-8654-465c-b7c7-6a62e8111c7f"
+        name="IMediaControl"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="c0f9cf13-26b0-4e0d-a30b-4904712b8a86"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=IMediaControl"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1bfe94e2-447d-42d4-be03-2b0d1612ab04"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a278017-c52e-4e5c-9f52-c10655bd0d3e">
+                <propertyInstance
+                  Id="55351185-1e0b-4811-bd1b-8a7e44e35eae"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dcbcee00-fb6e-4b90-84d9-726fbc678a99">
+                <propertyInstance
+                  Id="ef86c8e8-d830-4f21-871e-53076cddfc78"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2dbf9c6c-55e1-40fa-8cf9-45bdb28cdf59">
+                <propertyInstance
+                  Id="ceace31e-c3ff-4d54-9b44-d48f67c647d6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e82f3ae-2185-4855-ad3d-a719c7a59746">
+                <propertyInstance
+                  Id="833f1013-a922-4b3e-80cc-a37446701221"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d2e7c2e2-21c6-43b8-aad4-f2c344e38cbf"
+        name="ISampleGrabberCB"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ad032b43-55b9-4c84-96a8-67d9bc72bfcd"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/Desktop/DirectShowLibV2-1/lib/DirectShowLib-2005.dll&quot; Namespace=DirectShowLib Type=ISampleGrabberCB"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="61a5851a-895c-4618-b5af-07f75118a8f7"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cba0d0f9-7d7d-4c66-bafb-a57f55dac7ae">
+                <propertyInstance
+                  Id="17c2b896-7cbf-4544-b98a-d47fa7573e12"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2c129c71-019b-41ae-bc35-95232014b054">
+                <propertyInstance
+                  Id="80d5475e-d518-4fa5-98b9-f6e5c892f2ae"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="97764358-653a-4ecc-961c-b2cad8c4f2f7">
+                <propertyInstance
+                  Id="b7fd3d38-b31e-4e24-804c-00114c653b9e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b137543c-991d-4b59-a4eb-f1c2080e8b59">
+                <propertyInstance
+                  Id="f8ff6985-e8cb-43b5-aa7b-fa4dad56599a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

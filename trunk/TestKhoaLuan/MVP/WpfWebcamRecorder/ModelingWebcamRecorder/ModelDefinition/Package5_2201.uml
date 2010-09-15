@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="74203e13-3142-46b0-a5bd-4b230352f201"
+  name="Filters"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="fce71a99-b4b0-4595-98d4-fc8f828a08e9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=AForge.Imaging.Filters"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="206c2a54-c3a0-42f7-b23d-12c6950e97c4">
+      <profileInstance
+        Id="d743ac9a-175b-4005-8333-2b27ec98356d"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="48b4413f-746e-41aa-9e39-642e4be09b8f"
+        name="IFilter"
+        isAbstract="true"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="d06bdce8-13e1-4e17-a069-542d31317a30"
+            handle="viewcode://./CodeSchema_Interface?Assembly=file:///C:/AForge.NET/Release/AForge.Imaging.dll Namespace=AForge.Imaging.Filters Type=IFilter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fd5cb37c-7b35-4a29-b04a-e9d5d41dde09"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e07ef92b-85fa-4196-8461-79a667da18ee">
+                <propertyInstance
+                  Id="4d90eb5c-79d6-40c7-b51c-a9ed575c54ea"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7798219c-774c-47e2-8cea-58d90672864c">
+                <propertyInstance
+                  Id="69b62907-0c81-466c-9cc2-eef88f54fd0d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb0d1f10-880e-49f4-af5c-f82a6b21c819">
+                <propertyInstance
+                  Id="7be84d55-6987-45d1-9c39-6a966dd681ff"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb2bb873-27e1-4936-8996-a6faa81e5caa">
+                <propertyInstance
+                  Id="709fa86d-0fd3-4bfb-a7c6-d38867c3e6f9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2884a9e6-bc3b-4179-926a-7a0390c6a815"
+        name="Difference"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f399f8a1-95d0-4cdc-b46a-1e4e49b49991"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/AForge.NET/Release/AForge.Imaging.dll Namespace=AForge.Imaging.Filters Type=Difference"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e001e6f8-31f4-4881-bd6a-44ec7d5341a4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fabf4bb0-27d3-495f-b662-3c3c0369ac00">
+                <propertyInstance
+                  Id="05891824-9088-4c29-824c-b1d36eb8589f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5d67a1b6-f991-48b9-ade3-3daf59d3f608">
+                <propertyInstance
+                  Id="f71375d4-94d2-4e45-b9d3-2f0cfaa187e5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4c165e63-f754-4a46-acba-d412f3ca530d">
+                <propertyInstance
+                  Id="a6085da8-4280-4127-b01c-b3d5380cfb44"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b97a0f5-5df4-40f7-bf8b-775d46541c26">
+                <propertyInstance
+                  Id="851bd76f-03de-4233-be87-caae504c79d7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f7100dd2-59ee-4b43-b311-214d34a86549">
+                <propertyInstance
+                  Id="4d03e55a-e054-4c42-a7d8-c7b242566326"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c3ff8594-3b1a-48d1-a668-1138548e0c49"
+        name="Threshold"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cba8d3f6-2162-4289-a8b6-a2bdc97f5d99"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/AForge.NET/Release/AForge.Imaging.dll Namespace=AForge.Imaging.Filters Type=Threshold"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7c5e735e-17d6-4786-8bfb-dd042ec63792"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5e054448-fc2a-41a2-bc14-65ead349578d">
+                <propertyInstance
+                  Id="fb36cc9f-3865-49a6-bd8c-1e9a06871cc2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0cd7f3db-1c1f-4fb7-8bf2-45e6ed019bb8">
+                <propertyInstance
+                  Id="cf82185c-9c40-44db-8a47-68e96799204e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7ce6e704-7f0f-439e-bae3-5a83b42d89b3">
+                <propertyInstance
+                  Id="64161efc-5003-4c0f-8e54-f0e080d1496c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f4b4ca70-c69f-41e8-9b1e-0f8d6aff508b">
+                <propertyInstance
+                  Id="8b4fef6b-311c-445d-822b-ce6dbbc167fc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38071ff7-9beb-44b6-81e8-e04295db9adb">
+                <propertyInstance
+                  Id="b9e73572-fe0a-493a-b5d6-a629c92a883e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4f9a9ff0-9381-43da-acc1-00708716a420"
+        name="Merge"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a36f1c37-171f-43b4-8a6b-ee83a296ec9e"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/AForge.NET/Release/AForge.Imaging.dll Namespace=AForge.Imaging.Filters Type=Merge"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="23140a9a-b872-4510-b4d9-279e57a4f9ae"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3b3329b6-5598-46be-b15f-97242bc2aae2">
+                <propertyInstance
+                  Id="9d2ed7f1-6cd7-4e79-86a4-813d1346cf83"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2c1f6bd-853a-475a-b498-e803e42d4c2a">
+                <propertyInstance
+                  Id="10e6544f-fb2f-4307-8508-e9a8ff9d5cc8"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6525c509-9f93-4a4b-bec8-f4467d89f3b1">
+                <propertyInstance
+                  Id="56598e6d-2825-4bcc-935c-3f17cc844e3a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4173b3bb-cfaf-42f8-bcea-f301f7712059">
+                <propertyInstance
+                  Id="c8d9f196-e446-424d-924d-4fd4458f8769"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="479f4407-06ee-413f-ae1c-c58047550600">
+                <propertyInstance
+                  Id="26eed93a-4fe8-4cda-8e99-8d1090f90789"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3a972f1b-fafd-4c99-94ef-02fcd1834926"
+        name="ReplaceChannel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="188d85eb-d4fa-4413-a023-74a29a0335da"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/AForge.NET/Release/AForge.Imaging.dll Namespace=AForge.Imaging.Filters Type=ReplaceChannel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6642a6b8-bc43-418c-b826-4645d59e40f1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a2500ea2-320b-41b0-8f9a-2cae74dfe7ac">
+                <propertyInstance
+                  Id="67c8db5b-31a5-4821-8db5-50ddc692656d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ed51f34-aa52-4f25-87df-c9fbc1427d73">
+                <propertyInstance
+                  Id="87201b21-065d-4327-a4e1-0610d5fa0bda"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eee26a25-5300-4da0-b426-778b95c8cd75">
+                <propertyInstance
+                  Id="6b896c1e-3017-49bb-ab00-c2e4ecfebc8f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ad5c7546-a3da-46aa-af65-e87c6d04d833">
+                <propertyInstance
+                  Id="96342f7b-053e-4e11-8bde-fb468573d4df"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1edd6ef-d3ad-4d3d-b591-8c49fb45221f">
+                <propertyInstance
+                  Id="baec3ad0-f42e-4977-9581-5fb28cc3e453"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

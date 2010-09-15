@@ -1,0 +1,3126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="5d749139-786c-4ad1-957f-a1568627973e"
+  name="WpfWebcamClient"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a6a83bd6-4afb-4686-87ef-52b649e568ad"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=WpfWebcamClient"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="3aaf7825-3657-43f4-b4c2-3e334ba864aa">
+      <profileInstance
+        Id="afef273a-f419-4b53-aafb-40a176d66239"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7e37cfae-a06f-4623-a0cd-0261815d2550"
+        name="App"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="88d783ff-b943-4966-b7b3-4fecffc7b4d0"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=App"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1d62fd24-c2d3-4f71-ac7c-ae3cfd069b9e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bcba27c5-174c-4942-9c35-dd761d586301">
+                <propertyInstance
+                  Id="f1a377e3-78e4-4ebd-a5f5-76485dae5d7e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c35f51bf-db37-4427-9204-9f40f28190a9">
+                <propertyInstance
+                  Id="bcca7041-594d-4d0e-ac9b-8eb250aacfbe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f52dcd0-0ddf-4c58-af80-baf23fec407d">
+                <propertyInstance
+                  Id="b66d79b4-df6a-4654-bb63-c3c50e921693"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="642e64e8-9de0-4c7d-aeee-71737ca039f1">
+                <propertyInstance
+                  Id="644291b2-941d-4ce6-8b57-8a214de412bd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2135fef4-9a00-4b02-8cb2-23ee94296e4c">
+                <propertyInstance
+                  Id="5562b245-dd43-49bc-8594-08b0f6219301"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="a4903393-ffba-4336-b4ae-436f692db5e5"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7e887c69-5bf9-497f-8034-afe6a2296e29"
+              LastKnownName="Application"
+              LastKnownLocation="Package2_1141.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="aa8905e6-780b-4346-b522-4363300f69e6"
+            name="InitializeComponent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d6326027-aafb-4cb0-baba-d01a3f1dab96"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=App Member=InitializeComponent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dc8fcf10-d72e-44b0-a9a5-5d736ab70023"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2795c68-a673-426e-88db-c7e8cfaa4b97">
+                    <propertyInstance
+                      Id="a4ed8178-2cff-407b-8b22-d5c21dcbb6a9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="272754f8-5bc3-488c-b808-9c8fea31d631">
+                    <propertyInstance
+                      Id="655098a7-b89a-4e1a-b72b-1f192bf7fb2f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="224b4580-9e98-49b6-92ff-1cf2f62167c3">
+                    <propertyInstance
+                      Id="6fe7d8b3-0b0d-4a2f-ab4c-21243809f4c8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19e8fe60-74ae-4363-8af5-39d6b1ab247b">
+                    <propertyInstance
+                      Id="23469f12-93b2-42a2-a989-25a09d347f0d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="536afab3-753b-4c17-a37c-5f20e0f21b17">
+                    <propertyInstance
+                      Id="0b8b5769-6c72-43fa-af94-5e34dba72241"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="a56fb6e9-5c15-405a-95aa-dc08633e142f"
+            name="Main"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f31d1c0c-aa5a-4e3b-8f73-fb4b9a3a285e"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=App Member=Main"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3024e698-dcf8-4486-9856-11848e4b3e86"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62209e77-30c8-4aef-b8ab-ae92a5b95d76">
+                    <propertyInstance
+                      Id="dd906a7f-ebc7-4ab5-8c31-f48f6e2940ff"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d39d41bb-3059-446d-bc9f-50f87ca28cc4">
+                    <propertyInstance
+                      Id="9c0f7611-4400-425c-a769-cd48be34c5a1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07c2e702-e5b4-4e60-93e6-2bf0cc4ad47c">
+                    <propertyInstance
+                      Id="a38addff-9691-4f5e-836a-dfc85da31954"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ad547e6-8071-416d-8163-28cabaaefe9c">
+                    <propertyInstance
+                      Id="7e999efc-c13a-47ae-b61c-bc94fa9a0536"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="390d1cba-12b7-4d6e-9e55-98c80a8e3f70">
+                    <propertyInstance
+                      Id="4c2316a7-28b0-4da1-ac99-5634ce7eea45"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="cf3ddee5-b795-4c6a-bbc1-817d911e6943"
+            name="App"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b2b80ecf-8574-4106-961f-73bcd4e249cb"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=App Member=.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dd2181fc-aad3-4247-8a0c-d1fa90e6668e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee5faeaf-b662-4b52-b733-d2c3f4231f11">
+                    <propertyInstance
+                      Id="233766a2-0480-480f-bcf0-0492cc4b2d13"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46c93f08-e0ba-4f52-9551-6948847aae87">
+                    <propertyInstance
+                      Id="0521907f-21c6-476f-8ae0-53c4214188fb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2239cb68-55c2-42ab-bf90-4ed0e182d98d">
+                    <propertyInstance
+                      Id="b157520b-fbd4-46d0-8921-d09f42de5a31"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1da7365b-231c-4b74-87f1-de4132fe9239">
+                    <propertyInstance
+                      Id="9687cc53-bcdd-4eee-90cc-c66381314aed"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ff08f1e-dc42-4a43-94d1-ec6c4c6529d3">
+                    <propertyInstance
+                      Id="8741b65c-3879-4c87-aff7-98050e5f28de"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2189d381-d543-4c8e-8182-b4194ed4ac78"
+        name="ConnectionHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e67e15e8-3cd8-4a75-8bfa-a87a34bcee68"
+            handle="viewcode://./CodeSchema_Delegate?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c78ce99f-0d59-4ebb-8793-70fd23211932"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df65e344-371b-4fbf-95d6-da2810b03c5f">
+                <propertyInstance
+                  Id="4e55a2ed-7f08-4c0a-bc3f-eed4dfc06e88"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0ce2caeb-852b-4c95-850c-e2abcfffb705">
+                <propertyInstance
+                  Id="dc778d02-3e9a-43bd-b3e8-3ad94c8d42b3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f0d2b3f-0652-46d4-b639-fa089e36e2b9">
+                <propertyInstance
+                  Id="f8f8d7df-fdfa-49cb-8d32-641e68acf718"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="af591913-6c2a-49b9-be20-cd56bd217fe4"
+            name="Invoke"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bbefb9cb-68f8-4cec-b301-8b19ff858c72"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionHandler Member=(Name=Invoke OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="06c06c2e-4d47-4201-a6f8-f71f24ed23c1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="842ef29e-13cf-423e-a4a4-4f7784dea6be">
+                    <propertyInstance
+                      Id="eceac37c-c214-443c-b31c-dfba32c18d48"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aac4790d-c55e-405c-ba4d-3ae1a6eafbad">
+                    <propertyInstance
+                      Id="e106dd94-3359-4ef6-bc64-f698f2129b61"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04960b50-5c6d-437c-927c-672933d0f5c1">
+                    <propertyInstance
+                      Id="758eb079-2f60-4214-921c-48d65c53bc3c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b035c862-f196-4253-9a2a-9b20e0b4f2c8">
+                    <propertyInstance
+                      Id="f269a8ca-1a22-438d-9808-27386f48e1e8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47ccf61f-9192-4b88-b189-7b35a058d9f7">
+                    <propertyInstance
+                      Id="5e49935e-6954-4005-84d0-0644bf384779"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="667c3c12-ebc4-48c5-8b1a-648ad777c4c3"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0c7f3df2-a555-4be0-9d1c-c2378570f680"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionHandler Member=(Name=Invoke OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cdd91daa-bbaf-49c0-aae0-58b36d4aff80"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="aa5988f0-1e50-4afe-9337-65539401d62b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionHandler Member=(Name=Invoke OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=message"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5b385f48-b9cc-411e-a7fa-46695005d400"
+        name="ConnectionManager"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="56b202b1-1eaa-441e-b204-1cc524963102"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9ec8116f-13e4-4120-85b6-eb3057dda809"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ecd67caf-e8c8-4945-8e95-d1129b2c183d">
+                <propertyInstance
+                  Id="2b9e2683-473f-4881-a325-e2ddfdca9b80"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e8c5ff69-0fbb-4685-b6c6-e37b25e12e14">
+                <propertyInstance
+                  Id="8695f939-469a-4858-825b-70fbc8a8a45c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b72f2a6d-72b7-4bb8-9965-7744ffe0309a">
+                <propertyInstance
+                  Id="555d1e66-2ac4-4326-ae07-369026ecbdb6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="73612322-1272-4a1d-956a-ab740c9814fd">
+                <propertyInstance
+                  Id="533bc0e0-7fdc-499f-977f-b6f389a8bf31"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="172bfb99-a0bf-47e1-bc2c-eeecc492bd75">
+                <propertyInstance
+                  Id="bd56aaa4-7494-4a77-85e8-3d4c781396de"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="5edf9c21-a279-49f5-81a7-f8c6c63c57d4"
+            name="tcpClient"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="00c1c30f-62a3-4c92-a20e-96a1d76564ea"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=tcpClient"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1fec4a3d-1598-4408-8a7c-e7935c402ec1"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="562ede7d-0ca9-491c-b236-b24058814b3c">
+                    <propertyInstance
+                      Id="f354eb18-f305-4098-b398-56646b9cbc4e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22c6766c-e183-4e8c-8d28-5c1bfd175f71">
+                    <propertyInstance
+                      Id="5a73f59d-35b5-4fff-8e54-adaa0ffa8013"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc657bb1-ad26-4762-866d-6185b4d47da3">
+                    <propertyInstance
+                      Id="5fd964bc-6479-4a29-9f04-9c654bc0d706"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ac76c26-cac6-490e-a02a-567f763c6fc7">
+                    <propertyInstance
+                      Id="c24d97ce-cf73-46d9-9a32-ec8c1dae34d3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86565a34-20f0-4dc9-a1e1-34c9091b7aeb">
+                    <propertyInstance
+                      Id="41701731-e217-43ac-a541-bc4e2e6d7389"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d0d11b75-64f2-428c-b08b-801e7ef75017"
+                LastKnownName="TcpClient"
+                LastKnownLocation="Package4_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="834ad4c2-6a74-4613-ad44-9365ff9e522d"
+            name="networkStream"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1964baab-6751-4a93-8dce-373385ad5c87"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=networkStream"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bfcbe2ca-ec63-49a6-8b29-89d862cbe497"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7e7b459-af5e-486d-a9b3-617a7b3e6c4f">
+                    <propertyInstance
+                      Id="c43cd6d0-9f9d-4c4f-bc66-9e04df6d91c2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3ff8d43-33f7-499a-87a1-236f087332f7">
+                    <propertyInstance
+                      Id="9137476d-9412-42e7-9e8b-c0f5c061757e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3422131-3c76-4376-8594-906eef57b960">
+                    <propertyInstance
+                      Id="1a99af6e-2e97-4d91-8629-9654e83d3f63"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99f09360-6cc5-4887-a8b1-e41dfb56bcdc">
+                    <propertyInstance
+                      Id="d789f1fa-85ad-4ebd-8fec-b79cbeae567e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b948ca8-87c6-4d5c-ad7b-083da8fdf5f5">
+                    <propertyInstance
+                      Id="9f2c0910-d449-433b-83eb-ceedfaa0b986"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c73766f0-c81d-4108-9491-9261d6f4fc71"
+                LastKnownName="NetworkStream"
+                LastKnownLocation="Package4_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fd3d5ca3-15db-487c-a4a8-bd9483163b3c"
+            name="Disconnected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1cf853ab-4cf5-48b5-b36c-d630edcfb386"
+                handle="viewcode://./CodeSchema_Event?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=Disconnected"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="99be28a2-236f-464b-b1b1-93d144527f6d"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee0d3fde-b6d9-4115-94c9-5a301eca2809">
+                    <propertyInstance
+                      Id="05ea034c-bf45-4eee-a8f1-be46d7c6a918"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81446d9d-e928-4d33-8f64-c2ffcd7995e8">
+                    <propertyInstance
+                      Id="a201ee00-2ba4-42e9-97fb-757268ed6bf3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b19403ce-943d-4ee9-b2ba-682ab4086cde">
+                    <propertyInstance
+                      Id="dbe07b16-43d5-4c90-ac4c-ab92121c3ea2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10aa41b2-5059-498e-a5aa-7e0cba2b3047">
+                    <propertyInstance
+                      Id="855c4577-2ec8-4437-af16-dd0e7cc62722"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b513faf0-28ff-4fc6-aff5-9354353c3557">
+                    <propertyInstance
+                      Id="23750cb5-9539-492a-8706-00fd4250e46f"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="2189d381-d543-4c8e-8182-b4194ed4ac78"
+                LastKnownName="ConnectionHandler"
+                LastKnownLocation="Package_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="97e28303-11d6-441c-85e0-5e47e16b2b1f"
+            name="MessageReceived"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="29510ebb-657c-447f-8587-f1593686e829"
+                handle="viewcode://./CodeSchema_Event?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=MessageReceived"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c42a4e68-601e-4a93-9d11-ca23b0cc4bea"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c59114e-182a-4ed1-8fa8-fc5db129f953">
+                    <propertyInstance
+                      Id="099c4d92-e548-46d8-ac61-9fff820cfd81"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b928c64a-9019-4e56-83d5-237a7a48caad">
+                    <propertyInstance
+                      Id="e1dc7704-1190-4e1e-8d63-ffcae6efdc2d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6de7074a-ff00-4ea5-b611-67828c1b58a9">
+                    <propertyInstance
+                      Id="b1b9924e-752b-4ad1-9b58-7778236d73b4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c77a86e-7bd3-41c3-8ede-1cd61a7a56da">
+                    <propertyInstance
+                      Id="bc0ba8e2-ba37-4e50-aa10-efc61daf8ef8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9d698e3-64ed-417a-a909-73db53cd2368">
+                    <propertyInstance
+                      Id="f3414af4-3564-496d-9352-79130efc409a"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="2189d381-d543-4c8e-8182-b4194ed4ac78"
+                LastKnownName="ConnectionHandler"
+                LastKnownLocation="Package_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="269a8cc7-91e2-43a5-8bbf-d5d586acddd3"
+            name="FrameReceived"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6aaa5360-9a8f-4c6a-81cb-503fb64bbddc"
+                handle="viewcode://./CodeSchema_Event?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=FrameReceived"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2db604e8-92be-4c38-acad-8d3e600c3572"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9cc37de-bce7-4d30-8cbd-f30ff831357c">
+                    <propertyInstance
+                      Id="24d1160c-a690-4350-9522-9c34f1447b10"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85b8fd14-4d02-45ba-a27c-ca139a08b47a">
+                    <propertyInstance
+                      Id="6a959979-efd9-4ff9-8c3e-e2cbb9d1cdf4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad02dc02-3aea-4850-a2cf-b47a26940837">
+                    <propertyInstance
+                      Id="b91e434f-3896-4b54-84f5-b45dfd91b007"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d89e285-6204-4ea7-9368-60b79a549d95">
+                    <propertyInstance
+                      Id="8a82f6ee-fee6-465e-9400-c38a0779081f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ce07dfe-3f6f-4a1c-a095-1ba9608e5db3">
+                    <propertyInstance
+                      Id="eeb53e93-b003-4ee4-91b8-11b5d8b4d5a9"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="241df34c-d2a6-4101-9570-102cfe892646"
+                LastKnownName="FrameHandler"
+                LastKnownLocation="Package_1141.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="03ea9fce-9220-48a7-9bcc-5cbc8d21d89b"
+            name="Connect"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d4fa7726-2825-4fb8-b5a4-8047f6220c83"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=(Name=Connect OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Int32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b395526e-38e5-4f34-8ca8-b389b4a3f577"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38c31f00-7d0d-447d-9347-a62b460c8a85">
+                    <propertyInstance
+                      Id="82378d67-012c-497d-8559-86514fcd20bd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e28484b-9a5e-426a-bcb3-5715f11e7e84">
+                    <propertyInstance
+                      Id="051ed7ca-72c8-4d7d-a9e1-80a10a782a35"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b723cd9-5079-46c9-bd91-e2248e3f1f7d">
+                    <propertyInstance
+                      Id="53083d31-21e1-4949-8457-81f263bb8160"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="029a3cfd-e2f7-45d3-93d0-12e9d57a926e">
+                    <propertyInstance
+                      Id="9c201ace-bcb1-4f0b-a960-aaf97b5f740a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c215300e-f75c-4c56-8806-fb918dd33c62">
+                    <propertyInstance
+                      Id="1161eb2a-bd05-4112-b78e-e21c4240561e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="95247255-e067-454f-97f1-be59f3d03f86"
+                  name="address"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7155aecc-3e10-44da-bfaa-206929d95a1b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=(Name=Connect OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Int32)]) ParameterIdentifier=address"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a9e1d8f-3904-4b5b-913d-91abd6da10a3"
+                  name="port"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="96b85c16-93c7-4fd9-aab8-fb4d12e6dc01"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=(Name=Connect OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Int32)]) ParameterIdentifier=port"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="19b7b709-6c93-455b-9144-5e269b217539"
+            name="Disconnect"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d096969c-6b71-4726-8638-40a6c17dab03"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=Disconnect"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ba38ff87-0183-4663-a3ad-ff421e8266d7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8edad647-f3dc-444e-8d18-1122d1017814">
+                    <propertyInstance
+                      Id="c824e644-e285-4490-b896-7384915b31f6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f0252d3-b0d5-4d13-b459-e23d6a5a5776">
+                    <propertyInstance
+                      Id="e2e64d75-7982-4f35-9b5d-29c82cd1d123"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2ddeca2-a85c-4d4a-99f2-e53d739e9734">
+                    <propertyInstance
+                      Id="7f01511a-3ea0-445d-8cea-75e183655f9e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3162a14-e8f6-46d2-ae8b-31cb9e392104">
+                    <propertyInstance
+                      Id="8585e3f3-44cd-4266-a12d-04afd2e80f8d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2fee3e5a-3772-4dbe-83a9-d4114663bc94">
+                    <propertyInstance
+                      Id="09c251fc-a54f-4c88-a7a9-389a6e5c9ea5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f9bda536-2d25-4da0-8ca2-087f7299a682"
+            name="SendMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b816e05e-ff67-4589-bae9-e64276538c86"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=(Name=SendMessage OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1c19a5d9-4913-4e6d-b27e-b2ca6671f4a3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0fcf8803-4f36-486e-9220-117f5907c86e">
+                    <propertyInstance
+                      Id="9706de99-9ffe-4775-89a0-124ce46c0a8a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f493ec36-0180-4fb9-8d8e-11a2ec4cc054">
+                    <propertyInstance
+                      Id="b8fbfd39-5341-415c-b074-806eb8703a77"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="389ad0dd-a6e2-47db-bfc6-252f3ad70f57">
+                    <propertyInstance
+                      Id="c96bd346-5198-488c-9491-c4add193c3dc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1f138f0-7cbb-417d-93ff-2058f456f66c">
+                    <propertyInstance
+                      Id="39dbd4b5-7bcf-4502-8379-3bcd9441d71d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d3d3884-bd9c-494d-ab03-0048096537c7">
+                    <propertyInstance
+                      Id="baade708-d346-41d5-8e52-028d02f0786f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="585c9acd-9137-43ca-9830-ac4bd7e8c7d2"
+                  name="msg"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1acb8873-ff7f-4aab-8586-d1128260b917"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=(Name=SendMessage OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=msg"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2a1e5fa1-cec5-4506-8312-7d8ab18b88f5"
+            name="OnReceive"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ac72fe14-4e39-4ad2-a70f-b0b15f8800d9"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=OnReceive"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fb7138e0-fe41-402a-87dc-f9b77d2025e5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="956531c0-f47a-4522-ab58-cb673d4c4aba">
+                    <propertyInstance
+                      Id="96cad357-3d50-46f4-ab9e-d3c6b2c99609"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f6bcfc8-e104-42e8-bba9-9c42d60ae1ab">
+                    <propertyInstance
+                      Id="b588a034-8653-446d-822e-542c6f60ac22"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="197d9645-6c12-456a-a312-fbf057fbb33e">
+                    <propertyInstance
+                      Id="20a9cd44-4dc8-411d-9505-ee9f4a08f95b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="835a3160-ea6b-4e33-b4ae-57ff88e3d824">
+                    <propertyInstance
+                      Id="a755f9c2-fa58-4f69-96c2-ae360fb53c09"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5916c9d1-5be7-4446-b26e-e7185c13c1ec">
+                    <propertyInstance
+                      Id="e845285d-9b48-4d44-8a07-2440d89c117d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b205fd01-fb5b-44f9-9e6c-f71054f44463"
+            name="ConnectionManager"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3bfe8ee1-e1eb-42b6-aac9-4468292c62ab"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="446673cf-5c6a-4324-b415-f8e1cac446b1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a27e9b2a-5c4f-4c65-8afb-29d1e9ddbaf4">
+                    <propertyInstance
+                      Id="b9cd7199-4c9e-40a1-9813-e7e74f0c4103"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4896190a-d148-4d34-9bc1-7742fb2e8594">
+                    <propertyInstance
+                      Id="ce92022d-7e75-4d66-8144-67b3e89a2c3a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b7c591b-8f11-4518-9018-d23158c45794">
+                    <propertyInstance
+                      Id="503d91a6-0309-4dd0-9e37-267bcbcd0f8e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e68cf83-f998-45fc-ab25-9e9a1cebea97">
+                    <propertyInstance
+                      Id="779f9d75-73ba-46b1-992c-8f85bb2f11f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3a6f4a0-a14a-4787-ae8e-b5d3c709b3aa">
+                    <propertyInstance
+                      Id="f18a1e7f-5603-4a8e-95ef-9f4ac8290d3a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="fcd74624-cda1-4251-98c8-21985400d042"
+            name="~ConnectionManager"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2aaac9ea-ed02-418f-82ec-22a996f31832"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=ConnectionManager Member=Finalize"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c17c615b-72c1-4126-bb7b-5fb9f0ca55da"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="683112e9-ad1e-4697-adb4-4c398f51bc31">
+                    <propertyInstance
+                      Id="a4a0fed1-3584-430b-b092-880115a676b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cdabace1-6888-42c3-b196-5110bca760de">
+                    <propertyInstance
+                      Id="5449dccc-5de9-4c6a-b1c2-5efa62226338"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e5f8b58-f705-4816-9d19-89d5b664f401">
+                    <propertyInstance
+                      Id="c16076fb-2401-4757-a556-e8568db00c0f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="810a138e-3fa5-4837-97ed-1ec885e220b7">
+                    <propertyInstance
+                      Id="95f0b21f-319f-4ce5-afbd-7f7cea940641"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68f5ce37-5687-4b1a-9175-8cd0c026057f">
+                    <propertyInstance
+                      Id="3abff4d2-fe7c-4a70-8741-93b195bc2603"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="241df34c-d2a6-4101-9570-102cfe892646"
+        name="FrameHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6093221f-21d2-464b-a527-f5fd57d44451"
+            handle="viewcode://./CodeSchema_Delegate?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=FrameHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dca01572-2c23-4956-a711-7763fb61a84e"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01141a15-f018-4142-a2ab-1e43ee9efccd">
+                <propertyInstance
+                  Id="79af09a0-c20d-44eb-9477-1feeeff3f076"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bff4976b-91b5-40f7-80b0-4cc55344d87d">
+                <propertyInstance
+                  Id="2f2a2c0f-b808-4f0a-a003-438efa242908"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5d7ce799-67e8-4179-802f-aa6d5d9439fd">
+                <propertyInstance
+                  Id="ede6dc72-0bde-44f6-b87e-49668c8ba4ab"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="185f70c4-c0ac-45f1-a5cb-4de0f35bb897"
+            name="Invoke"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c9748233-12b6-431d-bac1-e11b2c40657b"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=FrameHandler Member=(Name=Invoke OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=(Name=Byte ArrayRank=1 ParentType=Byte))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b0edba40-b495-4a01-bd41-bd716c8f4deb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1089323-03b0-430a-b184-e4f4e5d71b74">
+                    <propertyInstance
+                      Id="46b1d74b-7de9-46c5-9faa-2d9f0e612d31"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2ee75bb-479d-46ae-9a22-3501e351da85">
+                    <propertyInstance
+                      Id="fa847531-e72a-43e9-b8ce-29d0f9510166"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb28710b-6f75-423d-8756-f9a7bf94875d">
+                    <propertyInstance
+                      Id="813f4823-c76f-448e-8f2c-35756f08f29b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78b34356-93bc-4fc5-860d-d949d0f760a8">
+                    <propertyInstance
+                      Id="8701b3e0-369e-46c3-82e2-3028855249cd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52d6f065-f8cb-473a-866f-72ae9211fff6">
+                    <propertyInstance
+                      Id="0c79ed84-8bfd-4940-8abc-272abc461413"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0b0ab8a-0b95-4467-a057-5fffc8cd1808"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e5f74d5d-8369-429e-91e4-673178ac5bb8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=FrameHandler Member=(Name=Invoke OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=(Name=Byte ArrayRank=1 ParentType=Byte))]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="168f8115-23dd-422b-9d60-17587b3fc8fd"
+                  name="b"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="fe020d33-d87a-46f7-967d-f9a01bfa405b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=FrameHandler Member=(Name=Invoke OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=(Name=Byte ArrayRank=1 ParentType=Byte))]) ParameterIdentifier=b"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="824b66a2-7675-4a19-a516-4d5b668b93dd"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="90e77401-9873-4d7c-9ab7-eb767b6a25bb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7fe92d6d-1c1d-4b57-925c-d824187184d8"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="314b24b2-f824-40f3-b100-de4bd4d8c3ee"
+        name="MainWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="16e3336c-04ab-4b15-93cc-e43d00ab50ba"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2a279f30-b8e2-4578-b5e2-34ddd9464471"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e555d05-933e-43f1-83b4-7284c1d100e4">
+                <propertyInstance
+                  Id="46641514-ece7-4be3-a0bc-f804d6a8f79a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a1da8aee-dc38-45de-a36d-e5690b43789e">
+                <propertyInstance
+                  Id="6735a58f-b772-4c40-a4d4-8a457cb7bc60"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c7e042b3-76aa-48a9-a011-27c1559bf279">
+                <propertyInstance
+                  Id="0b651265-5d83-4f16-ac7d-82d0dd32a997"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7e5f8dd0-7a96-4956-9ae6-f47c67ccd4a1">
+                <propertyInstance
+                  Id="5e1d60c7-d4de-4941-8a74-23f3ba843633"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="32f9ce2f-a23b-44b4-96cf-ef950eb4739d">
+                <propertyInstance
+                  Id="8eb99529-99ce-4ca1-a314-e0774e5528b4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="123c0a41-62d4-42b2-ad02-cbaf5d770ab1">
+            <interfaceMoniker
+              Id="11cb2767-8686-4dee-b2d5-29ea6509ad0d"
+              LastKnownName="IComponentConnector"
+              LastKnownLocation="Package6_1141.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="c7f3f826-ba14-44f9-a743-3686db471548"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0c355c1e-554a-4fde-8398-be224291f68a"
+              LastKnownName="Window"
+              LastKnownLocation="Package2_1141.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="c141a485-5f62-4e90-a2bf-49e0d22a03eb"
+            name="conManager"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d14fe113-cc3d-4a20-90ec-a1e05f8ba37d"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=conManager"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="12c1be49-c1d2-4d3c-b255-31c62ab4cd55"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b101e374-cd03-4e71-a758-52b01de4c25b">
+                    <propertyInstance
+                      Id="2c50dfa1-7558-4792-8d0d-95a71d096cb1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c3734c8-87e4-452d-b094-fb4d57023c6e">
+                    <propertyInstance
+                      Id="543cfaa7-572e-4f74-8ae0-adc94d6b2a11"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6ab1832-3226-43b3-b125-b03fe3810584">
+                    <propertyInstance
+                      Id="64996545-72d6-41b9-8274-5ecabbd842cf"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94da9e4b-bf31-4bf8-accc-4fc8791ba32c">
+                    <propertyInstance
+                      Id="153cad3f-b55d-4913-9be3-4c0698d81356"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="386bd249-f02c-45fe-affb-966c06999214">
+                    <propertyInstance
+                      Id="38eb142c-d5a1-47f6-b73b-fcf60fd42e99"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5b385f48-b9cc-411e-a7fa-46695005d400"
+                LastKnownName="ConnectionManager"
+                LastKnownLocation="Package_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5bf015d4-4035-4cac-81ad-427a01103012"
+            name="pictureBox"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bd1d69d7-7c20-4a51-9d7a-6b5209c9a436"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=pictureBox"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="45806d44-dbed-4f07-a66d-fc7ac3f6144f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd074483-7ed1-4ba5-b093-6e8bec061197">
+                    <propertyInstance
+                      Id="5eaf1c3e-e000-4b9b-8aac-37cce25b24ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c36d354-5fc1-417a-9f6b-e4533db66176">
+                    <propertyInstance
+                      Id="66d3c26d-ee30-4af7-aa3e-7c9dec9ec8ba"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f210c249-9921-42f0-b745-4f7224e56ec5">
+                    <propertyInstance
+                      Id="9e8288de-6a5d-4050-81fa-0f8349698d75"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7397b7b7-fdd1-4ea1-99c7-96b04ce9cf45">
+                    <propertyInstance
+                      Id="a95dfea7-bf7d-4f98-a154-377c604b8a1a"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f58a7a5f-82ba-4220-af15-ff57d992c2b2">
+                    <propertyInstance
+                      Id="83d502a0-0f76-47a4-8a20-8ff855f24ce6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="41e5f535-4c6c-4943-8607-e32a2be64742"
+                LastKnownName="Image"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e61fabf8-c7fc-49cf-955d-b8c91434d3cb"
+            name="txtAddress"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="dfb85697-d6cc-4ff7-9458-c4bce6459f64"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=txtAddress"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7e03a23b-6b57-4320-8cd9-8d285e9f0b03"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c928ca1-953e-4f59-8aa2-c25066e9267e">
+                    <propertyInstance
+                      Id="5ee1213b-9bbf-4932-b0ab-0efab4fe0ba8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4632e053-d669-4b0b-b448-db8e432d3560">
+                    <propertyInstance
+                      Id="72b68c45-4900-4680-9804-a9d6bb062005"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c866177b-1619-4ddd-b8ba-94d315fef178">
+                    <propertyInstance
+                      Id="224a7af6-f5df-4736-9230-f51195ae413f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59a2dce5-9f5e-4c4c-aca9-f971d57b7d6a">
+                    <propertyInstance
+                      Id="8f4d2ff9-8e5a-4dc8-a8cc-4d29d5f1a196"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc213145-1781-4bc3-8ac6-c146dc73eb38">
+                    <propertyInstance
+                      Id="0429ff92-9540-4408-8e6b-c5a8fc846d81"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d45860dd-133c-44ab-8c79-3ea370dca70d"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="14ef194e-cf75-464a-a836-c9662ebfe4af"
+            name="txtPort"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="913a6856-67a7-4ddf-a6c0-294d4c46f6d3"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=txtPort"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="227a3812-5fed-4465-9e3b-cf79a1640db9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c912de78-fc3d-49bc-a78f-2a0cc37cf606">
+                    <propertyInstance
+                      Id="41677603-cf89-4f8e-864c-806a8a43fa9b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6771c7cd-6e7c-4492-8bb4-b527da2ca871">
+                    <propertyInstance
+                      Id="ffb6b1bb-e063-4159-b2c5-6523b7367f4c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="528f7924-aedc-4448-bfcc-ccee2d4703e6">
+                    <propertyInstance
+                      Id="b1bf693e-3fd7-4295-b9e9-a7bb756db994"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67deff5b-78fd-49b5-a39f-28ecc1ed52a8">
+                    <propertyInstance
+                      Id="e0a1f1a2-96de-4430-9b5a-3744453671f4"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86c84a9c-358b-4d4c-9888-47e87a1236b5">
+                    <propertyInstance
+                      Id="b4665443-34ce-4b63-8ad2-3ca37dd28e56"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d45860dd-133c-44ab-8c79-3ea370dca70d"
+                LastKnownName="TextBox"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e4e791be-4553-4e86-a72c-a27e79a58173"
+            name="btnConnect"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cc4fdaa4-a5c6-4c17-906c-54c798314143"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=btnConnect"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7de84ef1-2a99-4248-b883-421c5ec60b3e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f611a059-b5eb-4f23-994b-948c867eee0a">
+                    <propertyInstance
+                      Id="8bfcbdb3-43bd-4e6c-a9ec-7b3f74cddf15"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ecb26aa-5875-4ed9-8d6b-c1deb54c1872">
+                    <propertyInstance
+                      Id="63bdda1a-992d-46ce-92ed-17d29401a7c3"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8e0dd63-7f49-41ec-9bc1-41a98d43ae09">
+                    <propertyInstance
+                      Id="3382a31b-1866-461c-b841-0b242f0c53b0"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="760c3e9f-045f-4fad-91b1-03e1c383e182">
+                    <propertyInstance
+                      Id="a1061225-1b3d-4555-94a1-738174948cdd"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="672430d6-344e-4f59-bf19-b170052ab448">
+                    <propertyInstance
+                      Id="48db839a-9a9f-48bf-a7c7-0ffa9db93f4e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7500c54a-341e-4378-b3e9-1d9893e32561"
+                LastKnownName="Button"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="715b0333-d3a0-4256-9230-7553126fe225"
+            name="cbxWebcam"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a56025d5-7924-4ec5-acd5-a6944a78da19"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=cbxWebcam"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="864105ee-66df-4213-ac04-99ddf1f86090"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e677f99-ae63-41c0-bcb8-aa2b874be4da">
+                    <propertyInstance
+                      Id="336cb206-b4ca-4764-a031-50e7ac95a112"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e91149f-9ee3-4bd7-8e4f-05ae5765de9a">
+                    <propertyInstance
+                      Id="c705b39c-abbc-425a-9a36-776c7f8676b9"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="485a1885-582a-4799-842f-fefbb43149d4">
+                    <propertyInstance
+                      Id="9b4415d6-841f-40a6-8490-ab63b82c1dc2"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32fce593-c00b-45d9-b3f6-857b3022e33b">
+                    <propertyInstance
+                      Id="80a3bbe9-b76f-40ad-af3a-05f998021028"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3655f51c-15e7-47b7-804d-6b915ec16223">
+                    <propertyInstance
+                      Id="affb4d87-feda-4033-bbfb-19d75b9d4428"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ecba6919-8edb-4859-b7b4-19213d628565"
+                LastKnownName="ComboBox"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8bb269d7-f05c-4f43-805c-0e8038787905"
+            name="btnStart"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3dbf4b9e-5857-453b-bd8c-05ca2160207d"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=btnStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a41d447f-60e2-41c5-8b23-3bb971685dfb"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35650833-900e-49d9-a314-794bf135900a">
+                    <propertyInstance
+                      Id="eaee8e66-31fe-4b04-aa19-b2d0ad7947af"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df2c9357-304f-4b4c-a9e9-7e351eb50bdb">
+                    <propertyInstance
+                      Id="0c5fe88e-b8ea-4966-b238-51637731d23a"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eaae62ad-16df-417d-9d19-083f951ba65c">
+                    <propertyInstance
+                      Id="3d474d9a-e3a4-41dd-bed6-cb479ff65a9a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0edc4aac-52db-4e85-a3bb-2d9c1eb43df8">
+                    <propertyInstance
+                      Id="3c87dbe6-4095-42eb-96d8-f574df63d822"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b15e3d94-fb3e-4db0-8a1b-36d49a227ae1">
+                    <propertyInstance
+                      Id="d398044e-efaf-4991-aba1-b5f29502d9a8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7500c54a-341e-4378-b3e9-1d9893e32561"
+                LastKnownName="Button"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6daa179c-c592-4978-8327-08c9e884b700"
+            name="btnStop"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e4b2bee8-7a6e-4fab-9177-1fa6156fdd98"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=btnStop"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fc23174a-5d46-40da-9112-07f544194133"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab4525e3-358f-451e-9293-d76e85cc2e3c">
+                    <propertyInstance
+                      Id="69b8f68e-d96b-458c-9dcd-024bcfa5e917"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27a9b62e-415f-4668-8895-69cc660401ff">
+                    <propertyInstance
+                      Id="4dc9e265-bfcd-4882-92a1-22e4b1a4ec97"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87b32a13-e1fd-4f7c-8089-af130f6f522e">
+                    <propertyInstance
+                      Id="124a1305-9eaf-4824-bfb0-9a74e3a73220"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98196c4a-9714-4634-ad1a-7067da560dec">
+                    <propertyInstance
+                      Id="b031a33a-3006-483b-a009-606f59c244b9"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a93d422-414d-43b8-878b-e66f896e27fe">
+                    <propertyInstance
+                      Id="5595b852-8810-4893-b86d-74e6f3460da6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7500c54a-341e-4378-b3e9-1d9893e32561"
+                LastKnownName="Button"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bb3e1f8d-3f20-4ac7-8343-a805a48d27c8"
+            name="lstStatus"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="546a7c7d-23c4-462b-a164-f188c749ea09"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=lstStatus"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e536f5d0-a4d4-4773-8073-1730e57eed64"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="105ee117-c1a7-4f24-810c-865197a98304">
+                    <propertyInstance
+                      Id="04beddb1-262c-4f2e-bf3a-8c1ce1748e12"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3192990b-ef02-4cdb-be9b-218c905360aa">
+                    <propertyInstance
+                      Id="dad954ff-4636-421f-a1e1-475a7b393e14"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3556aee6-76ad-4970-88bc-ab6a0a963d90">
+                    <propertyInstance
+                      Id="2fd7994f-b1d4-4547-8377-8886bc89afc5"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cca57336-196f-4bd5-9987-dc81e71276f2">
+                    <propertyInstance
+                      Id="6648180a-1915-4182-8ccf-f1d358d8e929"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09ed072d-88af-4d34-b060-bded155c6138">
+                    <propertyInstance
+                      Id="2f5df056-1ea4-4665-8b4f-55525babd3e3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5f0259d8-0480-4e11-860f-952d0a222162"
+                LastKnownName="ListBox"
+                LastKnownLocation="Package5_1141.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4b91293c-ceb5-416b-b43f-dcf5c30aa84e"
+            name="_contentLoaded"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="271f55ac-7e83-4454-9e2d-72de5c0b467c"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=_contentLoaded"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eb242efd-545c-4e8d-8d2a-00a34616974d"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c442f85c-7f20-495e-b5aa-f408eb3b7f69">
+                    <propertyInstance
+                      Id="d4370291-9066-4b01-9439-93262f99e59c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c81bc0cd-8f6c-44d6-9ac2-a0ef558fcb17">
+                    <propertyInstance
+                      Id="8c92ec1c-9f4b-4cd5-ad9f-38d8cf942772"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81d116eb-aff8-4e19-b953-35d04cb1e173">
+                    <propertyInstance
+                      Id="a0e33da5-8b61-47f9-94a1-b4143f3402c5"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76dd1848-6248-47e4-8ee7-2353577bd183">
+                    <propertyInstance
+                      Id="2becf15c-9f57-4c0e-b93d-3c767dfdeb1a"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29ac9a16-b427-4408-999a-4294d3b7b305">
+                    <propertyInstance
+                      Id="38466eb7-b471-4165-a6ae-167ef921e0fb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingWebcamClient.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8c8c0799-8fa2-44f5-ae03-d82f966e571c"
+            name="btnConnect_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9c523cd2-ef07-45d3-86df-68bd49388a33"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnConnect_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a6ce3b49-ef42-48d6-931d-9c904d6c038f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2f4648f-feef-47bb-81aa-a8d976c304cd">
+                    <propertyInstance
+                      Id="eb941e14-bb6b-4791-b67a-7f7bc5012528"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f1b66f1-edab-44f3-8049-85619b366e8b">
+                    <propertyInstance
+                      Id="b1241ad2-1f7e-487e-adba-80037381e46f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e62d77de-9413-4dab-9602-11ddf70a2483">
+                    <propertyInstance
+                      Id="5cd44c9a-df88-4a24-b8e8-dc2dd22ef5e0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56b0f7d7-6e5a-480e-bedb-9d8ea2b63663">
+                    <propertyInstance
+                      Id="c3f230aa-1ed9-4f27-aeda-adf56edd1237"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97db11bf-767e-4c71-91c7-7429c5068a7c">
+                    <propertyInstance
+                      Id="7866d594-1cde-4960-b3e6-bdd64c1db614"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="08031181-9c59-43bc-b9ee-2ef2c01b2902"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4c90d0db-0407-47cd-9820-d9a56534237a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnConnect_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b3816122-9fbd-4001-bee2-74d38ddb44d4"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bebefb9c-7c6d-44ce-a707-cfcf7caececf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnConnect_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="57b7befd-1255-4b94-92fc-88155973ad7c"
+                      LastKnownName="RoutedEventArgs"
+                      LastKnownLocation="Package2_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="15159c5d-ad3a-41f1-a25e-5124e9ca55b7"
+            name="ProcessMessage"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c69b9b23-ad5c-4fc9-86cf-d788c93b41ba"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=ProcessMessage OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2a75f386-d6b6-4ae9-abd2-21a76ba9ef60"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55e81e91-e8d0-4901-af59-02def1b51ff9">
+                    <propertyInstance
+                      Id="dea2247a-1cbb-497f-afb0-3c0b17f8b006"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2a68b24-fffd-48ad-b0f6-51937f735989">
+                    <propertyInstance
+                      Id="7311380d-88dd-468a-8b53-9558ca5305ab"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb65ff84-4336-41b0-85c6-c746172795c1">
+                    <propertyInstance
+                      Id="007c8fbb-c98f-4dd3-9281-e4311d8f6b6c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8faaf48c-85bb-41e2-897f-df952306461c">
+                    <propertyInstance
+                      Id="dda6ce51-8d48-4940-87ae-0d2879823b0e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b55d1340-61c1-4540-82ba-9f22123aa0ac">
+                    <propertyInstance
+                      Id="82701db0-959a-4acb-809d-c16b06f3d0f1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f2213d1-f130-493f-8e52-47b7aff73cb1"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fbe00182-cd92-4ecd-a15a-064b063172ae"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=ProcessMessage OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aeddd8b8-227e-409e-b533-bf08f4bb6936"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="55797277-162c-4794-8bcd-26c015931b62"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=ProcessMessage OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=message"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="62bd24f8-cedf-4084-8f59-0c8917d948bf"
+            name="ProcessFrame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0f662709-6830-4e0c-8cba-80a9ebae68af"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=ProcessFrame OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=(Name=Byte ArrayRank=1 ParentType=Byte))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1b1753de-2df1-4b8c-b6d0-ade96ff2453e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="599a766e-0211-4539-8460-ce50f4c49843">
+                    <propertyInstance
+                      Id="f426af29-9fde-4454-9b56-3aec2514b855"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af2c15e4-903f-4015-a378-16a60b92d088">
+                    <propertyInstance
+                      Id="1bf0eb32-3357-488c-a5e0-51b025bcd712"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e77e5de7-bd65-4cde-8266-9fc45f8986ad">
+                    <propertyInstance
+                      Id="3d04a6b9-88ae-42e7-80d9-5f2012e2d234"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e4204ff-55b4-4955-98dd-4e93fc5dd18c">
+                    <propertyInstance
+                      Id="fb8c7f07-2a18-42b3-b0b0-511db07752b1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9cef55d1-0c68-45b2-8657-2bd64c2eb900">
+                    <propertyInstance
+                      Id="8383d486-dbea-4727-be12-a10093c3e9a7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2d306859-ad2e-4d70-862c-ab41ec39ad63"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="26f19fdd-93f6-402b-9213-106a5be72757"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=ProcessFrame OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=(Name=Byte ArrayRank=1 ParentType=Byte))]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d665892a-5721-4ccb-af6e-3409c20a0e1e"
+                  name="buffer"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="c7d5b4f4-14bc-4f1a-a2f4-e8257b2ff992"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=ProcessFrame OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=(Name=Byte ArrayRank=1 ParentType=Byte))]) ParameterIdentifier=buffer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4fb4fcb4-eae4-4cb0-8193-0cecc81c2692"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="63d8305c-9959-4512-9865-75a636eac402"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="7fe92d6d-1c1d-4b57-925c-d824187184d8"
+                      LastKnownName="Byte"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a4c2cd77-48af-4f8a-8a0d-b0f0f0d5bbae"
+            name="btnStart_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="50ec49f6-3a4e-4681-9df0-8d78bb578f1a"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnStart_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="273fbde2-58b9-40a7-ac64-ff499eb198e3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a57c14d-1143-4f5e-b9df-c71aab2b1e99">
+                    <propertyInstance
+                      Id="dd971d57-c7b6-4a32-a18b-177461f60865"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb966ca9-5155-4d4a-ab67-91e798da1bdd">
+                    <propertyInstance
+                      Id="e9676cec-b075-44ee-bdae-2857406ab4cb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29b3bc87-8743-40f5-8088-9ed73945a6ca">
+                    <propertyInstance
+                      Id="45dcd51c-8b23-4d1e-8800-e6f6a7ce36a1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4ef242d-7bfa-48de-92ea-6b0f0eee13d0">
+                    <propertyInstance
+                      Id="7e4bdc2c-73dc-4881-afc4-3f0881de4015"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9d7cf6b-0e56-448a-8f47-3542b815e17c">
+                    <propertyInstance
+                      Id="647b0979-ee2b-49bc-b61f-819408cdbf59"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0564539d-894f-4a09-aff8-54bde6c86ced"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="38cbb374-867f-4de8-afe6-0c271bb8a613"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnStart_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4251736c-3225-410f-8b31-674ce1563f8b"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="eef7c5e8-8c29-4285-ab25-87552d7efc89"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnStart_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="57b7befd-1255-4b94-92fc-88155973ad7c"
+                      LastKnownName="RoutedEventArgs"
+                      LastKnownLocation="Package2_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="77737f08-2be7-4a61-9033-691f884ff165"
+            name="OnDisconnect"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9c0e92e3-d3a8-4544-bb2b-28c0f6377f59"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=OnDisconnect OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9c9b0efc-46a7-4ade-8ac6-9cc7b5e9a0d2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ed42d4e-995b-40fb-829f-106aff33a784">
+                    <propertyInstance
+                      Id="045af67b-4302-485b-9cd7-f25f53e2c383"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95bfbecf-cee6-4159-9484-b61748ec7a1f">
+                    <propertyInstance
+                      Id="1fd554e0-600c-4e22-ac06-2cbb4515eab6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e5cc984-e079-4184-aa2c-69d0c35dd9da">
+                    <propertyInstance
+                      Id="bc505f9d-f06f-482c-bffb-e35d30b67e57"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b837cc11-73ac-4d88-a6a4-2a71a1cd89c2">
+                    <propertyInstance
+                      Id="8be09dd0-1c33-4ad3-9352-4c3f7b4242db"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="effc080e-9669-42e0-9e62-abf3f1e8be67">
+                    <propertyInstance
+                      Id="ef3e59f3-e0e0-406e-a865-e880185aeff7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83e13452-4ab0-4d3d-9aa0-47ef7c3d21ee"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3607c76a-8696-4677-9da3-4c5121c50c67"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=OnDisconnect OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c4bf541f-2783-455f-a16b-53b79559b1c0"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="aa318c2f-5d4f-444f-8581-6886b7e11de6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=OnDisconnect OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=message"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="63c540fc-b9cf-4e79-ae9d-0660f3041e02"
+            name="Window_Closed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ac8dc843-f6a2-49f9-9b85-d9e52fa2dbbb"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=Window_Closed OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=EventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d0740d13-215b-4bd1-8c8e-ade91d457328"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b1ce6b6-53bc-49ec-b78a-dd962134b0f0">
+                    <propertyInstance
+                      Id="2c2d0aba-4773-42bc-8c56-5cfc690b54b1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b192418-174a-4011-8494-8542d263225d">
+                    <propertyInstance
+                      Id="ac369eff-f51d-42da-b5db-531b7c58d8e6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2adbb018-b25b-4e07-a1aa-643e06606c7c">
+                    <propertyInstance
+                      Id="af6d735f-44c0-415e-97f9-ab148f534e6a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca8355ec-b9a5-47d8-bfef-e1eedf3c2ac2">
+                    <propertyInstance
+                      Id="cd8884c1-ecb2-48ee-83aa-71375b47b11f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bedbe3b-5dba-4c13-8c21-23c5af3eba5b">
+                    <propertyInstance
+                      Id="72746680-2b14-4a6e-aef5-79af77538d0d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="69a46da4-9500-4416-a011-7e55541413ac"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3f50bb4f-fa96-4c51-bb8c-f9a9c6a18ae5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=Window_Closed OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=EventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="65fcb5be-cfb2-44bd-a829-b090ba95dde2"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7b45db93-9924-4799-b9bb-72f1c28812c1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=Window_Closed OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=EventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e1a80db1-6f97-4ea6-8e1d-87270a8bdf9a"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7ecaec25-c170-47ac-89eb-7639bef9d23e"
+            name="btnStop_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9783e1c7-3d56-4287-ab13-8cbe994facce"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnStop_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8d5c1691-8ce3-46c3-b841-8459ee1c2fe9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0beb5b51-0ee9-4afa-adb3-6b4c6c5abf39">
+                    <propertyInstance
+                      Id="a8aedce9-d7d1-4117-9a42-8ea95bf93ce3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5af585f3-147a-40ec-8e2f-9081712c4432">
+                    <propertyInstance
+                      Id="52d9d1e7-8b67-4542-a0e5-8751276a6f76"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98fe69fa-ae6d-4816-8e5a-2ca9c87ee868">
+                    <propertyInstance
+                      Id="59034ea8-7c30-40d1-852b-82a693d94749"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f72b960f-b3a4-40e8-abb8-2b71129d7d47">
+                    <propertyInstance
+                      Id="5d63ddec-8926-4ee7-bda4-619a132cd616"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3119f326-3f8c-4901-9516-ed4bf16cedee">
+                    <propertyInstance
+                      Id="76994e6a-f68a-498a-898f-c4132ced795d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c2ab6aa-e813-4e87-a58f-ada4407823b9"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d64257c8-c35f-4044-9da8-f9fd0f22ea37"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnStop_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)]) ParameterIdentifier=sender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="34c56110-9b5b-4ece-a6a3-99d1402c9cbb"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f0a76049-a61d-4e07-9b2f-ed84a54e6468"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=btnStop_Click OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/PresentationCore.dll&quot; Namespace=System.Windows Type=RoutedEventArgs)]) ParameterIdentifier=e"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="57b7befd-1255-4b94-92fc-88155973ad7c"
+                      LastKnownName="RoutedEventArgs"
+                      LastKnownLocation="Package2_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bbc04b64-0561-4827-8c7b-a0a7685b1cd4"
+            name="UpdateStatus"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8ddd617c-b2b6-4deb-ba34-207745c85621"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=UpdateStatus OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="978587dc-7347-43d1-9fe6-b8e2e9c4cb03"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="101eda5c-c892-408c-9144-cba741ce7834">
+                    <propertyInstance
+                      Id="0e12537e-5f31-4ad8-a204-0bf3949a1e02"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a4a0b15-8d06-4f5e-80dc-75224138b01f">
+                    <propertyInstance
+                      Id="87267dcc-5258-40e4-8ade-ec09b7c9c714"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e52acfa4-f176-463d-9b33-177817c2ea82">
+                    <propertyInstance
+                      Id="d79165cc-479c-4587-a476-875f0c1ed998"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83604527-4ab4-44f9-bb58-0bef850c18f5">
+                    <propertyInstance
+                      Id="cf5ec6f1-3c94-46fc-84bb-0b0671e44af2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e34e43be-2fdc-4868-8ad5-bc6c135bbbd2">
+                    <propertyInstance
+                      Id="8252b242-77f1-4118-b443-9a92e8f51edc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="81340550-10ba-4b81-89d7-897711839dd8"
+                  name="status"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="69441fdb-72cb-411b-b30d-b2f8c90f51bc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=UpdateStatus OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=status"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="910ac179-8b46-482b-8245-6688bd0e7767"
+            name="InitializeComponent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f387e02d-91ca-44d4-b030-ef9d819e7950"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=InitializeComponent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="82fcd358-3957-489d-adb0-02a29b481552"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ba0708b-9c2c-4684-bcaf-3204b1fe5b5d">
+                    <propertyInstance
+                      Id="56079500-e31f-4c97-94e9-1b07200b37d4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a010cee2-76fe-4b8c-9ad5-45c3360e20ab">
+                    <propertyInstance
+                      Id="1fb64fa5-9731-4e7f-b057-ecab7d1a99c4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2470aa54-6212-41d2-b5d2-45109ee155fe">
+                    <propertyInstance
+                      Id="d110a4f2-80b9-4a1c-b6bb-126649521d10"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78165b5c-ca3e-4da7-9d3b-5f0b01d986f6">
+                    <propertyInstance
+                      Id="978daa83-88a2-44b3-82fc-2bf53b81fb35"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce2b983c-be51-4930-ad34-32279f5e3a41">
+                    <propertyInstance
+                      Id="3099303f-63d1-40ae-8777-cefc3df8f85c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="7cf0a6c8-b71b-4da5-849f-982e02590970"
+            name="IComponentConnector.Connect"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8abd8116-5452-4130-b25c-9c5d99d62db5"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=Connect ExplicitInterface=(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/System.Xaml.dll&quot; Namespace=System.Windows.Markup Type=IComponentConnector) OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="87a76acd-cc1f-425b-9ab1-1f471daef8a2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45128584-0769-4f60-99d1-5c18d4e1f102">
+                    <propertyInstance
+                      Id="dea17a62-7797-46a3-bb40-90027e081f2e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d41b531-5893-4993-80fb-d958b895dc8a">
+                    <propertyInstance
+                      Id="45acb922-5854-435f-851b-0912a53d9c12"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b87419f-3398-4b45-83cc-c76dbeba2b5e">
+                    <propertyInstance
+                      Id="8b864cb7-fa36-4382-ae07-379cc7dc55e9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8ea134e-2b2b-487e-8115-996cd6da70b0">
+                    <propertyInstance
+                      Id="fedfefd3-938a-4901-8b62-092a9a99eda0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e98b6f64-8df2-4a7f-ade8-560b4aa6c321">
+                    <propertyInstance
+                      Id="a03b231f-4b3b-4ff8-9475-80acabdb0457"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="509e33aa-e59d-4b83-b6cd-5fd6bcaddb61"
+                  name="connectionId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5ab4fea6-d857-492c-9402-1f147f7cb79d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=Connect ExplicitInterface=(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/System.Xaml.dll&quot; Namespace=System.Windows.Markup Type=IComponentConnector) OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object)]) ParameterIdentifier=connectionId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingWebcamClient.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dadb2f97-f6ce-47ca-9625-1257a585f67c"
+                  name="target"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="47d0d169-8a4c-44d4-95a5-bd4989f6ba8e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=(Name=Connect ExplicitInterface=(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/System.Xaml.dll&quot; Namespace=System.Windows.Markup Type=IComponentConnector) OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/Profile/Client/mscorlib.dll&quot; Namespace=System Type=Object)]) ParameterIdentifier=target"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b9720ae9-5c49-4202-afdb-56f9c279591b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1141.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="01c08c20-5f9e-44fb-91a6-b08042732b38"
+            name="MainWindow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="dcc01947-c7d3-4e3d-8854-5815c995b374"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/My Documents/Visual Studio 2010/Projects/WpfWebcamClient/WpfWebcamClient/bin/Debug/WpfWebcamClient.exe&quot; Namespace=WpfWebcamClient Type=MainWindow Member=.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4127638c-b08d-43cb-a774-d782db2dcdd1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a575e49-857e-4278-b503-8d9fbf28f96e">
+                    <propertyInstance
+                      Id="7435fb91-88ca-43c4-9992-cf69c07c4d27"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16fc7cc8-f04f-4032-8cea-7d314c825c53">
+                    <propertyInstance
+                      Id="52f6436c-9fb2-4251-be46-48b8b256f67f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1aa065b1-74f9-4bd5-a24c-19fc59aeabfd">
+                    <propertyInstance
+                      Id="398d03a8-9c31-4dc6-a95b-3d44282f5575"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78114a49-2f81-4bbd-9fd7-f661df9b9e88">
+                    <propertyInstance
+                      Id="38034bf8-86ae-4515-9ef0-ead639f4752d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b95d0a3-b1f5-4611-887d-7d42aca1b992">
+                    <propertyInstance
+                      Id="2d3eef92-246d-49fa-89f7-b0e65ff96a74"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

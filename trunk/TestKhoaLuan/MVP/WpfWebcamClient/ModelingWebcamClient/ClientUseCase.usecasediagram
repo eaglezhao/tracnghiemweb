@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="208dda39-55e8-4e61-ba8a-32ebf70f3403" name="ClientUseCase" linkedPackageId="19bf9be4-d37d-46d2-802a-71cafc28ef49" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="7bcc49a7-92c0-4d11-8935-877d6d560451">
+      <profileInstance Id="b24aba90-250e-44d9-8994-b93b8f3712f9" name="CSharpProfile">
+        <elementDefinition Id="62b1acf4-de63-4a50-b0b5-c91655d15381" />
+      </profileInstance>
+      <elementDefinition Id="634c98b4-52ac-4e52-8384-a47ea483c93d" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="7c32d727-050d-4376-9df7-61796e258636" name="Server" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5b818e70-e391-448b-aa0e-39918499cf41" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="8067d71f-8aae-406d-aa07-755647e05549" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b96f1328-374d-4263-881d-2189a9e8b73b" />
+        <targetEnds>
+          <association Id="0ea6539e-2aab-4e66-84ac-652e6d636d05" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Configure Server Address" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="08b560df-168d-43f0-80d9-2132b0e0ff91" LastKnownName="Configure Server Address" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbb23df7-aaed-4cf1-8ae7-a797539436ed" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="381a4842-5f61-4401-91f8-9509c8c3b56b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bb0d548a-1ae1-48d1-b282-c8b17f56d723" name="Configure Server Address" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="53ef7011-077c-4ad8-b2a0-4e9ef0e5812d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="814749b6-e7ba-41f3-9a09-eca4d14caa11" />
+          </association>
+          <association Id="b8db8def-dec5-4591-be97-fcd06b69be58" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Connect To Server" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f3e75f14-be91-42de-be4c-9576c2dae3c5" LastKnownName="Connect To Server" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d966f6f-9033-4c93-91f4-3f70508dcfb1" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="178be6dd-97d5-438c-8096-a81aeaf7ac03" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c87128da-dc5c-4178-a94b-cb2dddc1b1a5" name="Connect To Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d86db363-ef79-4cae-b4a2-12f8a87b884b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5c0910bc-0259-4492-b070-348ed66df953" />
+          </association>
+          <association Id="f8221b88-90b1-4178-93fc-b6ff237c509d" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Available Webcams" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d0238d1e-6b4e-4ecc-ba69-c465da5d68a5" LastKnownName="View Available Webcams" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29a0e9b8-973e-4ad1-96a5-973367296537" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a5dcf46e-2686-4fe7-9ca8-4bb089216ca8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="154b23e0-a52d-46e1-8ec3-58fb5762d8b3" name="View Available Webcams" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="83ce84bf-071a-47fa-a267-0cc8816521cf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fbcffb45-a2ff-46d2-bbf2-7dcde66f006b" />
+          </association>
+          <association Id="7779f764-f0b5-4ce8-a503-446f3814ed5c" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Webcam" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="05eebc14-e51e-44b2-9b0a-fb55462512d2" LastKnownName="View Webcam" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2852bc7-f14c-47a5-af60-17c349bc3ac5" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="234d4553-f5f1-4922-b190-8871e35b335d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3db53bd6-b869-41fc-b92a-4bf76f0a3330" name="View Webcam" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="66388d53-d5a4-41c3-ba82-b4c6d0d4d8fc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1502bdda-037b-44d2-8d2b-38e0214e92b7" />
+          </association>
+          <association Id="01b2ad82-f873-44ce-8e83-eb88c45484b6" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Status" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b6b696b8-885d-449a-9c08-3b665294fcd9" LastKnownName="View Status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4134244b-bb8a-4c1c-91bc-25af7a6f238e" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e60c879d-61fb-4f33-afd5-6c96d6e1adad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3d38f079-f335-4849-95f1-7ff51f2857d3" name="View Status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aec41f3c-2418-405d-9976-b076531fcfca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d4565bf9-980a-47de-9600-a98ccec8ed26" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="08b560df-168d-43f0-80d9-2132b0e0ff91" name="Configure Server Address" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7feaa1c6-21b9-4501-8496-336f6eaeb538" />
+        <subjects>
+          <subsystemMoniker Id="54f0fcfe-778b-4206-86ae-56975c0569a8" LastKnownName="Webcam Client" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f3e75f14-be91-42de-be4c-9576c2dae3c5" name="Connect To Server" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c93c8d61-d2c6-4a8d-ba39-1a0965a7e3b4" />
+        <subjects>
+          <subsystemMoniker Id="54f0fcfe-778b-4206-86ae-56975c0569a8" LastKnownName="Webcam Client" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d0238d1e-6b4e-4ecc-ba69-c465da5d68a5" name="View Available Webcams" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="374d2689-ff42-4d3b-9139-694f2c17f400" />
+        <additions>
+          <include Id="df402554-fd8d-45ca-a078-0da732882e2b">
+            <useCaseMoniker Id="b772f9ee-d950-4c3f-81d4-b62b0c2da936" LastKnownName="Get Webcam List" />
+            <elementDefinition Id="9ac59493-8646-4b23-b021-53cb4bd4ee75" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="54f0fcfe-778b-4206-86ae-56975c0569a8" LastKnownName="Webcam Client" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="05eebc14-e51e-44b2-9b0a-fb55462512d2" name="View Webcam" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e975198b-facb-4e8e-a5f6-e36ecaf713d8" />
+        <targetEnds>
+          <association Id="6ac5ecde-429c-46c1-b016-8b5214bdd0d5" isDerived="false" sourceEndRoleName="View Webcam" targetEndRoleName="Server" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="7c32d727-050d-4376-9df7-61796e258636" LastKnownName="Server" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef9b2a40-7862-4825-a8ab-46808d3c33dc" name="View Webcam" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2eb29860-813f-4f87-906a-44ff15cf02b2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="819d4d8d-f365-47e4-938f-078aa80f6ac1" name="Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac243b4b-46ad-4022-926d-03605c550388" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bb801458-dfe3-4984-b11b-5b994cec5522" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="54f0fcfe-778b-4206-86ae-56975c0569a8" LastKnownName="Webcam Client" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b6b696b8-885d-449a-9c08-3b665294fcd9" name="View Status" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="91ad979f-1de7-400b-8317-e246dc18bafa" />
+        <subjects>
+          <subsystemMoniker Id="54f0fcfe-778b-4206-86ae-56975c0569a8" LastKnownName="Webcam Client" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b772f9ee-d950-4c3f-81d4-b62b0c2da936" name="Get Webcam List" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="794925ce-c864-4ba2-a84c-67fc3f2047bd" />
+        <targetEnds>
+          <association Id="095b2fb1-064a-43e5-9ead-19e41c79104a" isDerived="false" sourceEndRoleName="Get Webcam List" targetEndRoleName="Server" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="7c32d727-050d-4376-9df7-61796e258636" LastKnownName="Server" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cafc5e29-48ac-4e65-8e28-d8973efe0375" name="Get Webcam List" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cad1f58a-d7ef-450b-b61a-ebeb78c08f71" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3543eff0-37fb-452e-9df6-cd73ddc34d8c" name="Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5ad63c1b-817c-4a11-b63c-a6231326fc33" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3aab7d0f-3854-415d-bfd1-04d09916568e" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="54f0fcfe-778b-4206-86ae-56975c0569a8" LastKnownName="Webcam Client" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="54f0fcfe-778b-4206-86ae-56975c0569a8" name="Webcam Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3d5bac3e-5274-43b5-9f8f-0c2511b34e6e" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="19bf9be4-d37d-46d2-802a-71cafc28ef49" name="ModelingWebcamClient">
+    <elementDefinition Id="d3117844-f9be-4841-b18e-cf52ea629a5c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="058875d3-5485-4d68-bdbb-bceb66a85a58">
+        <profileInstance Id="9a65d0b0-693a-40b0-8e8f-a8aedb2579cb" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f2b97ea9-a082-460c-bd5b-5c0d6fff7439">
+        <profileInstance Id="4f1f6f54-64e1-4cfd-8f28-17e65508a1cd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
