@@ -1,0 +1,8 @@
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\bin\Release\Imaging.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\bin\Release\Imaging.pdb
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\bin\Release\AForge.Imaging.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\bin\Release\AForge.Math.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\bin\Release\AForge.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\obj\Release\Imaging.dll
+C:\Documents and Settings\Administrator\my documents\visual studio 2010\Projects\WpfWebcamRecorder\Imaging\obj\Release\Imaging.pdb

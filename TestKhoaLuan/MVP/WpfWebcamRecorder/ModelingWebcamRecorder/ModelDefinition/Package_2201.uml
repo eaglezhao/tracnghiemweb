@@ -1,0 +1,2086 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="daf4f725-0b8c-4dbe-9c10-7cc3921819c9"
+  name="Imaging"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="32214dbe-5dc9-42c9-908a-8dc19d0b7349"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=Imaging"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="f2186812-d851-4da9-a2fe-12a3203794ac">
+      <profileInstance
+        Id="1adba9a4-a907-4d6e-bec2-02dd4169d74b"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="8fb33277-05fb-47fd-b360-187c0898a9a9"
+        name="IMotionDetector"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="871ffd11-e4ca-45e8-be99-61a539ac9e14"
+            handle="viewcode://./CodeSchema_Interface?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=IMotionDetector"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6f3f357e-e57c-4e09-9360-a3b323f95c17"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f4de263-0dc5-40b8-a13c-89fdbf89fd80">
+                <propertyInstance
+                  Id="cbb967ab-08f0-4b19-a51e-858b1c21c839"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22987cad-2cd1-4ad1-a156-8bd0ddf1037b">
+                <propertyInstance
+                  Id="6008c393-f27b-4427-aa86-65db586e4d9e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be4b4125-596c-473e-b07f-e0265463d917">
+                <propertyInstance
+                  Id="8e4b649f-c0db-4afc-993f-bfd2d65d9170"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5c6bc42e-7c0f-4065-9426-062870708d24">
+                <propertyInstance
+                  Id="f9236291-76de-437c-9516-2c4a23597035"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="840f7c9a-fc6f-4e33-a664-4b3b4f3b5ce9"
+            isDerived="false"
+            sourceEndRoleName="IMotionDetector"
+            targetEndRoleName="MotionLevel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="97ac1f26-e90a-43bf-8439-80d6e47d30da"
+              LastKnownName="Double"
+              LastKnownLocation="Package1_2201.uml" />
+            <description>Property MotionLevel references type Double.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f9afa38-a66e-4fb9-81cb-43f015678c3a"
+                  name="IMotionDetector"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2460dbed-e889-49a8-83de-057fa393eb0d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b0c4d9d1-01ce-4c9b-b86b-743e7432ba1b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="efa14b12-fade-47b0-b809-525e6b804a2f"
+                  name="MotionLevel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="80eceba5-17df-4bd5-97fb-0fc4d2546d36"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="20ae4c4e-c92a-4f93-925a-d6bf31e5433c"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="7779a030-dcf6-49c2-99c5-c2f40b270f0b"
+            name="MotionLevelCalculation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f6cb809b-c722-4162-bea8-541e70b286e7"
+                handle="viewcode://./CodeSchema_Property?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=IMotionDetector Member=MotionLevelCalculation"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f2b850c6-7bc5-4503-89f3-9f367b7c3776"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d51eaac0-1a33-4673-8537-b0cc13fa0d21">
+                    <propertyInstance
+                      Id="cab52076-c2ec-41c3-be2e-4b4d7b481141"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="581bcb84-c3e3-4716-b016-92b3a89774de">
+                    <propertyInstance
+                      Id="2bb1c6cb-1286-4993-b33d-3064efa5ca03"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d32341ba-dca6-4d12-a92e-01e3095dc3cf">
+                    <propertyInstance
+                      Id="da9fa779-3e81-4e3b-9f9d-2a5490a9d62b"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84179ec6-81f7-4261-b032-9b89988ee5de">
+                    <propertyInstance
+                      Id="a30225a9-a953-4fc1-9bc3-ce781fe53e95"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0095984-6867-4a57-acdb-6bb11f252edf">
+                    <propertyInstance
+                      Id="8c13e944-6b84-4805-92e6-f30a7b48f37a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c367c780-abbd-4463-a99f-3abce0274e5f">
+                    <propertyInstance
+                      Id="3251decd-964b-43c2-883b-39c1029da01e"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingWebcamRecorder.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d76c2318-7beb-4574-8b83-429ef9434e11"
+            name="MotionLevel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1d80c519-3eac-4b83-a129-cb516c71161e"
+                handle="viewcode://./CodeSchema_Property?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=IMotionDetector Member=MotionLevel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="63664bba-c8ee-4fbd-a093-b7c18ad60bc9"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c4697d7-cb37-4613-b6d8-45f0561e0094">
+                    <propertyInstance
+                      Id="8975e179-4861-4bf4-bab2-4f1cb56bd250"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b6796d9-e230-4590-9cc7-008afccdf5c7">
+                    <propertyInstance
+                      Id="a2cf0a40-8fb3-4a86-b9f7-815040caf443"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae45b587-761e-4a3c-b82e-bcc0c8533b74">
+                    <propertyInstance
+                      Id="ecff1f89-1baf-4341-86f2-1e03dfb890a4"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a500936e-e72a-4735-979f-334cf0c0d48c">
+                    <propertyInstance
+                      Id="ec4b59f7-0722-4288-a35d-a9328618e3be"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3cd124d-893f-4e67-b572-316aee4ca9cc">
+                    <propertyInstance
+                      Id="5655c225-90d9-4064-be75-d47838ed6750"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fae26b8c-7b8c-48bf-a9bc-8508b8b08250">
+                    <propertyInstance
+                      Id="f038ca2c-0f7c-46f8-be80-e11a4061a401"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="97ac1f26-e90a-43bf-8439-80d6e47d30da"
+                LastKnownName="Double"
+                LastKnownLocation="Package1_2201.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="a2675dfa-b67e-4d76-a7d4-76f937852fe6"
+            name="ProcessFrame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b8136552-ee34-4147-b973-a951d8b90df8"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=IMotionDetector Member=(Name=ProcessFrame OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bf80bf04-fb4a-400d-b6c3-d08431ec97aa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd09f8a4-2799-4226-a8db-6aae8288869b">
+                    <propertyInstance
+                      Id="5841df67-38eb-4db6-9539-31e20c6d2525"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6770cb12-6d53-49d5-8cbc-a57a44409b3c">
+                    <propertyInstance
+                      Id="9b795fbe-9e93-4963-8c4f-ab57425f0d99"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55b4b129-2738-431f-9873-0c7ed7e00ae3">
+                    <propertyInstance
+                      Id="8e1d683a-81a6-4842-9575-4602049d368f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea13bc11-1579-4a64-a144-05dd04155edf">
+                    <propertyInstance
+                      Id="42a1247e-f3ef-4620-9fbb-b22d969519c5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7034aea8-c73c-4aef-8684-ba646acd0e07">
+                    <propertyInstance
+                      Id="5c29c321-8eae-4684-a85c-0f208845b47b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b1381aaa-23c5-452e-ab7d-d9560367b2c4"
+                  name="image"
+                  direction="InOut">
+                  <referencesInternal>
+                    <reference
+                      Id="3cf4bdf3-642b-4011-be93-54a9cbde22b3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=IMotionDetector Member=(Name=ProcessFrame OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap)]) ParameterIdentifier=image"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="96808fe3-8ec8-435c-8429-0dab003ba481"
+                      LastKnownName="Bitmap"
+                      LastKnownLocation="Package2_2201.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="477b8cf7-58d9-4ff9-9bed-54a917c62e25"
+            name="Reset"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f47d4e75-2f99-4f5c-b063-83a7616f11ef"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=IMotionDetector Member=Reset"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="54127ae4-e874-42a4-b162-cc3b1ce0b3ef"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="249b84ed-e201-41c5-a87d-2ad537142e57">
+                    <propertyInstance
+                      Id="79c58026-ff91-47c5-b2f8-135083a255da"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0fcb18f1-b412-45db-97ed-13ad9b88ec34">
+                    <propertyInstance
+                      Id="3a3e3499-1724-46ec-8b7d-156ed0d7a763"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a12a740d-9bde-4669-8049-e3addf120675">
+                    <propertyInstance
+                      Id="9ec566d9-5e99-4014-b749-3db8ac08420d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ef3b708-ecfd-4646-872e-48889e25b8c6">
+                    <propertyInstance
+                      Id="5116ac01-5ac3-4af3-a400-55c255cf9523"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85965330-aa51-4189-a959-6c716e58c983">
+                    <propertyInstance
+                      Id="e2e8e4c6-103d-4f6d-bc65-106aef0dfb20"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d85f84ac-5317-438d-9ca4-081cca2f307a"
+        name="Imaging"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="87120577-aae3-441e-951d-ab99820bd7f6"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=Imaging"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="99fac926-4152-480a-8e45-baf407c2ce36"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="42675a11-843b-4294-ba77-124154009bd9">
+                <propertyInstance
+                  Id="9ea0c62f-acc5-42fa-a0ae-5b52a2060932"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="66a3bb67-8271-402c-b32a-0975caae77f6">
+                <propertyInstance
+                  Id="d40884e5-5adf-4e17-a8b3-8dcf0b9f6cd0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="89406d37-34e7-40cb-b3f3-5b2bd70bea5c">
+                <propertyInstance
+                  Id="7a36dbef-7763-44c5-bfc1-10af87e3e1e4"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a5b2b9e0-bb2d-4642-af3d-bfe845114f2f">
+                <propertyInstance
+                  Id="bca2527f-5a32-417e-a55e-02e5b399aaf4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cf6ef703-a784-4c4b-9b09-0001de589139">
+                <propertyInstance
+                  Id="a0046041-c4e3-4ddc-bdac-62c33ba86e63"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3b5d0a38-2a72-409b-8c82-dc24f188e050"
+            name="AddText"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7d8782a1-48f8-442e-8442-2d6b0d305c55"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=Imaging Member=(Name=AddText OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Font),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9b6f0b1f-c9af-4742-a5a6-83ceb7488ee7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d3fd560-b020-4bde-a12d-edb7c0972cf7">
+                    <propertyInstance
+                      Id="1b43ea51-e0d3-4fa7-9bf3-3bdc127f6765"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="108f5446-5399-4799-a7a0-0647c24f3e80">
+                    <propertyInstance
+                      Id="aecdd6d1-35ae-4d5c-94a1-10fb65dc4df1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e4bf2aa-51bc-4fae-8674-14e48ff00646">
+                    <propertyInstance
+                      Id="a6a96a63-69db-4196-b5db-8e167ec1dc76"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3be57bd-4a1c-4f5a-845d-8a4f4dc31ea6">
+                    <propertyInstance
+                      Id="662855a5-3a52-496c-b8cb-bf60d6694382"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0054cbe-1183-4811-a1fa-40f7699cb1e8">
+                    <propertyInstance
+                      Id="79312987-f801-40a3-9035-0d55c5f2e642"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9a621ae7-6618-4baf-9ceb-7b0063cde0cf"
+                  name="image"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="78f044a3-eb7b-406e-96e1-f42e2f1254f6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=Imaging Member=(Name=AddText OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Font),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=image"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="96808fe3-8ec8-435c-8429-0dab003ba481"
+                      LastKnownName="Bitmap"
+                      LastKnownLocation="Package2_2201.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9878339c-ec5b-41ff-873e-d67c0728348b"
+                  name="fontOverlay"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6c0c97b6-4553-48f6-8a39-c892d2abbe9a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=Imaging Member=(Name=AddText OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Font),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=fontOverlay"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1e576d69-7d56-4fa7-ac84-b9af3dd821f4"
+                      LastKnownName="Font"
+                      LastKnownLocation="Package2_2201.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fc076a65-7790-47a6-8627-a34fc51dd027"
+                  name="top"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0032b040-b91c-4fcb-9088-619822ad610b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=Imaging Member=(Name=AddText OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Font),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=top"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="675d42a4-0bac-4e9d-bd00-2ca6b9b8aa52"
+                      LastKnownName="Single"
+                      LastKnownLocation="Package1_2201.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2f0895a9-394d-48a0-9839-ff661d0f1ac5"
+                  name="left"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6118211a-5f2a-499e-9339-4f1f588e6abd"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=Imaging Member=(Name=AddText OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Font),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=left"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="675d42a4-0bac-4e9d-bd00-2ca6b9b8aa52"
+                      LastKnownName="Single"
+                      LastKnownLocation="Package1_2201.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aab53fb6-b4ba-41b0-8af4-0d9a78bb7e66"
+                  name="text"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fada00e2-78c3-4a87-b405-85a29fdae118"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=Imaging Member=(Name=AddText OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Font),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=Single),(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/mscorlib.dll&quot; Namespace=System Type=String)]) ParameterIdentifier=text"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingWebcamRecorder.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="320da96c-00d7-4401-ac1a-214eb3d58155"
+        name="MotionDetector"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="74640bc6-5a90-44dd-bd99-4d95b8b4433c"
+            handle="viewcode://./CodeSchema_Class?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f4f5c0ac-bf0a-409b-9266-7283c2a31086"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="abef0471-4aa0-4ab1-932b-9ab8013a9124">
+                <propertyInstance
+                  Id="4cab6b93-4d13-43c4-a09a-b4aa544916ee"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5a88c7c8-e2be-4c8e-8980-f5a82ea7e50d">
+                <propertyInstance
+                  Id="a7f52a73-e2c5-4ff5-89c4-a6548fc57367"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c58c4d3c-f90e-4121-9a88-dc390d59131d">
+                <propertyInstance
+                  Id="d01c8d2e-a549-42d1-bb48-c879f1b5f3dc"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="faff4296-1b14-4cd5-852f-179b11f6b9b4">
+                <propertyInstance
+                  Id="8b300940-ab2d-4f5a-af49-5ada88b1e11e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b4924bed-5187-4f30-8315-be90a6a8cf9f">
+                <propertyInstance
+                  Id="fec235f8-5dd8-4f6f-b97a-4c0bccf95816"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="5f6706be-1293-4edd-9514-3e3931308bc5">
+            <interfaceMoniker
+              Id="8fb33277-05fb-47fd-b360-187c0898a9a9"
+              LastKnownName="IMotionDetector"
+              LastKnownLocation="Package_2201.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="c5f0f693-b897-4c0b-b900-117ab2edfb6e"
+            isDerived="false"
+            sourceEndRoleName="MotionDetector"
+            targetEndRoleName="MotionLevel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="97ac1f26-e90a-43bf-8439-80d6e47d30da"
+              LastKnownName="Double"
+              LastKnownLocation="Package1_2201.uml" />
+            <description>Property MotionLevel references type Double.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="43e6e1e4-4428-4316-9c30-d4b65cd9fc9e"
+                  name="MotionDetector"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="100b3f43-db9b-4638-a664-e917f6dead2f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="af2bcd5d-ce90-4484-8449-2647a5820f5b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2db93d3-3c00-4a28-a5a5-bd8609405a7e"
+                  name="MotionLevel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b6835ad4-7e5a-46a5-bb48-5a2dc632584f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fbadf2d1-f317-4f80-90b6-acdb2fdc998a"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="e05f75e6-6753-4532-97e5-f776c6647b0b"
+            name="MotionLevelCalculation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2f781064-7815-4244-9b1c-ae4dead1c65e"
+                handle="viewcode://./CodeSchema_Property?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=MotionLevelCalculation"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ec4790c2-9b64-4cbd-9ccc-ac244af41822"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2dde19e3-c190-442c-bc64-5fb52ff38f99">
+                    <propertyInstance
+                      Id="b142d7db-2416-48ee-9b26-54fe7738b9a0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca0f8ffa-04cf-4988-98a4-d827558abab7">
+                    <propertyInstance
+                      Id="2425ce01-26e5-426f-b136-387ab6fa277c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ad1d545-4830-446b-bc26-a658d2357ab6">
+                    <propertyInstance
+                      Id="3d2a9453-26a2-4ed5-827a-7ce12bd3be5c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="496a63df-70bc-4514-9602-00f901c4f0ef">
+                    <propertyInstance
+                      Id="10dcf64f-c891-4f91-a399-9866e783a3a5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe1e76d9-2377-4ca4-8c71-3d9c80555ee6">
+                    <propertyInstance
+                      Id="a54363f7-77e8-4f8d-bb24-6cea286bfae2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72438c2d-1a5b-4340-90dc-2f9f97050fba">
+                    <propertyInstance
+                      Id="0a71eb66-d5e8-4e2a-b705-caca245886d0"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingWebcamRecorder.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4c081756-0266-40b7-b6bb-2c317d4d8b54"
+            name="MotionLevel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a5aea185-2f98-44be-b77a-b5dcea12c0ac"
+                handle="viewcode://./CodeSchema_Property?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=MotionLevel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="966acbe7-bcc3-45ef-bc88-b781d34f3a8d"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2617b171-e9de-42af-b692-c968efbba19d">
+                    <propertyInstance
+                      Id="de03a1c2-a898-454b-8f5d-1866b2a808d1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2daef381-c42a-4bcb-ba30-89d1e41ef75b">
+                    <propertyInstance
+                      Id="80514c4d-75d9-4b05-83fc-1dbc4445bd72"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="189bf0f1-2ad9-4b78-9bac-9f08ef27aaa5">
+                    <propertyInstance
+                      Id="204dda80-fb59-411c-83cb-73d9ba3150aa"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07fec2cb-70e8-4c07-ac05-a0b9a91e794d">
+                    <propertyInstance
+                      Id="c29eaa27-8b33-4032-9f3d-2dfec9b6729c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be6a8e27-ad60-4885-957e-ae9ec5a651ab">
+                    <propertyInstance
+                      Id="719dbbf8-6413-48f5-95e4-cce56d8857c2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7175d135-9d44-419e-affe-239962e49e15">
+                    <propertyInstance
+                      Id="c9c46bfa-74c1-4224-b195-8dd237e4d05d"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="97ac1f26-e90a-43bf-8439-80d6e47d30da"
+                LastKnownName="Double"
+                LastKnownLocation="Package1_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dce6066a-ee96-4e73-a3de-1eaae10bf16c"
+            name="grayscaleFilter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="be9548ec-0ed0-4ec2-94a0-88894440e89e"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=grayscaleFilter"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="31f4e3a3-da0e-4614-ab43-bc894be9a743"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1c5cb3a-98a8-4805-a4e2-8579dadf64f3">
+                    <propertyInstance
+                      Id="e51c235c-56d9-4466-ba27-295edfcb91f3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="511f5daf-0227-4a8e-a3f0-0e3f016329c8">
+                    <propertyInstance
+                      Id="d878afde-a92b-4ee8-922a-7d67d3d81fda"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc4f1caf-64d5-4021-a9d1-3fdda0bbd996">
+                    <propertyInstance
+                      Id="58aa5215-8ea7-4770-ad63-bd16675cb8fa"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3ebb46e-971f-49b4-8154-96d377a2c8b8">
+                    <propertyInstance
+                      Id="1595805a-b13e-493f-8ec7-3a4253a40de1"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1bba6e20-1a44-4c8b-9f5c-546020714cca">
+                    <propertyInstance
+                      Id="b9264502-d534-4164-af30-3319379519ef"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="48b4413f-746e-41aa-9e39-642e4be09b8f"
+                LastKnownName="IFilter"
+                LastKnownLocation="Package5_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a2c31330-ad78-46e7-87db-b3cfd660bbca"
+            name="differenceFilter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3f19dbce-c59c-462b-91da-c97d4373b220"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=differenceFilter"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="289aa562-4fff-4c91-b698-d2982128abdf"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e0c80b8-f9c1-4fb1-b5e4-4912832452f6">
+                    <propertyInstance
+                      Id="dd0aecd3-5816-4496-8a9c-b81605872b7c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be8bb809-73ba-4cd9-a192-d89e9bf6eefc">
+                    <propertyInstance
+                      Id="8d407aec-1a9d-4fd0-8081-229fd0cc266c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e4dc903-a66f-452f-ba6e-8acf82ae19f9">
+                    <propertyInstance
+                      Id="e5b28459-db4b-4669-bc45-fea4299d4528"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac8da2ff-aa48-444d-a066-4c76731ab334">
+                    <propertyInstance
+                      Id="c438d5ce-8e59-42a6-b9e1-07b75ea9354a"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ea970fc-fbe2-4293-b9b6-b44f3040d3cb">
+                    <propertyInstance
+                      Id="54cd9542-3539-48b4-b084-a95e67f2c72b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="2884a9e6-bc3b-4179-926a-7a0390c6a815"
+                LastKnownName="Difference"
+                LastKnownLocation="Package5_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2d83b035-bcb2-4637-b066-f01c7664bae0"
+            name="thresholdFilter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5efd7663-2821-486e-9cd4-1996b8a5041c"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=thresholdFilter"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5b001386-45c4-45bf-9b5d-e18ddd0269af"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="856a4b8f-5059-4545-8ce8-ad9782a597bb">
+                    <propertyInstance
+                      Id="c348db0c-f02f-48ac-8e82-bbdc170aac6e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fe5512d-87d6-4a57-8e2f-32f18a34e740">
+                    <propertyInstance
+                      Id="43a4bf22-89af-4a4a-8d34-8e2d85f500cf"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df2f1772-4ad7-47f2-8e3c-74383b9f6a7c">
+                    <propertyInstance
+                      Id="cb51dd43-53bc-4914-8108-efbb5905c6aa"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6914e40-e396-4cd7-b47c-4357c4a9c613">
+                    <propertyInstance
+                      Id="e0239721-af9b-4347-8b04-8a40659a48f5"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="251323de-352d-4ce9-852c-fea08ed2477b">
+                    <propertyInstance
+                      Id="ca23e047-415e-44b9-9ced-84ab603a7343"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c3ff8594-3b1a-48d1-a668-1138548e0c49"
+                LastKnownName="Threshold"
+                LastKnownLocation="Package5_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="639bca76-4227-43a0-9eed-9452d826eebd"
+            name="erosionFilter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f155b14a-0480-47cd-9ee6-1c73d6ed5885"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=erosionFilter"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4e9d57b6-7d0d-4f11-a4c7-876de7b68538"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d5d9db6-bd03-4b28-baac-c6b602abb9ec">
+                    <propertyInstance
+                      Id="6ac81c39-217a-47dd-8b39-aafa27046e1e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca9ec63a-2dea-43a3-a402-552147e5a563">
+                    <propertyInstance
+                      Id="efd15bf2-29ce-40f4-bb00-ed35b6c0586c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1774cc44-77e2-4646-aea9-259c3dab794c">
+                    <propertyInstance
+                      Id="1d4212a5-c3a4-4386-b32c-458bcb078a0a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1513962-7cc2-4781-9080-839716aa6249">
+                    <propertyInstance
+                      Id="5474eef8-190c-4b66-9dd9-5ac7f09a3020"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b873a81c-85ec-45e2-8bc2-620699c1042f">
+                    <propertyInstance
+                      Id="c02fb180-5afc-4d23-916e-7a00a0519fc8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="48b4413f-746e-41aa-9e39-642e4be09b8f"
+                LastKnownName="IFilter"
+                LastKnownLocation="Package5_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3d833be1-74ff-4867-bfc8-3c74c28efbad"
+            name="mergeFilter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2018333e-4881-44b3-9a95-38e00e6094ad"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=mergeFilter"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="67549cc5-54ab-4ed9-8d58-632aa0079a95"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="762d43f0-cae2-4b75-aac2-95c994ebeb94">
+                    <propertyInstance
+                      Id="e2e74752-b217-4b9d-b633-0e879c73616a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58781f9a-8e66-48b6-afe2-f9e60f1e97b9">
+                    <propertyInstance
+                      Id="edaf8b9e-e7b9-43e6-8305-0fe24dad50a4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcf10bc3-720a-4690-9fd0-4eed379c134c">
+                    <propertyInstance
+                      Id="6c5fd5ed-88fc-47c0-b8f6-5ff7e18ffafb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="159afb05-3ea3-46fd-a05e-952c8901dfb2">
+                    <propertyInstance
+                      Id="01c0676c-0a3b-4d53-8da9-83d54c9eaac9"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9e8f69e-a418-423a-8bbe-30efd73d32ef">
+                    <propertyInstance
+                      Id="e06245b7-7a9a-43f9-b4f5-4b0214322053"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4f9a9ff0-9381-43da-acc1-00708716a420"
+                LastKnownName="Merge"
+                LastKnownLocation="Package5_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f2c29150-21f2-499e-b82f-48ef9115c7c5"
+            name="extrachChannel"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d10a8b59-e38f-4245-a9d2-92f2ed57bce7"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=extrachChannel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="04311133-b08b-4d91-b2f1-288fd966822c"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03febf7b-bcaa-43cd-b516-bd587ef077b0">
+                    <propertyInstance
+                      Id="3878eb2a-14a5-4958-97c0-78363c7b7920"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d67c4360-6028-4154-8d05-da678cd8812b">
+                    <propertyInstance
+                      Id="c1affb78-790c-40e3-9c4c-26d76d5d96ca"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b4625ec-9ea4-4ebd-948d-373ccb97fd29">
+                    <propertyInstance
+                      Id="818ebb75-6ac8-4ec0-ab50-3dc2c5d1132c"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a3eeb03-5c8d-46f2-b780-bb92f86fd3ca">
+                    <propertyInstance
+                      Id="ecfe1c0a-14fa-4d3e-af20-161afd8af415"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8130e0e6-6555-4409-85ee-5d7187b3b30b">
+                    <propertyInstance
+                      Id="a3c1d6f3-a251-4d04-a7e2-908770506914"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="48b4413f-746e-41aa-9e39-642e4be09b8f"
+                LastKnownName="IFilter"
+                LastKnownLocation="Package5_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4d03a0e4-ef54-4640-9d00-edfa30f41e2d"
+            name="replaceChannel"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f4c5a0a2-d9d1-4378-855b-d9f12a58928d"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=replaceChannel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b0f97383-f137-4904-ab91-4c83be38ae5d"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8eb39b99-04f4-44c4-8c2a-3c159e9a155e">
+                    <propertyInstance
+                      Id="f4a98132-ee16-4446-aed5-54f7b84c3c94"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="020b5dc4-70f4-48e8-bd30-befedb45e9e5">
+                    <propertyInstance
+                      Id="44cbfc13-8254-46ad-a869-4ccecb659c61"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33fb2821-f841-4e09-a738-8896018b274c">
+                    <propertyInstance
+                      Id="4daf99ef-5c65-490b-b6f2-e569ab69f429"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="973104d6-89dc-4491-8de6-f741b2b38e9e">
+                    <propertyInstance
+                      Id="20e65b8e-332d-43e3-bcc8-c4b3780feec9"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da7b8131-28a6-469e-9167-753d02a1956b">
+                    <propertyInstance
+                      Id="1f08280e-b488-4561-afb8-c8811e130128"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="3a972f1b-fafd-4c99-94ef-02fcd1834926"
+                LastKnownName="ReplaceChannel"
+                LastKnownLocation="Package5_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5ee27bcf-fd48-4e5d-952c-550b3a20cc98"
+            name="backgroundFrame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="74fd0d64-6cee-401a-b2a9-5f64ade9e7e2"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=backgroundFrame"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e49e5072-e6d9-4cd2-85b9-8a8261d5f462"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e8aa199-873c-4525-923b-f6178b5a1feb">
+                    <propertyInstance
+                      Id="a0235894-d3b6-483b-9cf7-f908e0f18339"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7ccaeec-7722-4378-963f-f779aa41f160">
+                    <propertyInstance
+                      Id="49200d42-2412-4ddb-a323-2b05b573d754"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f651460c-5f2e-4bef-871b-7346035b3b91">
+                    <propertyInstance
+                      Id="0c67dc7f-8c8f-4eb2-8f7d-34f529d1ae02"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76b62307-9027-4d8f-91f5-0129d23edc9c">
+                    <propertyInstance
+                      Id="17d5aaef-6e85-46c2-bc2c-13c2719ee16e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5aa1fcec-d557-494f-a5d0-67756bcdb66b">
+                    <propertyInstance
+                      Id="5ba6dfe5-fddd-4a54-bd59-f91c35f7292c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="96808fe3-8ec8-435c-8429-0dab003ba481"
+                LastKnownName="Bitmap"
+                LastKnownLocation="Package2_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6283ea04-a774-4c7f-95f2-943ff06195cb"
+            name="bitmapData"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5b498bfe-7b0b-4ae6-9620-f0ebd85493d1"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=bitmapData"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c655bc02-07af-4a5c-b2f7-fb1c7490b708"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a6f1427-d0c5-4da4-87c3-0b956cdbf633">
+                    <propertyInstance
+                      Id="34c36c54-6840-47ce-9ee6-cb62864695fd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bff6ca8-9922-422c-b53a-c933d3581ace">
+                    <propertyInstance
+                      Id="9bcba14f-bd81-467e-b2e2-456797e5ddef"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07dc43d0-2529-4ea8-9759-12ee7de1181b">
+                    <propertyInstance
+                      Id="6995a6a3-b382-4378-b901-17533d375c5d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5274fa6c-a8ff-4a83-a759-b2f1e8d89200">
+                    <propertyInstance
+                      Id="5dd2fdc2-8a2b-4666-a0d9-698e970f5a9e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0acf3e4e-11ab-49ac-9120-5acfa82d9106">
+                    <propertyInstance
+                      Id="b5b04ca2-7b7c-4bdb-a22d-59cf1ea38aa4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="bb5a78d4-2fec-49ae-9f59-9ce5996c1ac8"
+                LastKnownName="BitmapData"
+                LastKnownLocation="Package6_2201.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5f8fc026-3b76-45bb-a2e2-62d3e94e2c37"
+            name="calculateMotionLevel"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d3466a43-deaf-49bf-bdf5-dc0b96f6ada3"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=calculateMotionLevel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="af0bd1d2-be26-4b26-b0d8-17140526149c"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="719955a3-9646-452e-be30-5d79e75d1d02">
+                    <propertyInstance
+                      Id="4e5dc98b-ca9c-4009-a3b8-d246a933e585"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1690ced1-a006-494a-a7f2-124ee564ba46">
+                    <propertyInstance
+                      Id="81c12495-6579-4053-8fdb-82fc6c282d8e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76d38225-46ca-43a9-a320-43b51484d679">
+                    <propertyInstance
+                      Id="a0c2f47d-3ac5-4960-bee6-6337f917f010"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="daffa32a-af8c-4bc1-b8fc-592be8802dd8">
+                    <propertyInstance
+                      Id="42ba8b6c-6cd9-4bf0-8a98-da2d8c55b89c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53eb2ac3-69e4-4328-a95a-91d2d736ccb0">
+                    <propertyInstance
+                      Id="1659141b-ca54-479e-b089-cbd4755a5b7a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingWebcamRecorder.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="88b28cba-2ff8-4ea4-9955-abf0a4feb5fd"
+            name="width"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a8030f59-9f75-4e41-9be5-c28283a3222f"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=width"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="74f276ca-6f43-4453-92ac-5d6b65a48d46"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db35003a-b2a1-4e56-b9db-5d6baffd96f3">
+                    <propertyInstance
+                      Id="4c11ce63-d847-4e1a-95d6-024a2c8962b7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b883851-5aa7-43d5-927e-e70e5f0597d3">
+                    <propertyInstance
+                      Id="6528347d-787a-4b74-9d3d-fd0fc14647d3"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="428fdc93-3381-4abe-aacf-ed8d7774ce90">
+                    <propertyInstance
+                      Id="2b2b6451-5a1d-4ce2-94ed-bac67d84f2fd"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43d477cf-c0fb-41d5-8f16-ae5f27b2a8fe">
+                    <propertyInstance
+                      Id="1b7434ed-ef24-426e-8998-254922c0e9ac"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f4d7fae-c5ea-42aa-9c3e-0046109d1277">
+                    <propertyInstance
+                      Id="d6310217-4f12-4dc2-80cf-4f09ef90bfa6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingWebcamRecorder.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e1bcbdd8-a142-412c-8319-5780bc5543b9"
+            name="height"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d95f7c68-bfe3-4a7a-8b64-a5e391af1142"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=height"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9f6b92d6-f223-4169-8aa8-aa6d2e9b185a"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae7515a6-fc9f-4010-bde8-b805771e789e">
+                    <propertyInstance
+                      Id="75b7aad0-8958-4542-b457-79a23ce309ac"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28bb474a-5df6-4889-bb8e-44734621524f">
+                    <propertyInstance
+                      Id="640837b1-2b9c-481f-a687-3a5aad43b14c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="431d10a6-5b31-4923-af39-e08a157e2528">
+                    <propertyInstance
+                      Id="1c858cdd-50d5-4374-8243-8074ec348ed3"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a98bf1b8-85be-49c6-b186-3a825783e710">
+                    <propertyInstance
+                      Id="9952623d-a1f8-4295-b3f1-41762ba8839f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51ff7133-55e8-4e61-9106-8cab3169a615">
+                    <propertyInstance
+                      Id="fac690f2-e18c-4b74-8953-3b448229a64d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingWebcamRecorder.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="215cf40c-8902-4ffc-8ac2-cb41d149a019"
+            name="pixelsChanged"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="943e322d-868c-4e32-a8f7-8cb1c721424d"
+                handle="viewcode://./CodeSchema_Field?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=pixelsChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4ea2ddb8-e27d-41ce-a77b-0898cc5dda2b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e847df8-acf9-467d-b2d1-d079a3bc64d5">
+                    <propertyInstance
+                      Id="6cafec6a-c58e-46de-b5d0-9712d7b90009"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fea588b3-8786-4d29-9ebf-73d3c18f0144">
+                    <propertyInstance
+                      Id="1f0773f1-44f0-4766-8d52-663c7a7df5db"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eeacb6ee-e65b-4080-96aa-8fd7548cda4a">
+                    <propertyInstance
+                      Id="1f0e9d8a-cc3c-45d4-81bf-b322b76331c6"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1dc7e4f-17d5-41f3-8ced-5a97af294e6a">
+                    <propertyInstance
+                      Id="63666d76-48ae-4d5b-bea5-12e3d764d84b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7eadd7d-0e9b-4103-adca-bae2af3b38f6">
+                    <propertyInstance
+                      Id="8b585cea-4ed3-4df2-899f-e9e067543879"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingWebcamRecorder.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="aee43319-dceb-4af2-b8cb-7c5f05d1c169"
+            name="Reset"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b8df250c-640d-4e20-93cd-2b7ed5a80ebe"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=Reset"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="530029ad-1f1a-4713-a62c-813c9b38c763"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="834350e1-80b2-484a-8eaa-3a64ece8d20e">
+                    <propertyInstance
+                      Id="3dd95c8e-e5ef-419a-bff9-d093a431851d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13b626a3-0cdb-4b22-a543-c2477a6d2c5d">
+                    <propertyInstance
+                      Id="5855f998-25cf-46f5-b207-b9d7338119b0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98930a23-f414-47e3-b6d5-070b0d59353d">
+                    <propertyInstance
+                      Id="99a66284-6591-4e57-8f58-42ac0681323e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ef532ec-987c-4952-83be-1f97e21178af">
+                    <propertyInstance
+                      Id="b0b583fd-31b4-4c79-81e8-e3f65c164735"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3aec64f0-89e4-4640-8fbc-0766f9b7e16c">
+                    <propertyInstance
+                      Id="3f761f28-c4a7-4d30-a126-8ac6b76c21ed"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b52a27d3-5f11-4d1e-ac83-c000d2bddeba"
+            name="ProcessFrame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="aa1d6f07-bb5d-4f72-b519-183a1976eb9d"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=(Name=ProcessFrame OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="819a48da-a924-4072-985c-6b6bac1089ce"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="545cf307-9eee-43ab-a90a-7f5bb2ba9f2f">
+                    <propertyInstance
+                      Id="5fd45d39-a743-4d81-9919-946a262ac2d4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ac46c34-d610-4076-917a-d80b8cb1170f">
+                    <propertyInstance
+                      Id="7bb643f9-630d-4bd1-80cf-4fc1340dd7c5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6cb9fe92-fe99-4c21-8652-930a0d70c33f">
+                    <propertyInstance
+                      Id="e30516bd-0ad2-4379-ba16-6a72c6636063"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7688e5b6-a6fb-4906-b4b9-269ca214ffcb">
+                    <propertyInstance
+                      Id="5ed80bd1-46a8-4483-87f2-806bad8d97b7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7db40189-0ad7-4ce3-b411-c941eb987d1e">
+                    <propertyInstance
+                      Id="a918e0c5-f9ef-4354-a61c-4c22174bb0f0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="36661523-b539-4933-ab90-d4ebcc4fe757"
+                  name="image"
+                  direction="InOut">
+                  <referencesInternal>
+                    <reference
+                      Id="0482591d-4df0-4a58-adbb-0ccf485d9e14"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=(Name=ProcessFrame OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap)]) ParameterIdentifier=image"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="96808fe3-8ec8-435c-8429-0dab003ba481"
+                      LastKnownName="Bitmap"
+                      LastKnownLocation="Package2_2201.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8324f8ba-78df-4758-9bc5-27a8c18019f4"
+            name="CalculateWhitePixels"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="20d822db-7573-4cd3-b3d5-30f7fdb368ab"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=(Name=CalculateWhitePixels OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="074483f7-1e32-495c-b432-656cb49a282f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="796eca47-b8ad-407c-87c3-952d4bbe5e1e">
+                    <propertyInstance
+                      Id="3618599b-079d-4774-9a22-225601e50c6f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa917fb6-0b92-4928-b35c-23e363b58dec">
+                    <propertyInstance
+                      Id="e2c67939-8c67-4cb4-909b-06c9cdd07940"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1766abb-c55d-48a3-872d-5052c31c4185">
+                    <propertyInstance
+                      Id="f812381c-2d3a-4f16-abf8-4d7ccc8492f9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a4a9b37-def8-4f37-bd12-44b65a1fbdc1">
+                    <propertyInstance
+                      Id="431f52cb-d32e-4a3d-9aa3-87cc6d27e806"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01aaebd6-6a37-45c9-a551-f9a4f2c7df6d">
+                    <propertyInstance
+                      Id="224847d8-5264-466d-adb1-ad74d4103a8c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e18bccb4-29f4-4d1f-af1e-9b41b4978d1f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingWebcamRecorder.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dd39f77c-42df-4805-8368-6bfeab11044c"
+                  name="image"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5ab65051-80dc-487e-bb09-33f10ca78942"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=(Name=CalculateWhitePixels OverloadingParameters=[(Assembly=&quot;file:///C:/Program Files/Reference Assemblies/Microsoft/Framework/.NETFramework/v4.0/System.Drawing.dll&quot; Namespace=System.Drawing Type=Bitmap)]) ParameterIdentifier=image"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="96808fe3-8ec8-435c-8429-0dab003ba481"
+                      LastKnownName="Bitmap"
+                      LastKnownLocation="Package2_2201.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9a2f0284-3120-4447-a90f-215ebf48af4a"
+            name="MotionDetector"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f118dd32-130a-4779-bb08-783c7ff232fb"
+                handle="viewcode://./CodeSchema_Method?Assembly=&quot;file:///C:/Documents and Settings/Administrator/my documents/visual studio 2010/Projects/WpfWebcamRecorder/Imaging/bin/Debug/Imaging.dll&quot; Namespace=Imaging Type=MotionDetector Member=.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="543a58dc-90b3-433c-b800-643ee69bd94b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6252a2a1-3b7b-4769-8112-5639490dfbd3">
+                    <propertyInstance
+                      Id="14c5be8a-e940-48ca-ae01-c5918c9ec0f8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4e2ea54-6a85-419a-8682-e6cd8385eb51">
+                    <propertyInstance
+                      Id="25928bf1-764c-43f3-b81d-c5f9549dbdd9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5831954e-03b6-4446-928f-ffcd8d582c1f">
+                    <propertyInstance
+                      Id="0564b5d4-cca9-42b8-a2c8-c37242d33b31"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42c76883-97f8-46bc-b8a7-787b66f56037">
+                    <propertyInstance
+                      Id="cb6369e9-b940-4790-9e2c-81b4a52f9f30"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b6299a0-3243-44aa-8ab5-357427796805">
+                    <propertyInstance
+                      Id="0d0d48a8-e98d-44dc-9b28-7f23c85b3283"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

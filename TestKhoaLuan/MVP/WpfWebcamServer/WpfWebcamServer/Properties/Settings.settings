@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WpfWebcamServer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="broadcastPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2222</Value>
+    </Setting>
+    <Setting Name="webcamPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3333</Value>
+    </Setting>
+    <Setting Name="clientPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4444</Value>
+    </Setting>
+    <Setting Name="basePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

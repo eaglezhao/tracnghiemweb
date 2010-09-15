@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8f2cdb55-136b-4f13-8237-6cd4a881a0bc"
+  name="ModelingWebcamRecorder" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="c9aa9ba6-ca50-407a-9073-a8fb423ffeb5">
+      <profileInstance
+        Id="adb52c6f-df3b-4f4c-9225-a2f5180ae9db"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="daf4f725-0b8c-4dbe-9c10-7cc3921819c9"
+        LastKnownName="Imaging"
+        LastKnownLocation="Package_2201.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dc6ecbed-a446-43de-9bb2-dc76ce8e91e1"
+        LastKnownName="System"
+        LastKnownLocation="Package1_2201.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="12b6148e-7225-44c5-9232-6fdcf691b3e0"
+        LastKnownName="AForge"
+        LastKnownLocation="Package3_2201.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ed6f5d5f-92de-4242-8af1-be9c985660f2"
+        LastKnownName="WpfWebcamRecorder"
+        LastKnownLocation="Package_2202.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0305006c-d3c1-4325-91b5-236a81c0a1cd"
+        LastKnownName="DirectShowLib"
+        LastKnownLocation="Package1_2202.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7b708ccc-5ce7-4117-a3cb-ab2e5070fa24"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="11f21de5-d130-43cf-b0ab-d43a7718e131"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Change Sensitivity"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c1c44717-7975-4a36-82a5-144e17b92c5c"
+              LastKnownName="Change Sensitivity"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="db04460e-77d1-46e1-b5d3-ead5cc2f50d3"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="692e9839-b23b-4c00-8411-9b76cba3713e"
+                  name="Change Sensitivity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="08b3e962-b5c0-405c-89d2-91c323d67179"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Change Port"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1ff9a66b-9d50-4ffd-a1fa-67dda4964f92"
+              LastKnownName="Change Port"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce8da2bd-b2f3-4aca-a3d0-4b4b6f7edc9a"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3cb9bb91-3399-4423-adb0-6ddf9fc84bb0"
+                  name="Change Port"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="62702b68-bd7a-4884-a149-813958dc36dd"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Change Alarm Sound"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d7cd3cc7-b8f2-4c1c-8474-7cfd837bedb9"
+              LastKnownName="Change Alarm Sound"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b530efbb-1488-4ca3-9e2a-d3998756354e"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="574e8ef4-c116-44ad-9a7a-7ee1d21d86e7"
+                  name="Change Alarm Sound"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e4d29664-fccf-4797-8e96-1d66624ce210"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="View Status Message"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b1be07cd-287d-400b-b6bd-409b636588b7"
+              LastKnownName="View Status Message"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10de9f2e-7d4a-4dd6-80a8-89ce6c10d23f"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="333e98a6-be03-4ea2-9aad-f870e8b2ee34"
+                  name="View Status Message"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c1c44717-7975-4a36-82a5-144e17b92c5c"
+        name="Change Sensitivity"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1ff9a66b-9d50-4ffd-a1fa-67dda4964f92"
+        name="Change Port"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d7cd3cc7-b8f2-4c1c-8474-7cfd837bedb9"
+        name="Change Alarm Sound"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b1be07cd-287d-400b-b6bd-409b636588b7"
+        name="View Status Message"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="2be38c15-677e-4e2e-9ffc-10aebf111724"
+        name="Server"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="db6eaf2d-c3b5-43ba-81b0-df40a27d5fa1"
+            isDerived="false"
+            sourceEndRoleName="Server"
+            targetEndRoleName="Discover"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bc467aa3-74ab-46cd-bbfc-d3689b626c60"
+              LastKnownName="Discover"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4038021c-4daf-4605-acc8-affd310e2089"
+                  name="Server"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f522d905-fd33-4306-a7a2-1f524849f773"
+                  name="Discover"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c32430d9-58ae-4a69-abcd-5b2573214f1c"
+            isDerived="false"
+            sourceEndRoleName="Server"
+            targetEndRoleName="Get Video"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="80c175b8-1169-49aa-bc51-ac108ce4ae76"
+              LastKnownName="Get Video"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86237ea8-66cb-400d-82d9-2c71c3139abd"
+                  name="Server"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d72193a-d1cc-416f-8d3e-8bc1977a4a97"
+                  name="Get Video"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="82cc6b3a-eb84-47ff-b28a-d82acfd922e8"
+            isDerived="false"
+            sourceEndRoleName="Server"
+            targetEndRoleName="Alarm"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="640ac04f-325c-4b91-9d1f-d92144693051"
+              LastKnownName="Detect Motion"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="010658b2-925b-4d1c-9020-c3438aac4727"
+                  name="Server"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="114a042a-2fe6-4738-9c24-ba142c9f84ea"
+                  name="Alarm"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bc467aa3-74ab-46cd-bbfc-d3689b626c60"
+        name="Discover"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="a554ef17-3236-4f34-8bc1-36e108d43859">
+            <useCaseMoniker
+              Id="899b5e93-1be4-4038-94cb-bb3e448e37b4"
+              LastKnownName="Get Webcam Name"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="899b5e93-1be4-4038-94cb-bb3e448e37b4"
+        name="Get Webcam Name"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="80c175b8-1169-49aa-bc51-ac108ce4ae76"
+        name="Get Video"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="640ac04f-325c-4b91-9d1f-d92144693051"
+        name="Detect Motion"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ee5df94b-816f-47d0-9c16-169fc8572424">
+            <useCaseMoniker
+              Id="dc42f261-7b83-44a9-8d58-275444397048"
+              LastKnownName="Alarm"
+              LastKnownLocation="ModelingWebcamRecorder.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dc42f261-7b83-44a9-8d58-275444397048"
+        name="Alarm"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+            LastKnownName="Webcam Recorder"
+            LastKnownLocation="ModelingWebcamRecorder.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="41b99a1a-4413-4deb-9279-4959c42cc42c"
+        name="Webcam Recorder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

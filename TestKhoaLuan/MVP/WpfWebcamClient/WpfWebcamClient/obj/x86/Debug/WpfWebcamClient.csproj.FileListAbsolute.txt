@@ -1,0 +1,13 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\bin\Debug\WpfWebcamClient.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\bin\Debug\WpfWebcamClient.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\MainWindow.baml
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\MainWindow.g.cs
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\App.g.cs
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\WpfWebcamClient_MarkupCompile.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\WpfWebcamClient.g.resources
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\WpfWebcamClient.Properties.Resources.resources
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\WpfWebcamClient.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\WpfWebcamClient\WpfWebcamClient\obj\x86\Debug\WpfWebcamClient.pdb
