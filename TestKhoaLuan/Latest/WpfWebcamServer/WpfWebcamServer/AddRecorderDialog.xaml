@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfWebcamServer.AddRecorderDialog" x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Recorder Dialog" Height="120" Width="250" ResizeMode="NoResize"
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Border Name="windowFrame" BorderBrush="#395984" BorderThickness="1" CornerRadius="0,20,30,40">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Color="#E7EBF7" Offset="0.0"/>
+                        <GradientStop Color="#CEE3FF" Offset="0.5"/>
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Canvas>
+            <TextBlock Text="Address:" Canvas.Top="16" Canvas.Left="10"/>
+            <TextBlock Text="Port:" Canvas.Top="46" Canvas.Left="10"/>
+            <TextBox Name="txtAddress" Canvas.Top="10" Canvas.Left="60" Width="150"/>
+            <TextBox Name="txtPort" Canvas.Top="40" Canvas.Left="60" Width="150"/>
+            <TextBlock Name="txtError" Canvas.Top="70" Canvas.Left="60" Foreground="Red"/>
+            <Button Content="Add" Canvas.Top="90" Canvas.Left="100" Width="50" IsDefault="True" Click="addButton_Click"/>
+            <Button Content="Cancel" Canvas.Top="90" Canvas.Left="160" Width="50" IsCancel="True" />
+        </Canvas>
+    </Border>
+</Window>

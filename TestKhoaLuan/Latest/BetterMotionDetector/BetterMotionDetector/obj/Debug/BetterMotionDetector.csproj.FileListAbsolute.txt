@@ -1,0 +1,10 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\bin\Debug\BetterMotionDetector.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\bin\Debug\BetterMotionDetector.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\bin\Debug\AForge.Imaging.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\bin\Debug\AForge.Math.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\bin\Debug\Sensor.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\bin\Debug\AForge.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\bin\Debug\Sensor.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\obj\Debug\BetterMotionDetector.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\BetterMotionDetector\BetterMotionDetector\obj\Debug\BetterMotionDetector.pdb
