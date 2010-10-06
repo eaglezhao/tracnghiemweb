@@ -1,0 +1,10 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\bin\Debug\MotionDetector.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\bin\Debug\MotionDetector.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\bin\Debug\AForge.Imaging.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\bin\Debug\AForge.Math.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\bin\Debug\Sensor.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\bin\Debug\AForge.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\bin\Debug\Sensor.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\obj\Debug\MotionDetector.dll
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\MotionDetector\MotionDetector\obj\Debug\MotionDetector.pdb

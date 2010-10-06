@@ -1,0 +1,5 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WpfWebcamRecorder\Sensor\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WpfWebcamRecorder\Sensor\bin\Debug\Sensor.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WpfWebcamRecorder\Sensor\bin\Debug\Sensor.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WpfWebcamRecorder\Sensor\obj\Debug\Sensor.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\WpfWebcamRecorder\Sensor\obj\Debug\Sensor.pdb

@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfWebcamRecorder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Webcam Recorder" Height="280" Width="400" ResizeMode="NoResize" Closed="Window_Closed"
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Border Name="windowFrame" BorderBrush="#395984" BorderThickness="1" CornerRadius="10,10,10,10">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Color="#E7EBF7" Offset="0.0"/>
+                        <GradientStop Color="#CEE3FF" Offset="0.5"/>
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Canvas>
+            <Border CornerRadius="0, 10, 0, 0" Canvas.Top="0" Canvas.Left="348">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientBrush.GradientStops>
+                            <GradientStopCollection>
+                                <GradientStop Color="#CC0000" Offset="0.0"/>
+                                <GradientStop Color="#FF9999" Offset="0.5"/>
+                            </GradientStopCollection>
+                        </GradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Name="txtExit" Foreground="White" Padding="22, 3" Text="X" Width="50" MouseLeftButtonDown="txtExit_MouseLeftButtonDown" Cursor="Hand"/>
+            </Border>
+            <ListBox Name="lstStatus" Canvas.Top="20" Canvas.Left="10" Width="200" Height="240"/>
+            <TextBlock Text="Device:" Canvas.Top="20" Canvas.Left="230"/>
+            <ComboBox Name="cbxDevice" Width="164" Canvas.Top="40" Canvas.Left="216" SelectionChanged="cbxDevice_SelectionChanged" />
+            <TextBlock Text="Sensor:" Canvas.Top="65" Canvas.Left="230"/>
+            <ComboBox Name="cbxSensor" Width="164" Canvas.Top="82" Canvas.Left="216" SelectionChanged="cbxSensor_SelectionChanged" />
+            <TextBlock Text="Motion Sensitivity:" Canvas.Top="109" Canvas.Left="228"/>
+            <Slider Name="sensitivitySlider" Width="164" Minimum="0.001" Maximum="0.1" Ticks="0.001, 0.025, 0.05, 0.075, 0.1" TickPlacement="BottomRight" IsDirectionReversed="True" Canvas.Top="129" Canvas.Left="216" />
+
+            <GroupBox Header="Options" Width="162" Height="106" Canvas.Top="155" Canvas.Left="216">
+                <Canvas>
+                    <TextBlock Text="Port:" Canvas.Top="10" Canvas.Left="10"/>
+                    <TextBox Name="txtPort" Width="50" Canvas.Top="5" Canvas.Left="40" IsEnabled="False"/>
+                    <Button Name="portButton" Canvas.Top="5" Canvas.Left="100" Content="Change" Click="portButton_Click" />
+
+                    <TextBlock Text="Alarm sound:" Canvas.Top="35" Canvas.Left="10"/>
+                    <TextBox Name="txtSound" Width="110" Canvas.Top="55" Canvas.Left="10" TextChanged="txtSound_TextChanged" />
+                    <Button Name="selectButton" Content="..." Canvas.Top="54" Canvas.Left="125" Click="selectButton_Click" />
+                </Canvas>
+            </GroupBox>
+        </Canvas>
+    </Border>
+</Window>
